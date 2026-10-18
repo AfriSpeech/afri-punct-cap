@@ -14,7 +14,7 @@ import numpy as np
 
 
 class AfriRestorer:
-    def __init__(self, model_id="ghanaopenai/afri-punct-cap-restoration", backend="auto", device="cpu"):
+    def __init__(self, model_id="AfriSpeech/afri-punct-cap", backend="auto", device="cpu"):
         """
         backend: "auto", "onnx", or "torch"
         device: "cpu" or "cuda"

@@ -259,14 +259,19 @@ def main():
 
         print(f"--> Validation Epoch {epoch+1}: Cap F1: {cap_f1:.4f} | Comma Prec: {c_p:.3f}, Rec: {c_r:.3f}, F1: {c_f1:.3f} | Period Prec: {dot_p:.3f}, Rec: {dot_r:.3f}")
 
-    # 3. Save PyTorch & Safetensors
+    # 3. Save PyTorch & Safetensors (both standard and FP16)
     os.makedirs(args.output_dir, exist_ok=True)
     state_dict = model.state_dict()
     torch.save(state_dict, os.path.join(args.output_dir, "pytorch_model.bin"))
     save_file(state_dict, os.path.join(args.output_dir, "model.safetensors"))
+    
+    # Save explicit FP16 safetensors (compact ~230 MB for GPU deployment)
+    fp16_state_dict = {k: v.half() if v.is_floating_point() else v for k, v in state_dict.items()}
+    save_file(fp16_state_dict, os.path.join(args.output_dir, "model_fp16.safetensors"))
+    
     config.save_pretrained(args.output_dir)
     tokenizer.save_pretrained(args.output_dir)
-    print(f"\nModel weights saved to {args.output_dir}")
+    print(f"\nModel weights saved to {args.output_dir} (model.safetensors, model_fp16.safetensors, pytorch_model.bin)")
 
     # 4. ONNX Export and Quantization
     print("\n--- Exporting to ONNX and INT8 Quantization ---")

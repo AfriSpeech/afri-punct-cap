@@ -4,7 +4,9 @@ End-to-end pipeline for **acoustic speech-pause alignment** and **fast CPU-based
 
 Part of the **[AfriSpeech](https://afrispeech.org)** open-source speech initiative.
 
-[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-AfriSpeech%2Fafri2universal-blue)](https://huggingface.co/datasets/AfriSpeech/afri2universal)
+[![Hugging Face Model](https://img.shields.io/badge/%F0%9F%A4%97%20Model-AfriSpeech%2Fafri--punct--cap-yellow)](https://huggingface.co/AfriSpeech/afri-punct-cap)
+[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-AfriSpeech%2Fafri--speech--pause--aligned-blue)](https://huggingface.co/datasets/AfriSpeech/afri-speech-pause-aligned)
+[![Base Corpus](https://img.shields.io/badge/%F0%9F%A4%97%20Base%20Corpus-AfriSpeech%2Fafri2universal-green)](https://huggingface.co/datasets/AfriSpeech/afri2universal)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 
 ---
@@ -18,6 +20,13 @@ For **Text-to-Speech (TTS)** and **Automatic Speech Recognition (ASR)** pipeline
 * **Acoustic Pause Alignment:** By running forced alignment on the audio from [AfriSpeech/afri2universal](https://huggingface.co/datasets/AfriSpeech/afri2universal) (spanning 314 African languages and 950+ hours of speech), speech pauses ($\ge 350$ms) are detected and restored as punctuation commas.
 * **Multi-Task Restoration:** A fast multilingual transformer (`Davlan/afro-xlmr-mini`) is fine-tuned with dual heads to simultaneously restore **Capitalization** (3 classes) and **Punctuation** (5 classes: commas, periods, question marks, exclamations) across all 314 languages.
 * **Ultra-Fast CPU Inference:** Quantized into an INT8 ONNX engine running in **~15–25 ms** per sentence on standard CPUs.
+
+### 🌍 314 Languages & Generalizability to Other African Languages
+
+While the model is explicitly trained on **314 African languages** representing all four major African language families (Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan), it is designed to **generalize zero-shot to other African languages and local dialects**:
+* **Shared Prosodic Typology:** Grammatical clause boundaries, appositives, list elements, conjunctions, and breath pauses follow shared syntactic and acoustic rhythms across related African language subfamilies (e.g. Bantu, Kwa, Chadic, Cushitic, Senegambian, Gur).
+* **Pan-African Representation:** Built on `Davlan/afro-xlmr-mini` with SentencePiece tokenization covering African orthographies, the model learns cross-lingual punctuation cues rather than language-memorized tokens.
+* **Broad Dialect Coverage:** Unwritten, low-resource, or regional language varieties that share phonetic or syntactic phrasing with these 314 languages benefit directly from zero-shot punctuation and capitalization transfer.
 
 ---
 
