@@ -80,323 +80,13 @@ def main():
     )
     print(f"Model pushed to https://huggingface.co/{model_repo}!", flush=True)
 
+    all_langs_list = sorted([os.path.basename(p).split("=")[1] for p in glob.glob(os.path.join(source_dir, "language=*"))])
+    yaml_langs = "\n".join(f"- {l}" for l in all_langs_list)
+
     # Model Card with Generalizability and TTS Motivation
     model_card = f"""---
 language:
-- aal
-- aao
-- aar
-- aba
-- abn
-- abr
-- ach
-- ada
-- aeb
-- aec
-- afo
-- aha
-- ahl
-- ahs
-- ajg
-- aju
-- aka
-- ala
-- amh
-- anc
-- ank
-- anw
-- apd
-- arq
-- ary
-- arz
-- ati
-- avl
-- awo
-- ayl
-- bas
-- bci
-- bcs
-- bcy
-- bda
-- bde
-- bdm
-- bem
-- bhr
-- bin
-- biw
-- bjt
-- bky
-- bmm
-- bmq
-- bou
-- bqg
-- bsq
-- bum
-- bux
-- bwr
-- byc
-- bys
-- bzc
-- bzw
-- cce
-- ccg
-- cen
-- cfa
-- cgg
-- chw
-- cjk
-- ckl
-- cky
-- crs
-- csk
-- dag
-- dbd
-- deg
-- dga
-- dgh
-- din
-- dip
-- dnj
-- dua
-- dyu
-- ebu
-- ego
-- ekr
-- elm
-- ets
-- etu
-- etx
-- ewe
-- ewo
-- eyo
-- fan
-- fat
-- ffm
-- fia
-- fip
-- fkk
-- fon
-- fuc
-- fue
-- fuf
-- fuh
-- fui
-- ful
-- fuq
-- fuv
-- gaa
-- gax
-- gaz
-- gby
-- gdf
-- gkn
-- glw
-- gol
-- gsl
-- gur
-- guw
-- guz
-- gwe
-- gxx
-- gyz
-- hau
-- hav
-- hbb
-- her
-- hia
-- hwo
-- ibo
-- ida
-- idu
-- ijc
-- ikw
-- ish
-- iso
-- its
-- itw
-- iyx
-- juk
-- kab
-- kai
-- kam
-- kbl
-- kbp
-- kck
-- kcq
-- kea
-- keu
-- kik
-- kin
-- kln
-- kmb
-- kmy
-- knf
-- kny
-- kon
-- koo
-- kpo
-- kqo
-- kri
-- kss
-- ktu
-- kua
-- kuh
-- kwm
-- kwn
-- kwy
-- lag
-- ldb
-- ldi
-- leh
-- lin
-- lir
-- lkb
-- lla
-- lnu
-- lom
-- loz
-- lto
-- lua
-- lub
-- lue
-- lug
-- lun
-- luo
-- lwg
-- maf
-- mas
-- mck
-- mde
-- men
-- mer
-- mfe
-- mfm
-- mfn
-- mfo
-- mfv
-- mgh
-- mgi
-- mgr
-- mkf
-- mlg
-- mlq
-- mne
-- mny
-- mos
-- mrt
-- msh
-- msw
-- mwn
-- myj
-- naq
-- nba
-- nbh
-- nbl
-- ndc
-- nde
-- ndi
-- ndo
-- ngb
-- ngi
-- ngl
-- nja
-- nnb
-- nse
-- nso
-- nya
-- nyk
-- nyn
-- nyu
-- nzi
-- ogo
-- orc
-- orm
-- phm
-- pip
-- piy
-- pko
-- plt
-- pov
-- puu
-- rag
-- rcf
-- rif
-- rng
-- rof
-- run
-- sag
-- say
-- sba
-- seh
-- sfw
-- shi
-- shk
-- shr
-- shu
-- sid
-- skg
-- sna
-- snk
-- som
-- sop
-- sot
-- ssw
-- suk
-- swc
-- swh
-- tan
-- tap
-- tdx
-- thv
-- tir
-- tiv
-- tkg
-- tll
-- tog
-- toh
-- toi
-- tsc
-- tsn
-- tso
-- ttj
-- tui
-- tul
-- tum
-- tuq
-- tuv
-- tuy
-- twi
-- twx
-- txy
-- umb
-- urh
-- vai
-- ven
-- ver
-- vmk
-- vmw
-- wal
-- wci
-- wes
-- wja
-- wji
-- wof
-- wol
-- xho
-- xmc
-- xmv
-- xmw
-- xog
-- xpe
-- yao
-- yay
-- ydd
-- yer
-- 'yes'
-- yom
-- yor
-- zga
-- zul
+{yaml_langs}
 license: apache-2.0
 tags:
 - african-languages
@@ -459,12 +149,82 @@ Code, data pipelines, and CLI tool: [AfriSpeech/afri-punct-cap](https://github.c
 
     print("\n=== Step 4: Publishing Dataset to AfriSpeech on Hugging Face ===", flush=True)
     dataset_repo = "AfriSpeech/afri-speech-pause-aligned"
+    dataset_export_dir = "/mnt/volume_d2wey28/projects/afri-punct-cap/data/hf_dataset"
+    data_dir = os.path.join(dataset_export_dir, "data")
+    os.makedirs(data_dir, exist_ok=True)
+
+    # Link/copy all aligned language parquet files into data/*.parquet
+    aligned_files = sorted(glob.glob(os.path.join(aligned_dir, "*.parquet")))
+    print(f"Preparing {len(aligned_files)} language parquet files for Hugging Face upload...", flush=True)
+    for f in aligned_files:
+        dest = os.path.join(data_dir, os.path.basename(f))
+        if not os.path.exists(dest):
+            try:
+                os.link(f, dest)
+            except OSError:
+                import shutil
+                shutil.copy2(f, dest)
+
+    # Dataset Card with all 314 language tags
+    dataset_card = f"""---
+language:
+{yaml_langs}
+license: cc-by-nc-4.0
+task_categories:
+- text-to-speech
+- automatic-speech-recognition
+tags:
+- african-languages
+- speech-pause-alignment
+- punctuation-restoration
+- comma-restoration
+- text-to-speech
+- tts-prosody
+- universal-orthography
+- afrispeech
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: "data/*.parquet"
+size_categories:
+- 100K<n<1M
+---
+
+# Pan-African Speech-Pause Aligned Dataset (314 African Languages)
+
+Parallel dataset for **314 African languages** acoustically aligning natural speech breath/clause pauses (>=350ms) with text transcripts.
+
+Part of the **[AfriSpeech](https://afrispeech.org)** open-source speech initiative.
+
+## 🎙️ Why This Dataset Matters for African Speech & TTS
+Across African languages, **writers conventionally omit commas** before conjunctions (like *ne* in Akan, *àti* in Yoruba, *na* in Swahili), complementizers, and clause boundaries. When training Text-to-Speech (TTS) models on unpunctuated text, the resulting audio rushes through phrases unnaturally without taking breath.
+
+By aligning 292,791 audio clips from [AfriSpeech/afri2universal](https://huggingface.co/datasets/AfriSpeech/afri2universal) using Meta MMS Forced Aligner on the H200 GPU, this dataset inserts commas at true acoustic pauses, providing ground-truth prosodic punctuation for high-quality African TTS and ASR.
+
+## 🌍 Language Coverage & Generalizability
+Directly covers **314 African languages** spanning all 4 major language families (*Niger-Congo*, *Afroasiatic*, *Nilo-Saharan*, *Khoisan*). The shared acoustic and prosodic phrasing across related African language subfamilies allows models trained on this dataset to **generalize zero-shot to other African dialects and unwritten language varieties**.
+
+## Schema
+- `language` (*string*): ISO 639-3 language code (e.g. `yor`, `hau`, `aka`, `swh`, `amh`).
+- `original_transcript` (*string*): The raw transcript from afri2universal.
+- `comma_fixed_transcript` (*string*): Transcript with commas inserted at acoustic pause locations.
+- `commas_added` (*int64*): Number of commas inserted for this sentence.
+- `duration` (*float64*): Duration of the spoken audio clip in seconds.
+
+## Citation & Credits
+- Source Corpus: [AfriSpeech/afri2universal](https://huggingface.co/datasets/AfriSpeech/afri2universal)
+- Organization: **[AfriSpeech](https://afrispeech.org)** & **[Ghana NLP](https://ghananlp.org)**
+"""
+    with open(os.path.join(dataset_export_dir, "README.md"), "w", encoding="utf-8") as f:
+        f.write(dataset_card)
+
     api.create_repo(repo_id=dataset_repo, repo_type="dataset", exist_ok=True)
     api.upload_folder(
-        folder_path=aligned_dir,
+        folder_path=dataset_export_dir,
         repo_id=dataset_repo,
         repo_type="dataset",
-        commit_message="Add 314 African language speech-pause aligned parallel transcripts"
+        commit_message="Publish 314 African language speech-pause aligned parallel transcripts"
     )
     print(f"Dataset pushed to https://huggingface.co/datasets/{dataset_repo}!", flush=True)
 
