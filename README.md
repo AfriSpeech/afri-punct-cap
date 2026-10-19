@@ -17,25 +17,25 @@ When writing African languages, writers conventionally omit commas at natural cl
 
 For **Text-to-Speech (TTS)** and **Automatic Speech Recognition (ASR)** pipelines:
 * **The TTS Bottleneck:** Without commas, TTS models synthesize audio without breath pauses, producing rushed and unnatural phrasing.
-* **Acoustic Pause Alignment:** By running forced alignment on the audio from [AfriSpeech/afri2universal](https://huggingface.co/datasets/AfriSpeech/afri2universal) (spanning 314 African languages and 950+ hours of speech), speech pauses ($\ge 350$ms) are detected and restored as punctuation commas.
-* **Multi-Task Restoration:** A fast multilingual transformer (`Davlan/afro-xlmr-mini`) is fine-tuned with dual heads to simultaneously restore **Capitalization** (3 classes) and **Punctuation** (5 classes: commas, periods, question marks, exclamations) across all 314 languages.
+* **Acoustic Pause Alignment & Multi-Corpus Aggregation:** Combines 3,305,255 multi-sentence passages across **751 African languages** from `AfriSpeech/africa-corpus`, `AfriSpeech/african-corpus-jw`, and `AfriSpeech/african-transcribed-speech-monolingual`.
+* **Multi-Task Restoration:** Fine-tunes `Davlan/afro-xlmr-base` (278M params) with dual heads to simultaneously restore **Capitalization** (3 classes) and **Punctuation** (5 classes: commas, periods, question marks, exclamations) across all 751 languages with **zero language tags**.
 * **Ultra-Fast CPU Inference:** Quantized into an INT8 ONNX engine running in **~15–25 ms** per sentence on standard CPUs.
 
-### 🌍 314 Languages & Generalizability to Other African Languages
+### 🌍 751 Languages & Pan-African Generalizability
 
-While the model is explicitly trained on **314 African languages** representing all four major African language families (Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan), it is designed to **generalize zero-shot to other African languages and local dialects**:
-* **Shared Prosodic Typology:** Grammatical clause boundaries, appositives, list elements, conjunctions, and breath pauses follow shared syntactic and acoustic rhythms across related African language subfamilies (e.g. Bantu, Kwa, Chadic, Cushitic, Senegambian, Gur).
-* **Pan-African Representation:** Built on `Davlan/afro-xlmr-mini` with SentencePiece tokenization covering African orthographies, the model learns cross-lingual punctuation cues rather than language-memorized tokens.
-* **Broad Dialect Coverage:** Unwritten, low-resource, or regional language varieties that share phonetic or syntactic phrasing with these 314 languages benefit directly from zero-shot punctuation and capitalization transfer.
+The model is trained on **751 African languages and dialects** representing all four major African language families (Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan):
+* **Shared Prosodic Typology:** Grammatical clause boundaries, appositives, list elements, conjunctions, and breath pauses follow shared syntactic and acoustic rhythms across related African language subfamilies (e.g. Bantu, Kwa, Chadic, Cushitic, Senegambian, Gur, Mande).
+* **Pan-African Representation:** Built on `Davlan/afro-xlmr-base` with SentencePiece tokenization covering African orthographies (Ethiopic, Arabic, Latin with African phonetic extensions), the model learns universal cross-lingual punctuation cues rather than language-memorized tokens.
+* **Broad Dialect Coverage:** Unwritten, low-resource, or regional language varieties that share phonetic or syntactic phrasing with these 751 languages benefit directly from zero-shot punctuation and capitalization transfer.
 
 ---
 
 ## Languages Covered
 
-Spans **314 African languages and dialects** across all 4 major African language families (Niger-Congo, Afroasiatic, Nilo-Saharan, Khoisan), including:
-* **West Africa:** Akan/Twi (`aka`), Yoruba (`yor`), Hausa (`hau`), Igbo (`ibo`), Ewe (`ewe`), Ga (`gaa`), Wolof (`wol`), Fula (`ful`), Mende (`men`), etc.
-* **East Africa:** Swahili (`swh`), Amharic (`amh`), Somali (`som`), Oromo (`orm`), Tigrinya (`tir`), Luganda (`lug`), Kinyarwanda (`kin`), Acholi (`ach`), etc.
-* **Central & Southern Africa:** Lingala (`lin`), Kongo (`kon`), Shona (`sna`), Zulu (`zul`), Xhosa (`xho`), Sotho (`sot`), Tswana (`tsn`), etc.
+Spans **751 African languages and dialects** across all 4 major African language families (Niger-Congo, Afroasiatic, Nilo-Saharan, Khoisan), including:
+* **West Africa:** Akan/Twi (`aka`/`twi`), Yoruba (`yor`), Hausa (`hau`), Igbo (`ibo`), Ewe (`ewe`), Ga (`gaa`), Wolof (`wol`), Fula (`ful`), Mende (`men`), Fanti (`fat`), Dagbani (`dag`), Dangme (`ada`), etc.
+* **East Africa:** Swahili (`swh`), Amharic (`amh`), Somali (`som`), Oromo (`gax`), Tigrinya (`tir`), Luganda (`lug`), Kinyarwanda (`kin`), Acholi (`ach`), etc.
+* **Central & Southern Africa:** Lingala (`lin`), Kongo (`kon`), Shona (`sna`), Zulu (`zul`), Xhosa (`xho`), Sotho (`sot`), Tswana (`tsn`), Bemba (`bem`), etc.
 * **North Africa:** Egyptian Arabic (`arz`), Moroccan Arabic (`ary`), Algerian Arabic (`arq`), Tunisian Arabic (`aeb`), etc.
 
 ---
@@ -43,30 +43,34 @@ Spans **314 African languages and dialects** across all 4 major African language
 ## Repository Structure
 
 ```
-├── afri_restorer.py                          # Standalone CPU inference library and CLI tool (ONNX INT8 & PyTorch)
+├── afri_restorer.py                          # Standalone CPU inference library and CLI tool (FP16 & INT8 ONNX)
 ├── requirements.txt                         # Project dependencies
-├── align_afri2universal.py                  # Multi-language acoustic pause alignment using Meta MMS Forced Aligner
-├── export_and_push_multi_sentence_dataset.py# Packs consecutive sentences into multi-sentence training sequences
-├── train_afro_xlmr_base_50ep.py             # 50-epoch training on Davlan/afro-xlmr-base with language prompting
-├── train_afri_multilingual.py               # Fine-tuning Afro-XLMR-mini, ONNX export, and INT8 dynamic quantization
-├── orchestrate_pan_african.py               # Autonomous pipeline monitor and execution controller
-├── benchmark_h200_speed.py                  # Throughput benchmarking on NVIDIA H200 GPU
-└── test_align_multilingual.py               # Cross-language alignment verification test
+├── build_pan_african_mega_corpus.py         # Assembles 3.3M passages across 751 languages from 3 corpora
+├── train_mega_corpus_afro_xlmr.py           # 20-epoch training on Davlan/afro-xlmr-base (zero language tags)
+├── push_mega_dataset_to_hf.py               # Uploads unified 3.3M dataset to AfriSpeech/afri-speech-pause-aligned
+├── modal_server.py                          # Serverless Modal API (FP16 GPU / INT8 ONNX, auto-sleep on idle)
+└── paper/                                   # 5-page arXiv preprint LaTeX source and compiled PDF
 ```
 
 ---
 
 ## Datasets on Hugging Face
 
-1. **Multi-Sentence Training Dataset (`data/multi_sentence_train.parquet`)**:
-   * **145,812 multi-sentence training rows** packed from 292,533 single sentences across all 314 languages.
-   * Clusters 1–3 consecutive sentences into continuous streams so models learn **internal sentence-boundary detection** (periods, question marks) inside running text, in addition to clause commas and capitalization.
-   * Columns: `language`, `input_text` (with `[lang]` prompt), `target_text`, `num_sentences`, `num_words`, `num_commas`, `num_periods`.
-   * **Zero Audio Bytes:** Lightweight (~42 MB), fast to load and train.
+### [AfriSpeech/afri-speech-pause-aligned](https://huggingface.co/datasets/AfriSpeech/afri-speech-pause-aligned)
+* **`train` Split:** **3,263,160 multi-sentence passages** (701 MB)
+* **`eval` Split:** **42,095 balanced passages** (7.2 MB, stratified across all 751 languages)
+* **Strict Narrative Context (Not Randomly Joined):**
+  * Grouped strictly within the same book and chapter into 2–3 sentence paragraphs.
+  * Filtered of English contamination.
+  * **Zero Audio Overhead:** Exclusively text-only parallel data.
 
-2. **Per-Language Aligned Transcripts (`data/{lang}.parquet`)**:
-   * 314 individual language parquet files with parallel `original_transcript` and `comma_fixed_transcript`.
-   * Available at: [AfriSpeech/afri-speech-pause-aligned](https://huggingface.co/datasets/AfriSpeech/afri-speech-pause-aligned)
+```python
+from datasets import load_dataset
+
+ds = load_dataset("AfriSpeech/afri-speech-pause-aligned")
+print(ds["train"])  # 3,263,160 rows
+print(ds["eval"])   # 42,095 rows
+```
 
 ---
 
