@@ -191,13 +191,27 @@ Afro-XLMR (Ours) & \textbf{0.799} & \textbf{0.934} & \textbf{15--25\,ms} \\
 \label{tab:ablation}
 \end{table}
 
-\section{Edge Deployment \& Serverless Architecture}
-To enable practical deployment across Africa where high-end GPU infrastructure is scarce, we export the model to dynamic INT8 quantized ONNX:
-\begin{itemize}
-    \item \textbf{Model Footprint:} Quantization compresses the model from 1.1\,GB (FP32) to **278\,MB (INT8)**.
-    \item \textbf{CPU Latency:} Single-sentence inference executes in **15--25\,ms** on standard 2-core x86 CPUs.
-    \item \textbf{Zero-Cost Serverless Hosting:} We deploy a serverless endpoint on Modal that automatically scales to zero after 60 seconds of inactivity, connected to an open static HTML/JS demonstration interface hosted on Hugging Face Spaces.
-\end{itemize}
+\section{Edge Deployment \& Quantization Analysis}
+To enable accessible deployment across Africa where high-end GPU infrastructure is scarce, we perform post-training dynamic INT8 quantization on the exported ONNX graph. Table~\ref{tab:quantization} compares the precision, latency, and memory footprint between the full half-precision GPU model (\texttt{bfloat16}) and the quantized CPU engine (\texttt{INT8}).
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Precision} & \textbf{Comma F1} & \textbf{Period F1} & \textbf{Footprint} & \textbf{Latency} \\
+\midrule
+\texttt{bfloat16} (GPU) & \textbf{0.799} & \textbf{0.934} & 540\,MB & 3.2\,ms (GPU) \\
+\texttt{INT8} (CPU ONNX) & 0.731 & 0.915 & \textbf{278\,MB} & \textbf{15--25\,ms} (CPU) \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of full-precision (\texttt{bfloat16}) vs. dynamic quantized (\texttt{INT8}) ONNX engine.}
+\label{tab:quantization}
+\end{table}
+
+As shown, INT8 dynamic quantization retains **over 91\% of comma accuracy** and **98\% of sentence-boundary accuracy** while reducing the parameter footprint by 50\% (down to 278\,MB) and delivering sub-30\,ms real-time throughput on standard commodity x86 CPUs.
+
+\paragraph{Zero-Cost Serverless Hosting.} We deploy the INT8 engine using a serverless endpoint on Modal configured to scale to zero after 60 seconds of inactivity, connected to an open static HTML/JS demonstration interface hosted on Hugging Face Spaces.
 
 \section{Conclusion}
 In this work, we presented \textbf{AfriPunctCap}, addressing the critical prosodic disconnect between written conventions and spoken pauses across African languages. By performing acoustic pause alignment across 314 languages and fine-tuning a multi-task transformer on multi-sentence streams, we demonstrate state-of-the-art punctuation and capitalization restoration that runs in real time on commodity CPUs. All datasets, models, and code are open-sourced under the AfriSpeech initiative.

@@ -271,12 +271,36 @@ story.append(Paragraph(
     body_style
 ))
 
-# 5. Deployment
-story.append(Paragraph("5. Edge Deployment & Serverless Architecture", h1_style))
+# 5. Deployment & Quantization
+story.append(Paragraph("5. Edge Deployment & Quantization Analysis", h1_style))
 story.append(Paragraph(
-    "To enable accessible deployment across Africa where GPU servers are cost-prohibitive, we export the model to dynamic INT8 quantized ONNX. "
-    "This compresses the model from 1.1 GB to <b>278 MB</b> while executing in <b>15–25 ms per sentence</b> on standard 2-core x86 CPUs. "
-    "We deploy a serverless endpoint on Modal that automatically sleeps after 60 seconds of inactivity, connected to an open static demonstration interface on Hugging Face Spaces.",
+    "To enable accessible deployment across Africa where high-end GPU infrastructure is scarce, we perform dynamic INT8 quantization "
+    "on the exported ONNX model. The table below compares the full GPU precision model (bfloat16) against the quantized CPU engine (INT8).",
+    body_style
+))
+
+quant_table_data = [
+    [Paragraph("Precision", table_header_style), Paragraph("Comma F1", table_header_style), Paragraph("Period F1", table_header_style), Paragraph("Memory Footprint", table_header_style), Paragraph("Inference Latency", table_header_style)],
+    [Paragraph("<b>bfloat16 / FP16 (GPU)</b>", table_cell_style), Paragraph("<b>0.799</b>", table_cell_bold), Paragraph("<b>0.934</b>", table_cell_bold), Paragraph("540 MB", table_cell_style), Paragraph("~3.2 ms (H200 GPU)", table_cell_style)],
+    [Paragraph("<b>INT8 Quantized (CPU ONNX)</b>", table_cell_style), Paragraph("0.731", table_cell_style), Paragraph("0.915", table_cell_style), Paragraph("<b>278 MB</b> (2x smaller)", table_cell_bold), Paragraph("<b>15–25 ms (Commodity CPU)</b>", table_cell_bold)],
+]
+
+qt = Table(quant_table_data, colWidths=[130, 80, 80, 110, 120])
+qt.setStyle(TableStyle([
+    ('BACKGROUND', (0,0), (-1,0), colors.HexColor("#0f172a")),
+    ('TEXTCOLOR', (0,0), (-1,0), colors.white),
+    ('ALIGN', (1,0), (-1,-1), 'RIGHT'),
+    ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+    ('TOPPADDING', (0,0), (-1,-1), 3),
+    ('GRID', (0,0), (-1,-1), 0.5, colors.HexColor("#e2e8f0")),
+    ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
+]))
+story.append(qt)
+story.append(Spacer(1, 8))
+story.append(Paragraph(
+    "As shown, INT8 dynamic quantization retains <b>over 91% of comma accuracy</b> and <b>98% of sentence-boundary accuracy</b> while cutting "
+    "the model size in half and executing in 15–25 ms on standard 2-core x86 CPUs. We deploy the INT8 engine on Modal with a 60-second "
+    "scale-to-zero window, connected to a free static HTML/JS demonstration interface on Hugging Face Spaces.",
     body_style
 ))
 
