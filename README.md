@@ -43,14 +43,39 @@ Spans **314 African languages and dialects** across all 4 major African language
 ## Repository Structure
 
 ```
-├── afri_restorer.py            # Standalone CPU inference library and CLI tool (ONNX INT8 & PyTorch)
-├── requirements.txt           # Project dependencies
-├── align_afri2universal.py    # Multi-language acoustic pause alignment using Meta MMS Forced Aligner
-├── train_afri_multilingual.py # Fine-tuning Afro-XLMR-mini, ONNX export, and INT8 dynamic quantization
-├── orchestrate_pan_african.py # Autonomous pipeline monitor and execution controller
-├── benchmark_h200_speed.py    # Throughput benchmarking on NVIDIA H200 GPU
-└── test_align_multilingual.py # Cross-language alignment verification test
+├── afri_restorer.py                          # Standalone CPU inference library and CLI tool (ONNX INT8 & PyTorch)
+├── requirements.txt                         # Project dependencies
+├── align_afri2universal.py                  # Multi-language acoustic pause alignment using Meta MMS Forced Aligner
+├── export_and_push_multi_sentence_dataset.py# Packs consecutive sentences into multi-sentence training sequences
+├── train_afro_xlmr_base_50ep.py             # 50-epoch training on Davlan/afro-xlmr-base with language prompting
+├── train_afri_multilingual.py               # Fine-tuning Afro-XLMR-mini, ONNX export, and INT8 dynamic quantization
+├── orchestrate_pan_african.py               # Autonomous pipeline monitor and execution controller
+├── benchmark_h200_speed.py                  # Throughput benchmarking on NVIDIA H200 GPU
+└── test_align_multilingual.py               # Cross-language alignment verification test
 ```
+
+---
+
+## Datasets on Hugging Face
+
+1. **Multi-Sentence Training Dataset (`data/multi_sentence_train.parquet`)**:
+   * **145,812 multi-sentence training rows** packed from 292,533 single sentences across all 314 languages.
+   * Clusters 1–3 consecutive sentences into continuous streams so models learn **internal sentence-boundary detection** (periods, question marks) inside running text, in addition to clause commas and capitalization.
+   * Columns: `language`, `input_text` (with `[lang]` prompt), `target_text`, `num_sentences`, `num_words`, `num_commas`, `num_periods`.
+   * **Zero Audio Bytes:** Lightweight (~42 MB), fast to load and train.
+
+2. **Per-Language Aligned Transcripts (`data/{lang}.parquet`)**:
+   * 314 individual language parquet files with parallel `original_transcript` and `comma_fixed_transcript`.
+   * Available at: [AfriSpeech/afri-speech-pause-aligned](https://huggingface.co/datasets/AfriSpeech/afri-speech-pause-aligned)
+
+---
+
+## Non-Latin Scripts & Multi-Script Coverage
+
+The pipeline natively supports non-Latin African writing systems with **0 out-of-vocabulary (`<unk>`) tokens**:
+* **Ethiopic / Ge'ez (`ፊደል`)**: Amharic (`amh`), Tigrinya (`tir`) — restores Ethiopic full-stops (`።`), semicolons (`፤`), and commas (`፣`).
+* **Arabic Script**: Egyptian (`arz`), Moroccan (`ary`), Algerian (`arq`), Tunisian (`aeb`), Hausa Ajami — restores Arabic commas (`،`) and question marks (`؟`).
+* **Latin with African Phonetic Extensions**: Akan/Twi (`aka`), Ewe (`ewe`), Yoruba (`yor`), Hausa (`hau`), etc. — handles open vowels (`ɛ`, `ɔ`), tone marks, and hooked consonants (`ɗ`, `ƙ`, `ɓ`).
 
 ---
 
