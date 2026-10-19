@@ -228,47 +228,6 @@ Directly covers **314 African languages** spanning all 4 major language families
     )
     print(f"Dataset pushed to https://huggingface.co/datasets/{dataset_repo}!", flush=True)
 
-    print("\n=== Step 5: Updating Trello Progress Card ===", flush=True)
-    import urllib.request
-    import urllib.parse
-    KEY = os.environ.get("TRELLO_KEY", "fb42e6f9e55e85ea657494b6e71de684")
-    TOKEN = os.environ.get("TRELLO_TOKEN", "ATTA674f95efaf9dc688987d3a01b64b45ca708e1c06538327df1340a4372a59bd2f7F5D10B1")
-    LIST_ID = "69f8ad564a02e0638d4aef83" # Active
-
-    title = "Pan-African Punctuation & Capitalization Restoration (314 Languages + Generalization)"
-    desc = f"""Built and deployed an end-to-end Pan-African Punctuation & Capitalization Restoration pipeline across all 314 African languages in `AfriSpeech/afri2universal`:
-
-**Generalizability & TTS Motivation**:
-Trained on 314 African languages spanning all 4 major language families (Niger-Congo, Afroasiatic, Nilo-Saharan, Khoisan). Because prosodic phrasing and clause pauses share deep structural similarities across related African subfamilies, the model strongly generalizes zero-shot to other African languages and unwritten dialects. It compensates for conventionally omitted commas in written African text, directly unlocking natural speech prosody for TTS engines.
-
-1. **Acoustic Pause Alignment**:
-- Aligned 292,791 sentences (950+ hours of audio) across 314 African languages using Meta MMS Forced Aligner on H200 GPU.
-- Published Dataset: https://huggingface.co/datasets/{dataset_repo}
-
-2. **Pan-African Multilingual Model**:
-- Fine-tuned `Davlan/afro-xlmr-mini` with dual heads for Capitalization (3 classes) and Punctuation (5 classes).
-- Exported PyTorch, Safetensors, and INT8 Quantized ONNX (~115 MB, ~15-25 ms latency on CPU).
-- Published Model: https://huggingface.co/{model_repo}
-
-3. **GitHub Code Repository**:
-- https://github.com/AfriSpeech/afri-punct-cap"""
-
-    params = urllib.parse.urlencode({
-        "key": KEY,
-        "token": TOKEN,
-        "idList": LIST_ID,
-        "name": title,
-        "desc": desc,
-        "pos": "top"
-    })
-    try:
-        req = urllib.request.Request(f"https://api.trello.com/1/cards?{params}", method="POST")
-        with urllib.request.urlopen(req) as resp:
-            c = json.loads(resp.read().decode())
-            print(f"Trello card created: {c['shortUrl']}", flush=True)
-    except Exception as e:
-        print(f"Trello update note: {e}", flush=True)
-
     print("\nAll Pan-African pipeline steps completed successfully!", flush=True)
 
 if __name__ == "__main__":
