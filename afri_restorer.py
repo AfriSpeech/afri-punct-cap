@@ -39,9 +39,12 @@ class AfriRestorer:
         if use_onnx:
             self.backend = "onnx"
             print(f"Loading quantized ONNX model from {model_id} for fast CPU inference...")
-            from huggingface_hub import hf_hub_download
             import onnxruntime as ort
-            onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
+            if os.path.isdir(model_id):
+                onnx_path = os.path.join(model_id, "model_quantized.onnx")
+            else:
+                from huggingface_hub import hf_hub_download
+                onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
             opts = ort.SessionOptions()
             opts.intra_op_num_threads = min(4, os.cpu_count() or 4)
             self.session = ort.InferenceSession(onnx_path, sess_options=opts, providers=["CPUExecutionProvider"])
@@ -52,14 +55,15 @@ class AfriRestorer:
             import torch
             import torch.nn as nn
             from transformers import AutoConfig, AutoModel
-            from huggingface_hub import hf_hub_download
             from safetensors.torch import load_file
 
             class AfriPunctCapModel(nn.Module):
-                def __init__(self, config, base_model_name="Davlan/afro-xlmr-mini"):
+                def __init__(self, config, base_model_name="Davlan/afro-xlmr-base", vocab_size=None):
                     super().__init__()
                     self.roberta = AutoModel.from_pretrained(base_model_name, config=config)
-                    hidden_size = config.hidden_size # 384
+                    if vocab_size and vocab_size != config.vocab_size:
+                        self.roberta.resize_token_embeddings(vocab_size)
+                    hidden_size = config.hidden_size
                     self.dropout = nn.Dropout(0.2)
                     self.cap_head = nn.Linear(hidden_size, 3)
                     self.punct_head = nn.Linear(hidden_size, 5)
@@ -70,8 +74,12 @@ class AfriRestorer:
                     return self.cap_head(seq_out), self.punct_head(seq_out)
 
             config = AutoConfig.from_pretrained(model_id)
-            weights_path = hf_hub_download(repo_id=model_id, filename="model.safetensors")
-            self.model = AfriPunctCapModel(config)
+            if os.path.isdir(model_id):
+                weights_path = os.path.join(model_id, "model.safetensors")
+            else:
+                from huggingface_hub import hf_hub_download
+                weights_path = hf_hub_download(repo_id=model_id, filename="model.safetensors")
+            self.model = AfriPunctCapModel(config, vocab_size=len(self.tokenizer))
             state_dict = load_file(weights_path)
             self.model.load_state_dict(state_dict)
             self.model.to(device)
@@ -136,6 +144,10 @@ class AfriRestorer:
 
             word_str += self.rev_punct.get(p, "")
             reconstructed.append(word_str)
+
+        # Strip language prompt token from reconstructed output if present
+        if raw_tokens and re.match(r"^\[[a-zA-Z]{3}\]", raw_tokens[0]):
+            reconstructed = reconstructed[1:]
 
         return " ".join(reconstructed)
 
