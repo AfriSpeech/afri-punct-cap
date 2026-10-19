@@ -266,11 +266,11 @@ def main():
 
         cap_f1 = f1_score(all_cap_trues, all_cap_preds, average="macro")
         c_p = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 1 and t == 1) / max(1, sum(1 for p in all_punct_preds if p == 1))
-        c_r = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 1 and t == 1) / max(1, sum(1 for t in all_trues if t == 1))
+        c_r = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 1 and t == 1) / max(1, sum(1 for t in all_punct_trues if t == 1))
         c_f1 = 2 * c_p * c_r / max(1e-6, c_p + c_r)
 
         dot_p = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 2 and t == 2) / max(1, sum(1 for p in all_punct_preds if p == 2))
-        dot_r = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 2 and t == 2) / max(1, sum(1 for t in all_trues if t == 2))
+        dot_r = sum(1 for p, t in zip(all_punct_preds, all_punct_trues) if p == 2 and t == 2) / max(1, sum(1 for t in all_punct_trues if t == 2))
 
         composite = (cap_f1 + c_f1 + dot_p) / 3
 
