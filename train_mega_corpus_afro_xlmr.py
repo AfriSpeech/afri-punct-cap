@@ -174,7 +174,7 @@ def load_parsed_data(parquet_path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output_dir", default="/mnt/volume_d2wey28/projects/afri-punct-cap/models/afri-punct-cap-mega-base")
-    parser.add_argument("--epochs", type=int, default=4)
+    parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=128)
     parser.add_argument("--lr", type=float, default=4e-5)
     args = parser.parse_args()
@@ -292,10 +292,16 @@ def main():
             config.save_pretrained(args.output_dir)
             tokenizer.save_pretrained(args.output_dir)
 
-    print(f"\nMega-Corpus Training Complete! Best Composite Score: {best_score:.4f}")
+    print(f"\nMega-Corpus Training Complete! Best Composite Score: {best_score:.4f}", flush=True)
 
-    # Export INT8 ONNX
-    print("\n--- Exporting to ONNX and INT8 Quantization ---", flush=True)
+    # Export INT8 ONNX from the BEST checkpoint
+    print("\n--- Exporting to ONNX and INT8 Quantization from Best Checkpoint ---", flush=True)
+    best_weights_path = os.path.join(args.output_dir, "model.safetensors")
+    if os.path.exists(best_weights_path):
+        from safetensors.torch import load_file
+        model.load_state_dict(load_file(best_weights_path))
+        print("Loaded best checkpoint into model for export!")
+
     model.eval().to("cpu")
     class OnnxWrapper(nn.Module):
         def __init__(self, m):
