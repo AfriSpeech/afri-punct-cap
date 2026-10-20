@@ -36,7 +36,7 @@ app = modal.App("afri-punct-cap-server", image=image)
 
 class RestoreRequest(BaseModel):
     text: str
-    precision: str = "fp16" # "fp16" (default) or "int8"
+    precision: str = "int8" # "int8" (default, ultra-fast CPU) or "fp16" (optional, high accuracy GPU)
     lang: str = "afri"      # "afri" (default, zero-shot) or specific tag like "swh", "aka"
 
 class RestoreResponse(BaseModel):
@@ -235,7 +235,7 @@ class RestorerService:
             return {
                 "status": "ok",
                 "model": "AfriSpeech/afri-punct-cap",
-                "default_precision": "FP16 (GPU)",
+                "default_precision": "INT8 (Fast CPU ONNX)",
                 "default_mode": "Afri Mode (Default, Zero-Shot)",
             }
 

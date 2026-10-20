@@ -1,0 +1,1514 @@
+{
+  "aal": {
+    "lang": "aal",
+    "raw_input": "innensha inenkui ddukkuma yeke muhan sane yaro gake mitamyeta iseye famohe koa kamoya mifamoya",
+    "ground_truth": "Innensha inenkui ddukkuma yeke muhan sane yaro gake mitamyeta iseye famohe koa kamoya mifamoya.",
+    "num_words": 14
+  },
+  "aao": {
+    "lang": "aao",
+    "raw_input": "والله الكلب يقدر يدرب حتى تلاتة مرات في النهار عندو خطرة صبح كينوض يدرب يجري شوية وخطرة لعشية ويعني زيدلو وحدة فاليل يزيد يدرب ويجري شوية فالليل مليحة ليه وترفدلو صحتو ويتحسن وكل شي ياسر يمشي ياسر مليح",
+    "ground_truth": "والله، الكلب يقدر يدرب حتى تلاتة مرات في النهار\nعندو خطرة صبح كينوض يدرب يجري شوية وخطرة لعشية ويعني زيدلو وحدة فاليل يزيد يدرب ويجري شوية فالليل مليحة ليه وترفدلو صحتو ويتحسن وكل شي ياسر- يمشي ياسر مليح",
+    "num_words": 38
+  },
+  "aar": {
+    "lang": "aar",
+    "raw_input": "too magaalak too saaku migaaqah kiryat sefer axcuk yenen",
+    "ground_truth": "Too magaalak too saaku migaaqah Kiryat-Sefer axcuk yenen.",
+    "num_words": 9
+  },
+  "aba": {
+    "lang": "aba",
+    "raw_input": "8 bu jɛelë jɛelënë elë enɛ epiɛ elɛnë powu ë ebë ebɔ eka edi ngɩmɛnnelë wú",
+    "ground_truth": "8. ?Bu jɛelë jɛelënë elë enɛ epiɛ elɛnë powu ë ebë ebɔ eka edi ngɩmɛnnelë wú?",
+    "num_words": 16
+  },
+  "abr": {
+    "lang": "abr",
+    "raw_input": "nkuro akɛseɛ a ɔwɔ me mmeaeɛ no bi ne kumasi sunyani oguaa afei so nkuro nketewa ɔka ho bi yɛ berekum wamfie wamenafo ajumako tachiman mankessim winneba asikuma ne assin fosu",
+    "ground_truth": "Nkuro akɛseɛ a ɔwɔ me mmeaeɛ no, bi ne Kumasi, Sunyani, Oguaa.\nAfei so nkuro nketewa ɔka ho, bi yɛ Berekum, Wamfie, Wamenafo, Ajumako, Tachiman, Mankessim, Winneba, Asikuma ne Assin Fosu.",
+    "num_words": 31
+  },
+  "ach": {
+    "lang": "ach",
+    "raw_input": "man nyig kic nyig kic man opye i kom ature ma kalane tye ma yelo nyig kic man tye ka kwanyo moc cam ma tye i kom ature man wek gin giyub ki moo kic ma meggi",
+    "ground_truth": "Man nyig kic nyig kic man opye i kom ature ma kalane tye ma yelo nyig kic man tye ka kwanyo moc cam ma tye i kom ature man wek gin giyub ki moo kic ma meggi.",
+    "num_words": 37
+  },
+  "ada": {
+    "lang": "ada",
+    "raw_input": "7 mɛni he wa ma susu ngɛ ní kasemi nɛ ɔ mi nɛ mɛni he je",
+    "ground_truth": "7. Mɛni he wa ma susu ngɛ ní kasemi nɛ ɔ mi, nɛ mɛni he je?",
+    "num_words": 16
+  },
+  "aeb": {
+    "lang": "aeb",
+    "raw_input": "في أحد الأيام كانت هناك شجرة يمكنها التحدث مع الأشخاص الذين يستمعون إليها عن قرب<hesitation> كانت شجرة ضخمة عتيقة تظلل الغابة بأغصانها الكثيفة ولم يكن يعرف أحد سرها <hesitation> حتى جاء إليها فتى صغير <hesitation> اسمه محمد وكان يحب استكشاف الغابات",
+    "ground_truth": "في أحد الأيام كانت هناك شجرة يمكنها التحدث مع الأشخاص الذين يستمعون إليها عن قرب<hesitation> كانت شجرة ضخمة عتيقة تظلل الغابة بأغصانها الكثيفة، ولم يكن يعرف أحد سرها،<hesitation> حتى  جاء إليها فتى صغير <hesitation> اسمه محمد، وكان يحب استكشاف الغابات.",
+    "num_words": 41
+  },
+  "aec": {
+    "lang": "aec",
+    "raw_input": "البرتجالي ديه يفكرني بعصير البرتجال أجمل عصير في الدنيا",
+    "ground_truth": "البرتجالي ديه يفكرني بعصير البرتجال، أجمل عصير في الدنيا",
+    "num_words": 9
+  },
+  "afo": {
+    "lang": "afo",
+    "raw_input": "elɔ edrepwolumokparedelertenyi ederpmo lumo ekparedalaremo edarepmleumokpereda leredo edrpwo laumekperedo edarepmolaumo kperedodeze ederewole uwoekperedo lela edarepwoluamokoredɔ ledo edrer pwokuwokeredolelɔ edrepwo leukperedolerenyi edre pwolauwokpe edulerewo ederepwolukpere dolereda edarepewohwo ekperedɔleredo edrepwola ederela",
+    "ground_truth": "Elɔ edrepwolumokparedelertenyi ederpmo lumo ekparedalaremo, edarepmleumokpereda leredo edrpwo laumekperedo, edarepmolaumo kperedodeze ederewole uwoekperedo lela, edarepwoluamokoredɔ ledo edrer pwokuwokeredolelɔ, edrepwo- leukperedolerenyi, edre pwolauwokpe- edulerewo, ederepwolukpere dolereda, edarepewohwo ekperedɔleredo, edrepwola ederela",
+    "num_words": 29
+  },
+  "aha": {
+    "lang": "aha",
+    "raw_input": "5 mɩnla ɔhʋanɩ yɛ boluwalɩ zʋlɔ bɛhɛlɛlɩ hibulu ɛhɛlɛlɛ nɩ be a kila ɔwɩɛnɩlɛ aɣanɩ yɩ anyunu mfonyini yi",
+    "ground_truth": "5. Mɩnla ɔhʋanɩ yɛ boluwalɩ zʋlɔ bɛhɛlɛlɩ Hibulu ɛhɛlɛlɛ nɩ be a? (Kila Ɔwɩɛnɩlɛ Aɣanɩ yɩ anyunu mfonyini yi.)",
+    "num_words": 19
+  },
+  "ahs": {
+    "lang": "ahs",
+    "raw_input": "enyiŋ efwei etar enaa entɔɔ entɔn yiŋ entɔfwei entɔrɔk enturha ku ukɔu nyiŋ ukou niya nyiŋ kou nya fwei kou niyatar kou nibɔ náá koou nibotɔɔ kou nibɔtoyiŋ kou nibɔtɔfwei kou nibɔtɔrɔk kou nibɔtuŋra ishokifwei",
+    "ground_truth": "Enyiŋ efwei etar enaa entɔɔ entɔn yiŋ entɔfwei entɔrɔk enturha ku ukɔu nyiŋ ukou niya nyiŋ kou nya fwei kou niyatar kou nibɔ náá koou nibotɔɔ kou nibɔtoyiŋ kou nibɔtɔfwei kou nibɔtɔrɔk kou nibɔtuŋra ishokifwei",
+    "num_words": 35
+  },
+  "ajg": {
+    "lang": "ajg",
+    "raw_input": "5 cukaɖa ci yí mawu sɛntɔ sugbɔ donɔ goɔ",
+    "ground_truth": "5. Cukaɖa ci yí Mawu sɛntɔ sugbɔ donɔ goɔ?",
+    "num_words": 9
+  },
+  "aju": {
+    "lang": "aju",
+    "raw_input": "אֶל חַיָּוָן לִיּ כַּנְחַבּ בְּזַבַּא הִיָּא אֶל כַּלְבּ כַּיַּעְגְּבּנִי כִּיַּאש כַּיֻּקוּן סַדִיק וְפִי בְּזַבַּא וְכִיַּפְהַם בְּלָא מַא תְּהַדְּר הוּוּ חַיָּוָן זָכִי וְכַיְּחַמִּיְּך וְדִימָא פַרְחָאן בְּשַׁא יִּשּׁוּפְך כַּיְּגִ יב לִיּ אֶל טַּאקָּה וְכַיְּדַחְכְּנִי בְּזַבַּא",
+    "ground_truth": "אֶל-חַיָּוָן לִיּ כַּנְחַבּ בְּזַבַּא הִיָּא אֶל-כַּלְבּ, כַּיַּעְגְּבּנִי כִּיַּאש כַּיֻּקוּן סַדִיק וְפִי בְּזַבַּא, וְכִיַּפְהַם בְּלָא מַא תְּהַדְּר. הוּוּ חַיָּוָן זָכִי, וְכַיְּחַמִּיְּך וְדִימָא פַרְחָאן בְּשַׁא יִּשּׁוּפְך, כַּיְּגִ'יב לִיּ אֶל-טַּאקָּה, וְכַיְּדַחְכְּנִי בְּזַבַּא.",
+    "num_words": 33
+  },
+  "aka": {
+    "lang": "aka",
+    "raw_input": "wɔbuaa no sɛ hebrifoɔ mmaa no de ahoɔden wo ɔherɛ so enti yɛbɛduru hɔ no na wɔawo dada",
+    "ground_truth": "Wɔbuaa no sɛ, “Hebrifoɔ mmaa no de ahoɔden wo ɔherɛ so enti yɛbɛduru hɔ no, na wɔawo dada.",
+    "num_words": 18
+  },
+  "amh": {
+    "lang": "amh",
+    "raw_input": "በባሕር ውስጥ የሚበቅሉ ሣሮች በባሕሩ ውስጥ ያለው አሸዋ ባለበት እንዲቆይ ያደርጋሉ ኮራሎች በበሽታ እንዳይጠቁ ይከላከላሉ ከዚህም ሌላ አውዳሚ ማዕበሎችን ይቀንሳሉ እንዲሁም በባሕር ዳርቻ ላይ ያለው አሸዋ እንዳይሸረሸር ይከላከላሉ",
+    "ground_truth": "በባሕር ውስጥ የሚበቅሉ ሣሮች በባሕሩ ውስጥ ያለው አሸዋ ባለበት እንዲቆይ ያደርጋሉ። ኮራሎች በበሽታ እንዳይጠቁ ይከላከላሉ። ከዚህም ሌላ አውዳሚ ማዕበሎችን ይቀንሳሉ፤ እንዲሁም በባሕር ዳርቻ ላይ ያለው አሸዋ እንዳይሸረሸር ይከላከላሉ።",
+    "num_words": 28
+  },
+  "anc": {
+    "lang": "anc",
+    "raw_input": "tar ngò gak tar ngo bap <noise> tar ngo kwa tar ngo fir tar ngo pèt tar ngo pimi tar ngo pòbap tak ngo pokun tar ngo pofar tar ngo sar tar ngo sarpogak tar ngo sarpobap",
+    "ground_truth": "Tar ngò gak, tar ngo bap, <noise> tar ngo kwa, tar ngo fir, tar ngo pèt, tar ngo pimi, tar ngo pòbap, tak ngo pokun, tar ngo pofar, tar ngo sar, tar ngo sarpogak, tar ngo sarpobap,",
+    "num_words": 37
+  },
+  "anw": {
+    "lang": "anw",
+    "raw_input": "ked íbà ítá ínáñ ítion ítiokéd ítiábá ítiáítá usukéd duob duobòkéd duob ébá duob étá duob énáñ éfud éfuròkéd éfur íbá éfur ítá éfur ínáñ élib",
+    "ground_truth": "Ked, íbà, ítá, ínáñ, ítion, ítiokéd, ítiábá, ítiáítá, usukéd, duob, duobòkéd, duob'ébá, duob'étá, duob'énáñ, éfud, éfuròkéd, éfur'íbá, éfur'ítá, éfur'ínáñ, élib",
+    "num_words": 26
+  },
+  "apd": {
+    "lang": "apd",
+    "raw_input": "طبعا النباح ده اول حاجة بعداك الريحه الكلاب بتشم ريحة بعضها وبتبول عشان تحدد الحتات حقتها وبي ريحة البول دي بيعرفوا بعض",
+    "ground_truth": "طبعا النباح ده اول حاجة. بعداك الريحه الكلاب بتشم ريحة بعضها وبتبول عشان تحدد الحتات حقتها ، وبي ريحة البول دي بيعرفوا بعض",
+    "num_words": 22
+  },
+  "arq": {
+    "lang": "arq",
+    "raw_input": "﻿لوكان عندي سمانه كونجي نفوتها ماكلة تحواس ورقاد وشويه بحر بيسين شميسه وتيليفزيون والماكلة",
+    "ground_truth": "﻿لوكان عندي سمانه كونجي، نفوتها ماكلة، تحواس ورقاد، وشويه بحر، بيسين، شميسه، وتيليفزيون والماكلة.",
+    "num_words": 14
+  },
+  "ary": {
+    "lang": "ary",
+    "raw_input": "كيحتاج الكلب عموما لثلاثين دقيقة حتى لساعة ديال التمارين يوميا على حسب النوع والحجم ديالو",
+    "ground_truth": "كيحتاج الكلب عموما لثلاثين دقيقة حتى لساعة ديال التمارين يوميا\n على حسب النوع والحجم ديالو.",
+    "num_words": 15
+  },
+  "arz": {
+    "lang": "arz",
+    "raw_input": "حضرتك العربية دى من احسن العربيات بيع السنة دى موديلات الفين اربعة وعشرين بال لنسبة لسعرها مقارنة بالعربيات التانية بالنسبة للاوبشنز اللى فيها فيها فول اوبشنز saftyجامد اه جى بى اس stability عالية جدا",
+    "ground_truth": "حضرتك العربية دى من احسن العربيات -بيع السنة دى موديلات الفين اربعة وعشرين بال-لنسبة لسعرها مقارنة بالعربيات التانية, بالنسبة للاوبشنز اللى فيها ,فيها فول اوبشنز ,saftyجامد اه- جى بى اس stability عالية جدا",
+    "num_words": 34
+  },
+  "ati": {
+    "lang": "ati",
+    "raw_input": "17 biblëɛ ˈla bɛn ˈˈɲɔn maan ˈa sɛ ˈˈkuö dzhi bɛn ˈla ˈɲɔn ˈe nɔn bokan tsa hën fotoe ye ˈpɛ",
+    "ground_truth": "17. Biblëɛ ˈla bɛn ˈˈɲɔn maan ˈa sɛ ˈˈkuö dzhi bɛn ˈla ˈɲɔn ˈe nɔn bokan tsa? (-Hën fotoe -ye ˈpɛ.)",
+    "num_words": 21
+  },
+  "avl": {
+    "lang": "avl",
+    "raw_input": "ما أقدم هواياتك كيف بدأت ممارستها أقدم هواية عندي هي اللعب على الكمبيوتر بدأت أمارسها من زمان كنت ألعب ألعاب بسيطة مثل ماريو وتعرفت على أنماط مختلفة الكمبيوتر كان يخليني أستمتع وأستكشف أشياء جديدة في أوقات فراغي",
+    "ground_truth": "ما أقدم هواياتك؟ كيف بدأت ممارستها؟\n\nأقدم هواية عندي هي اللعب على الكمبيوتر\n\nبدأت أمارسها من زمان، كنت ألعب ألعاب بسيطة مثل ماريو وتعرفت على أنماط مختلفة\n\nالكمبيوتر كان يخليني أستمتع وأستكشف أشياء جديدة في أوقات فراغي",
+    "num_words": 37
+  },
+  "ayl": {
+    "lang": "ayl",
+    "raw_input": "الكلب يحتاج الى على الاقل يعني تلاتين دقيقة الى ساعة يوميا من التمرينات سواء كان مشي او لعب لكن بعض السلالات تحتاج تمارين اكثر عشان يحافظوا على نشاطهم وصحتهم",
+    "ground_truth": "الكلب يحتاج الى على الاقل يعني تلاتين دقيقة الى ساعة يوميا من التمرينات سواء كان مشي او لعب، \n لكن بعض السلالات تحتاج تمارين اكثر عشان يحافظوا على نشاطهم وصحتهم.",
+    "num_words": 29
+  },
+  "bas": {
+    "lang": "bas",
+    "raw_input": "8 lelaa yésu a bi gwélél ngap a bééna i yoñ makidik nyemede",
+    "ground_truth": "8. Lelaa Yésu a bi gwélél ngap a bééna i yoñ makidik nyemede?",
+    "num_words": 13
+  },
+  "bci": {
+    "lang": "bci",
+    "raw_input": "sran ng ɔ bo i ɲin ase yo like n like ng ɔ sunnzun kɛ ɔ́ yó n ɔ́ yó ye ɲanndra mun 21 5",
+    "ground_truth": "“Sran ng’ɔ bo i ɲin ase yo like’n, like ng’ɔ sunnzun kɛ ɔ́ yó’n, ɔ́ yó ye.”— Ɲanndra Mun 21:5 .",
+    "num_words": 25
+  },
+  "bda": {
+    "lang": "bda",
+    "raw_input": "ipiahe míñaɭelo miñaḃanimã ka ka kasukoko kíġi koo fópindiġẽolomi puruġaɭo núġusove iḃay muṗe bumaŋenobahalehekua moinibaloŋ éludu dõkk adumo éludu énoo ezamiem míama",
+    "ground_truth": "ipiahe míñaɭelo miñaḃanimã ka- ka- kasukoko kíġi koo fópindiġẽolomi puruġaɭo núġusove, iḃay muṗe bumaŋenobahalehekua. Moinibaloŋ éludu ; dõkk adumo éludu énoo ezamiem míama.",
+    "num_words": 22
+  },
+  "bdm": {
+    "lang": "bdm",
+    "raw_input": "gate kiyi gəakənnə həgəy hənjie ha arakə tuəlor wəaskə həliegəar hakan hakanyu gəte hakanyu kiyi hakanyu gəakənna hakan həgəy hakan hənjie hakanyu həararakə hakany tuelora",
+    "ground_truth": "Gate, kiyi, gəakənnə, həgəy, hənjie, ha’arakə, tuəlor, wəaskə, həliegəar, hakan, hakanyu gəte, hakanyu kiyi, hakanyu gəakənna, hakan həgəy, hakan hənjie, hakanyu həararakə, hakany tuelora.",
+    "num_words": 25
+  },
+  "bem": {
+    "lang": "bem",
+    "raw_input": "3 bushe icibukisho cilenga shani twaba abaikatana isonde lyonse moneni ne cikope",
+    "ground_truth": "3. Bushe Icibukisho cilenga shani twaba abaikatana isonde lyonse? (Moneni ne cikope.)",
+    "num_words": 12
+  },
+  "bhr": {
+    "lang": "bhr",
+    "raw_input": "<noise> ny tenda lavan ny zirafy igny e da manampy azy e hahazo sakafo amin ireo hazo avo izay tsy takatsy ny biby hafa igny koa da manome tombony <noise> lehibe azy amin ny fifaninana lafa misakafo",
+    "ground_truth": "<noise> Ny tenda lavan'ny zirafy igny e da manampy azy e hahazo sakafo amin'ireo hazo avo izay tsy takatsy ny biby hafa.\nIgny koa da manome tombony <noise> lehibe azy amin'ny fifaninana lafa misakafo.",
+    "num_words": 37
+  },
+  "bin": {
+    "lang": "bin",
+    "raw_input": "9 de vbene u khian ya ru iyobọ ne ọmwa ne u gu ruẹ e baibol nọ gha mu egbe dọmwadẹ iruẹmwi yotọ rhan otọ re",
+    "ground_truth": "9. De vbene u khian ya ru iyobọ ne ọmwa ne u gu ruẹ e Baibol, nọ gha mu egbe dọmwadẹ iruẹmwi yotọ? Rhan otọ re.",
+    "num_words": 26
+  },
+  "biw": {
+    "lang": "biw",
+    "raw_input": "mang kingong tong kanieng ginonge kamong temang nge nenge peleng mang keniong tong eve",
+    "ground_truth": "Mang kingong tong kanieng ginonge kamong temang nge nenge peleng mang keniong tong eve.",
+    "num_words": 14
+  },
+  "bjt": {
+    "lang": "bjt",
+    "raw_input": "<hesitation> gyíŧe binsiimi binsiimi njali ma bintiibi nsiimi hamma bàa ma fana gíw",
+    "ground_truth": "<hesitation> gyíŧe, binsiimi binsiimi, njali ma bintiibi nsiimi hamma bàa ma fana gíw.",
+    "num_words": 13
+  },
+  "bky": {
+    "lang": "bky",
+    "raw_input": "ଆଈରୀଶ ସଂସ୍କୃତି ଆଈରୀଶ ସଂସ୍କୃତି ଏଖିର ସଂଗୀତ ନୁତ୍ଯା ଏବଂ ଉସ୍ଵବ ପରବୋ ଦ୍ଵାରା ଖାତ୍ଯା। ସେନ୍ଟ <hesitation> ପେଟ୍ରୀକ୍ସ ଦେଖ ଏଖିର ଏକ ମୁହତ୍ତ ପୁନ୍ଯ ଉସ୍ଵବ। ଆଈରୀଶ ଲୋଗ କୋ ମାନେ ଆତିତ୍ଯା ପତୀ ବୋହୁତ ପତୀ ଥୀ ପଡାଯାନ ଅଧନ୍ତୀ।",
+    "ground_truth": "ଆଈରୀଶ ସଂସ୍କୃତି, ଆଈରୀଶ ସଂସ୍କୃତି ଏଖିର ସଂଗୀତ ନୁତ୍ଯା ଏବଂ ଉସ୍ଵବ ପରବୋ ଦ୍ଵାରା ଖାତ୍ଯା।\nସେନ୍ଟ <hesitation> ପେଟ୍ରୀକ୍ସ ଦେଖ, ଏଖିର ଏକ ମୁହତ୍ତ ପୁନ୍ଯ ଉସ୍ଵବ।\nଆଈରୀଶ ଲୋଗ କୋ ମାନେ ଆତିତ୍ଯା ପତୀ ବୋହୁତ ପତୀ ଥୀ ପଡାଯାନ ଅଧନ୍ତୀ।",
+    "num_words": 32
+  },
+  "bmm": {
+    "lang": "bmm",
+    "raw_input": "sokatra karazandaoko foanigny karazandaoko tsy foanigny vato fasika raha maniry",
+    "ground_truth": "Sokatra, karazandaoko foanigny, karazandaoko tsy foanigny, vato, fasika, raha maniry",
+    "num_words": 10
+  },
+  "bmq": {
+    "lang": "bmq",
+    "raw_input": "han lanti yira bon un zunrobe bɛ a benɛ a bwa da han beso si wa <um> unbv zun mu bera so si yibɛ a ba ci sinaro un vɛ dia bie a mu wa unbɛ zun be tete a mu beso",
+    "ground_truth": "han lanti'yira bon un zunrobe bɛ'a benɛ a bwa da han beso\nsi wa <um> unbv zun mu bera,so si yibɛ a ba ci sinaro\nun  vɛ dia bie a mu wa unbɛ zun be tete'a mu beso",
+    "num_words": 42
+  },
+  "bou": {
+    "lang": "bou",
+    "raw_input": "mimi nampenda nguku kwasababu nguku nikaa nae nyumbani khana wasiwasi na pia mbogha yakwe naipenda sana ukamchinja yule ana nyama naona raha kuliko mbuzi wala ng ombe wala nku ngoto napenda nguku",
+    "ground_truth": "Mimi nampenda nguku, kwasababu nguku nikaa nae nyumbani khana wasiwasi. Na pia mbogha yakwe naipenda sana. Ukamchinja yule ana nyama naona raha, kuliko mbuzi wala ng'ombe wala nku- ngoto, napenda nguku.",
+    "num_words": 32
+  },
+  "bqg": {
+    "lang": "bqg",
+    "raw_input": "náñtɔ báa ŋalá tɩ ka sɩsɩ tʋ táa wɛrɛkɩ bɔɔ báa táŋ aŋkɛ ŋñ gɛ tɩ ŋñ yɛná dito náŋtɔ baá fɛñ tɩ ka sɩsɩ ró bʋ táa wɛrɛkɩ bɔɔ ŋñ yɛna dito",
+    "ground_truth": "Náñtɔ, báa ŋalá tɩ ka sɩsɩ tʋ táa wɛrɛkɩ bɔɔ báa táŋ aŋkɛ ŋñ gɛ tɩ ŋñ yɛná dito, náŋtɔ baá fɛñ tɩ ka sɩsɩ ró, bʋ táa wɛrɛkɩ bɔɔ, ŋñ yɛna dito.",
+    "num_words": 33
+  },
+  "bsq": {
+    "lang": "bsq",
+    "raw_input": "11 xwɛ̀ jàà ɓiè nyɔ̀ ɓè ɖà hwìè da wùɖù nìà wɛ́ɖɛ́ 96 8 múɛɛ kíɖíí sí teeɛ́",
+    "ground_truth": "11. Xwɛ̀ jàà ɓiè-nyɔ̀ ɓè ɖà hwìè-da-wùɖù nìà Wɛ́ɖɛ́ 96:8 múɛɛ kíɖíí sí teeɛ́?",
+    "num_words": 18
+  },
+  "bum": {
+    "lang": "bum",
+    "raw_input": "11 jé vanessa a nga bo asu na a bi mbamba bemvôé nalé a ye ele bia jé",
+    "ground_truth": "11. Jé Vanessa a nga bo asu na a bi mbamba bemvôé, nalé a ye’ele bia jé?",
+    "num_words": 18
+  },
+  "bys": {
+    "lang": "bys",
+    "raw_input": "<noise> beree bii ɓee rabrare ɓee ɓee diya nere ɓee nubli ɓee ɓee lumu ɓee umishid",
+    "ground_truth": "<noise> Beree bii ɓee, rabrare ɓee, ɓee diya, nere ɓee, nubli ɓee, ɓee lumu, ɓee umishid.",
+    "num_words": 16
+  },
+  "bzc": {
+    "lang": "bzc",
+    "raw_input": "aha misy mi biby io tsy managna maso fa tsy voatery hoe handeha hahita aby si jiabijiaby kara antsibiloka zô dia a nanavy regny zô dia agnisany biby tsy manamaso sady tsy mahita",
+    "ground_truth": "Aha, misy mi biby io tsy managna maso fa tsy voatery hoe handeha hahita aby si jiabijiaby.\nKara antsibiloka zô, dia a nanavy.\nRegny zô dia agnisany biby tsy manamaso sady tsy mahita.",
+    "num_words": 33
+  },
+  "cce": {
+    "lang": "cce",
+    "raw_input": "8 ngu sihi sikarato asi abrahamu a nga mana naso",
+    "ground_truth": "8. Ngu sihi sikarato asi Abrahamu a nga mana naso?",
+    "num_words": 10
+  },
+  "cgg": {
+    "lang": "cgg",
+    "raw_input": "waayenda kugura amakara <hesitation> waayenda kuteeka noogura amakara arigo waateekyesa kandi waayenda nk okureeba noogura etaara ariyo waakozeesa",
+    "ground_truth": "Waayenda kugura amakara, <hesitation> waayenda kuteeka, noogura amakara arigo waateekyesa, kandi waayenda nk'okureeba, noogura etaara ariyo waakozeesa.",
+    "num_words": 18
+  },
+  "chw": {
+    "lang": "chw",
+    "raw_input": "7 roma 10 13 15 ononiha dhavi wi mabasa olaleya bamakamaka",
+    "ground_truth": "7. Roma 10:13-15 ononiha dhavi wi mabasa olaleya bamakamaka?",
+    "num_words": 11
+  },
+  "cjk": {
+    "lang": "cjk",
+    "raw_input": "manyonga a yipalakata katwala ku kulumbama wika yishima 21 5",
+    "ground_truth": "“Manyonga a yipalakata katwala ku kulumbama wika.”— Yishima 21:5 .",
+    "num_words": 10
+  },
+  "ckl": {
+    "lang": "ckl",
+    "raw_input": "suche mahteur fhodu ndufu nkwa murfuh ntsisu mildla kuma",
+    "ground_truth": "Suche, mahteur, fhodu, ndufu, nkwa, murfuh, ntsisu, mildla, kuma.",
+    "num_words": 9
+  },
+  "crs": {
+    "lang": "crs",
+    "raw_input": "sa premye transmisyon ti en sikse pour sa prosen 33 an sa radyo wbbr ti ganny servi pour transmet bann progranm radyo pour pep zeova",
+    "ground_truth": "Sa premye transmisyon ti en sikse. Pour sa prosen 33 an, sa radyo WBBR ti ganny servi pour transmet bann progranm radyo pour pep Zeova.",
+    "num_words": 25
+  },
+  "csk": {
+    "lang": "csk",
+    "raw_input": "li laañen baj umaane woono kuŋen li ubakii kítum nan kujokumuu kata isilayeel kújowetum babiloon boot yok nan kilisita abukimuu",
+    "ground_truth": "Li laañen baj umaane woono kuŋen li ubakii, kítum nan kujokumuu kata Isilayeel kújowetum Babiloon boot yok nan Kilisita abukimuu.",
+    "num_words": 20
+  },
+  "dag": {
+    "lang": "dag",
+    "raw_input": "bipuɣinsi ata m bɔŋɔ yino ʒila gbarigu cheche zuɣu ka yino guuri doli o yino nyɛla ŋun ka palli maa zuɣu ka lee zaŋ o nuhi ti pɔbi o nina bɛ nyaaŋa nyɛla tihi din gili",
+    "ground_truth": "Bipuɣinsi ata m-bɔŋɔ yino ʒila gbarigu cheche zuɣu ka yino guuri doli o yino nyɛla ŋun ka palli maa zuɣu ka lee zaŋ o nuhi ti pɔbi o nina bɛ nyaaŋa nyɛla tihi din gili.",
+    "num_words": 36
+  },
+  "deg": {
+    "lang": "deg",
+    "raw_input": "iblayoka otromo bol uto do mekre me we iblanyo me wete iblayo do iblayo ikpote do mikro mitie mekro mediya do mekro medieki me de ibiay medeya mikrometa esy mikro mikpro idede mekro medeya iyoimunu me mimene vamidiya",
+    "ground_truth": "Iblayoka otromo bol uto do mekre me we iblanyo me wete iblayo do iblayo ikpote do mikro mitie mekro mediya do mekro medieki me de ibiay medeya mikrometa esy mikro mikpro idede mekro medeya iyoimunu me mimene vamidiya",
+    "num_words": 38
+  },
+  "dga": {
+    "lang": "dga",
+    "raw_input": "5 sobuo ka a etopiya dɔɔ da de yɛlɛ na oŋ da zanne na toŋ neŋ toma",
+    "ground_truth": "5. Sobuo ka a Etopiya dɔɔ da de yɛlɛ na oŋ da zanne na toŋ neŋ toma?",
+    "num_words": 17
+  },
+  "dgh": {
+    "lang": "dgh",
+    "raw_input": "latinine talanga luma ga sz gune lamisa thuma salda luma ga nisey",
+    "ground_truth": "Latinine, talanga, luma ga sz'gune lamisa, thuma, salda luma-ga nisey.",
+    "num_words": 12
+  },
+  "din": {
+    "lang": "din",
+    "raw_input": "6 7 ye wɛ̈tŋö cïï kɔc juëc yakoba ë luɔ̈ɔ̈i yeköölë ku ye wɛ̈tŋö thiek yen yic bï ya yen yeku door yetök",
+    "ground_truth": "6-7. Ye wɛ̈tŋö cïï kɔc juëc Yakoba ë luɔ̈ɔ̈i yeköölë, ku ye wɛ̈tŋö thiek yen yic bï ya yen yeku door yetök?",
+    "num_words": 23
+  },
+  "dip": {
+    "lang": "dip",
+    "raw_input": "ku tɔkï pïïrden rac në luɔɔi tuc thok",
+    "ground_truth": "Ku tɔkï pïïrden rac në luɔɔi tuc thok.",
+    "num_words": 8
+  },
+  "dnj": {
+    "lang": "dnj",
+    "raw_input": "a‑ ‑pö ka ‑dhɛ tɛan‑ ka ꞊dhɛ kii dho ka bo ‑ziö izraɛdhö ‑pö ꞊gban gü ‑sü ka kö mang mɛgbömɛ mii nu ꞊kö",
+    "ground_truth": "A‑ ‑pö ka ‑dhɛ tɛan‑ ka ꞊dhɛ kii dho ka bo ‑ziö Izraɛdhö ‑pö ꞊gban gü ‑sü ka kö mang Mɛgbömɛ mii nu ꞊kö.",
+    "num_words": 24
+  },
+  "dua": {
+    "lang": "dua",
+    "raw_input": "4 njika mo̱nge̱le̱ me ná ma lo̱ko̱ bonasango na bonańango ba mákokwe̱ mimbu e",
+    "ground_truth": "4. Njika mo̱nge̱le̱ me ná ma lo̱ko̱ bonasango na bonańango ba mákokwe̱ mimbu e?",
+    "num_words": 14
+  },
+  "dyu": {
+    "lang": "dyu",
+    "raw_input": "6 zeremi ni baruki ye mun lo kɛ tuma min na masacɛ wulila u kama",
+    "ground_truth": "6. Zeremi ni Baruki ye mun lo kɛ tuma min na masacɛ wulila u kama?",
+    "num_words": 15
+  },
+  "ebu": {
+    "lang": "ebu",
+    "raw_input": "irio cia muthenya urumo tanini na cia kivwaii urumatunini na nukwona nitukugia na ugima wa mwiri na nitugutorora",
+    "ground_truth": "Irio cia muthenya urumo tanini na cia kivwaii urumatunini na nukwona nitukugia na ugima wa mwiri na nitugutorora.",
+    "num_words": 18
+  },
+  "ekr": {
+    "lang": "ekr",
+    "raw_input": "aaaakpo kayata maleyi agaha nini na kpoi kumeh kun kpoi kuan kpoi akun kpoi yah ino go go yah meh kun kpoi kah tchor tchor neijei alah kpoi mi your orh mi bor o h mah re o h meh meh onor tchor neijei",
+    "ground_truth": "aaaakpo kayata, maleyi agaha-nini na-kpoi, kumeh kun-kpoi'' kuan-kpoi-akun-kpoi-yah, ino go-go yah, meh-kun-kpoi kah-tchor-tchor neijei alah kpoi, mi-your-orh, mi-bor o'h mah-re o'h meh-meh onor-tchor-neijei",
+    "num_words": 44
+  },
+  "elm": {
+    "lang": "elm",
+    "raw_input": "mju nu ã ya bo ka a ra toro na na nu te re õ nãã te yoruyaru a õ re ka yo cu base oton nsan",
+    "ground_truth": "Mju nu ã-ya bo ka a-ra toro na na nu te re õ nãã te yoruyaru a õ re ka yo cu base oton nsan.",
+    "num_words": 27
+  },
+  "ewe": {
+    "lang": "ewe",
+    "raw_input": "woayɔ wò aƒewo me wò dumegãwo ƒe aƒewo me kple egiptetɔwo katã ƒe aƒewo me nu si mia fofowo loo alo mia tɔgbuiwo mekpɔ kpɔ tso gbe si gbe wova anyigba sia dzi va se ɖe fifia o",
+    "ground_truth": "Woayɔ wò aƒewo me, wò dumegãwo ƒe aƒewo me kple Egiptetɔwo katã ƒe aƒewo me, nu si mia fofowo loo alo mia tɔgbuiwo mekpɔ kpɔ, tso gbe si gbe wova anyigba sia dzi va se ɖe fifia o.",
+    "num_words": 38
+  },
+  "ewo": {
+    "lang": "ewo",
+    "raw_input": "bia yi yen é mam bia yeane bò asu yi na yéhova a ke osu a tòng lò bia bi taag fe ai énying",
+    "ground_truth": "Bia yi yen é mam bia yeane bò asu yi na Yéhova a ke osu a tòng’lò bia, bi taag fe ai énying.",
+    "num_words": 24
+  },
+  "eyo": {
+    "lang": "eyo",
+    "raw_input": "kotikanutik chegia chegianyoru kochepo paisyet nekiapat imbaret ayage tuga ko kiayai kasit kiay poisyet apat imbaret anyoru tugukchu awe alchinegei imbaret nyuu agoi ingunoo atinye atinye mbaret nyu atinye tuk chuu kikitorto paisyosye chota tukul chepo chepo mbaret",
+    "ground_truth": "Kotikanutik chegia chegianyoru, kochepo paisyet nekiapat imbaret. Ayage tuga ko kiayai kasit kiay poisyet apat imbaret anyoru tugukchu, awe alchinegei imbaret nyuu. Agoi ingunoo atinye atinye mbaret nyu atinye tuk chuu kikitorto paisyosye chota tukul chepo chepo mbaret.",
+    "num_words": 38
+  },
+  "fan": {
+    "lang": "fan",
+    "raw_input": "tsilighe abakh été bifiè bisese ma kobe wa jér 30 2",
+    "ground_truth": "« Tsilighe abakh été, bifiè bisese ma kobe wa »— JÉR. 30:2 .",
+    "num_words": 11
+  },
+  "fat": {
+    "lang": "fat",
+    "raw_input": "dza nkyɛ mɔhwehwɛ mu yɛ hɛn po m nhwehwɛmu ama yeehu dɛ ndzɛmba bebree fa ɛpo no ho a yennyim mebɛpɛ dɛ mɔhwehwɛ ɔno na yehu wiase do nsɛm nyinaa ansaana yɛdze efi hɛn asaase yi do akɔ beebi fofor",
+    "ground_truth": "Dza nkyɛ mɔhwehwɛ mu yɛ hɛn po m'. Nhwehwɛmu ama yeehu dɛ ndzɛmba bebree fa ɛpo no ho a yennyim.\nMebɛpɛ dɛ mɔhwehwɛ ɔno na yehu wiase do nsɛm nyinaa ansaana yɛdze efi hɛn asaase yi do akɔ beebi fofor.",
+    "num_words": 40
+  },
+  "ffm": {
+    "lang": "ffm",
+    "raw_input": "jamma suundu fowru ɗii kaa ɗii mbiyataa jamma kañun ɓuri bon ndeen woni ko ɗi tewtata ko ɗi ñaamata taweede <hesitation> daabaaji jiilotooɗi jamma ana ngoodi fu <hesitation> ɗii ɗiɗi kaa ɓuri heewde yiilaade nokku amen ka",
+    "ground_truth": "Jamma, suundu, fowru. \nƊii kaa ɗii mbiyataa jamma kañun ɓuri. \nBon, ndeen woni ko ɗi tewtata ko ɗi ñaamata.\nTaweede <hesitation> daabaaji jiilotooɗi jamma ana ngoodi fu.\n<hesitation> Ɗii ɗiɗi kaa ɓuri heewde yiilaade nokku amen ka.",
+    "num_words": 37
+  },
+  "fia": {
+    "lang": "fia",
+    "raw_input": "shettel taban sesori oremga jaga aowa fana tigi sawarikoni bardo aowa fana tigi famu iskentikon bardo oremga jagi shado famu anjalia oremel fajemona",
+    "ground_truth": "Shettel taban sesori oremga jaga aowa fana tigi, sawarikoni bardo aowa fana tigi famu, iskentikon bardo oremga jagi shado famu, anjalia oremel fajemona.",
+    "num_words": 23
+  },
+  "fip": {
+    "lang": "fip",
+    "raw_input": "yene ndani usi niela kwamaana ukasolie pamayo kumuzuka leenge akusalulile la kupenda <noise>",
+    "ground_truth": "Yene ndani usi niela kwamaana ukasolie pamayo kumuzuka leenge akusalulile la kupenda <noise>.",
+    "num_words": 13
+  },
+  "fon": {
+    "lang": "fon",
+    "raw_input": "ye wá madagascar ɖò 2006 bo jɛ vivǐ sinsɛnzɔ́ yetɔn tɔn ɖu jí sín hwenɛnu nadia ɖɔ lee mɛ lɛ nɔ yí wɛn ɔ gbɔn é nɔ na awǎjijɛ ɖaxó mǐ",
+    "ground_truth": "Ye wá Madagascar ɖò 2006 bo jɛ vivǐ sinsɛnzɔ́ yetɔn tɔn ɖu jí sín hwenɛnu. Nadia ɖɔ: “Lee mɛ lɛ nɔ yí wɛn ɔ gbɔn é nɔ na awǎjijɛ ɖaxó mǐ.”",
+    "num_words": 31
+  },
+  "fuc": {
+    "lang": "fuc",
+    "raw_input": "rawaandu ina foti softinde ɓanndu mun kala ñalawma hakke hojomaaji cappanɗe tati fayde waktu gooto",
+    "ground_truth": "Rawaandu ina foti softinde ɓanndu mun kala ñalawma hakke hojomaaji cappanɗe tati fayde waktu gooto.",
+    "num_words": 15
+  },
+  "fue": {
+    "lang": "fue",
+    "raw_input": "<noise> gammurdi onordam moi en se gooɗo jooda waala fitinaji nanga addini be njuungo didi waada sadaka ta godɗo kabi be himɓe ta godɗo voola haala himɓe ta godɗo waada ki voodaka se godɗo jooga addini be njuugo didi",
+    "ground_truth": "<noise> Gammurdi onordam moi en se gooɗo jooda waala fitinaji.\n Nanga addini be njuungo didi waada sadaka. \nTa godɗo kabi be himɓe, ta godɗo voola haala himɓe. \nTa godɗo waada ki voodaka, se godɗo jooga addini be njuugo didi.",
+    "num_words": 39
+  },
+  "fuf": {
+    "lang": "fuf",
+    "raw_input": "ɓikkoñ laahooji kam e ɓuri yidgo dimbugo ɓandu e koñ ɓuri yidgo exercise kadi laahoo makko tedduko e ko njiɗi exercise kalluɗum yaadu goɗɗu ndu laahoyn koñ ɓalli tokosi bo e koñ bukati exercise seɗɗa",
+    "ground_truth": "Ɓikkoñ laahooji kam e ɓuri yidgo dimbugo ɓandu e koñ ɓuri yidgo exercise. Kadi laahoo makko tedduko e ko njiɗi exercise kalluɗum yaadu goɗɗu ndu laahoyn koñ ɓalli tokosi bo e koñ bukati exercise  seɗɗa.",
+    "num_words": 35
+  },
+  "fuh": {
+    "lang": "fuh",
+    "raw_input": "adadi doggudu ko haani kutiru waɗa kondeye ngam njamu ɓandu mun e duɓi mun e ɓeydaaki jaamu kutiru jaamu haani doggudu mintiji chappanɗe jewenay so kutiru yaamaki sanne bo wawaay heɓude doggudu mintiji nogas yari chappanɗe tati",
+    "ground_truth": "Adadi doggudu ko haani kutiru waɗa kondeye, ngam njamu ɓandu mun, e duɓi mun e ɓeydaaki jaamu.\nKutiru jaamu haani doggudu mintiji chappanɗe jewenay, so kutiru yaamaki sanne bo wawaay heɓude doggudu mintiji nogas yari chappanɗe tati.",
+    "num_words": 37
+  },
+  "fui": {
+    "lang": "fui",
+    "raw_input": "ewo digoo djenai djedidi sapo sapo ejoi nugasetati nugasenai chapane ndente mere",
+    "ground_truth": "Ewo digoo, djenai, djedidi, sapo, sapo ejoi, nugasetati, nugasenai, chapane, ndente mere.",
+    "num_words": 12
+  },
+  "ful": {
+    "lang": "ful",
+    "raw_input": "dif firiza ɓeɗo naftira be majum ngam feunuki ndiyam enanta lemu be ko nandi be man roɓɓe ɗo naftira wata kare hako banta kusel heɓa ta vonna",
+    "ground_truth": "Dif firiza ɓeɗo naftira be majum ngam feunuki ndiyam, enanta lemu, be ko nandi be man, roɓɓe ɗo naftira wata kare hako banta kusel heɓa ta vonna.",
+    "num_words": 27
+  },
+  "fuq": {
+    "lang": "fuq",
+    "raw_input": "geraaɗe nii guda ɗiɗi on woodi mauɗe woodi pamare ha launi maje boo woodi daneje ɓaleje woodi launi leddi leddi woodi zargina woodi muuɓe woodi bo jena muuɓe",
+    "ground_truth": "Geraaɗe nii guda ɗiɗi on, woodi mauɗe, woodi pamare. \nHa launi maje boo woodi daneje, ɓaleje, woodi launi leddi-leddi, woodi zargina. \nWoodi muuɓe woodi bo jena muuɓe",
+    "num_words": 28
+  },
+  "fuv": {
+    "lang": "fuv",
+    "raw_input": "o artay almasiihu warki nder bawɗe ruuhu allah ɗe annabi iliya heɓunoo o siryootiray danyooɓe e ɓiɓɓe maɓɓe",
+    "ground_truth": "O artay Almasiihu warki nder bawɗe Ruuhu Allah ɗe Annabi Iliya heɓunoo, o siryootiray danyooɓe e ɓiɓɓe maɓɓe.",
+    "num_words": 18
+  },
+  "gaa": {
+    "lang": "gaa",
+    "raw_input": "4 5 mɛɛ naagbai noa kɛkpe mɛni hewɔ eshifimɔ lɛ sa kadimɔ lɛ",
+    "ground_truth": "4, 5. Mɛɛ naagbai Noa kɛkpe? Mɛni hewɔ eshifimɔ lɛ sa kadimɔ lɛ?",
+    "num_words": 13
+  },
+  "gax": {
+    "lang": "gax",
+    "raw_input": "duuba waaqi deesiftu suni eebise worri israelileeni heddate jabeenna argate",
+    "ground_truth": "Duuba Waaqi deesiftu suni eebise, worri Israelileeni heddate jabeenna argate.",
+    "num_words": 10
+  },
+  "gaz": {
+    "lang": "gaz",
+    "raw_input": "achii immoo kaee gara biyya tulluun itti baayatu isa betel irraa gara baa biiftuutti argamu dhaqe godoo isaas betelin gara lixa biiftuutti aayin gara baa biiftuutti hambisee gidduu dhaabbate achittis iddoo itti waaqayyoof aarsaa dhieessu ijaaree maqaa waaqayyoo waammate*",
+    "ground_truth": "Achii immoo kaee gara biyya tulluun itti baayatu isa Betel irraa gara baa-biiftuutti argamu dhaqe; godoo isaas Betelin gara lixa-biiftuutti, Aayin gara baa-biiftuutti hambisee gidduu dhaabbate; achittis iddoo itti Waaqayyoof aarsaa dhieessu ijaaree, maqaa Waaqayyoo waammate*.",
+    "num_words": 39
+  },
+  "gdf": {
+    "lang": "gdf",
+    "raw_input": "to yan dige kwaraka kwarane aɗu wudanna kwarane hwar ba mena biya udah nivude to yan digite",
+    "ground_truth": "To yan dige kwaraka kwarane aɗu wudanna kwarane hwar ba mena biya udah nivude to yan digite",
+    "num_words": 17
+  },
+  "gkn": {
+    "lang": "gkn",
+    "raw_input": "5 6 éé ní ea náa è nyimá kọọ̀ éhàb náa beè aa deè ọgá ẹ́",
+    "ground_truth": "5-6. Éé ní ea náa è nyimá kọọ̀ Éhàb náa beè aa deè ọgá ẹ́?",
+    "num_words": 16
+  },
+  "gsl": {
+    "lang": "gsl",
+    "raw_input": "aan éni umugoor bala usontéén ésoho yayu aw bémunde uŋa aw bémunde utiyo jaraam éséét nuŋa kindi bubébéén uŋa ukan to",
+    "ground_truth": "Aan éni umugoor, bala usontéén ésoho yayu, aw bémunde uŋa, aw bémunde utiyo jaraam éséét, nuŋa kindi bubébéén uŋa ukan to.",
+    "num_words": 21
+  },
+  "gur": {
+    "lang": "gur",
+    "raw_input": "sweden tiŋa duma buuri malema kankaŋi de la ba na asera ba tiŋa la gee kelum suŋera ba tiŋa la maalegɔ yɛla",
+    "ground_truth": "Sweden tiŋa duma buuri malema kankaŋi de la ba na'asera ba tiŋa la gee kelum suŋera ba tiŋa la maalegɔ yɛla.",
+    "num_words": 22
+  },
+  "guw": {
+    "lang": "guw",
+    "raw_input": "1 2 a avùnnukundiọsọmẹ tẹlẹ wẹ jonọ susu nọ pehẹ to egbehe pọ́n yẹdide he tin to bẹjẹeji hosọ ehe tọn b etẹwẹ apọsteli paulu flin mí podọ kanbiọ tẹlẹ wẹ enẹ fọndote",
+    "ground_truth": "1, 2. (a) Avùnnukundiọsọmẹ tẹlẹ wẹ jonọ susu nọ pehẹ to egbehe? (Pọ́n yẹdide he tin to bẹjẹeji hosọ ehe tọn.) (b) Etẹwẹ apọsteli Paulu flin mí, podọ kanbiọ tẹlẹ wẹ enẹ fọndote?",
+    "num_words": 33
+  },
+  "guz": {
+    "lang": "guz",
+    "raw_input": "endagera egochenga omobere amanyinga niga aichire omobere eye nere endagera inche nyanchete ekero erosiri buya igo nabo amaene nkogokera endagera eywo naende nabo ngoteba ng a nyerete buya kabisa naende eragerwe ewiki engima nabo okonyora ng a chinsaga echi nabo nchiriete igo",
+    "ground_truth": "Endagera egochenga omobere, amanyinga niga aichire omobere. Eye nere endagera inche nyanchete ekero erosiri buya igo, nabo amaene nkogokera endagera eywo, naende nabo ngoteba ng'a nyerete buya kabisa naende eragerwe, ewiki engima nabo okonyora ng'a, chinsaga echi nabo nchiriete igo.",
+    "num_words": 42
+  },
+  "gwe": {
+    "lang": "gwe",
+    "raw_input": "ikero nifurie <hesitation> inywa uji na chai kole ni chai na kitafunwa chakwe na uji nipho findo fakwa njephipendelea ikyero <noise> naifurie ikaanga marughu niywelie chai maana kunu haghire marughu kana nichemshie mimanga ninywe na chai",
+    "ground_truth": "Ikero nifurie <hesitation> inywa uji na chai. Kole ni chai na kitafunwa chakwe na uji. Nipho findo fakwa njephipendelea ikyero. <noise> Naifurie ikaanga marughu niywelie chai maana kunu haghire marughu kana nichemshie mimanga ninywe na chai",
+    "num_words": 36
+  },
+  "gxx": {
+    "lang": "gxx",
+    "raw_input": "dhɛ ˗a ˈyea nʋn ˗bho dhɩ ˗ɩan˗ ˈˈzrua ˗abʋ a sa ˈbho ˗a ˗gwlɩˈˈ ˈkpa aˈ",
+    "ground_truth": "Dhɛ ˗a ˈyea nʋn ˗bho dhɩ ˗ɩan˗ ˈˈzrua ˗abʋ a sa ˈbho ˗a ˗gwlɩˈˈ ˈkpa aˈ.",
+    "num_words": 16
+  },
+  "gyz": {
+    "lang": "gyz",
+    "raw_input": "gwe a teted dabam na ilgwe a dla̱m wuso kyo kolti zhin se kasuwa gwe ana pa̱lti wu ga̱ wulti suk wulti ka̱wu ilgwisiwo yek ɗe ilgwe depa na la̱k ka̱ lubi giwu so yek ka̱n agode",
+    "ground_truth": "Gwe a teted dabam na ilgwe a dla̱m wuso kyo kolti zhin se kasuwa gwe ana pa̱lti wu ga̱ wulti suk wulti ka̱wu ilgwisiwo yek ɗe ilgwe depa na la̱k ka̱ lubi giwu so yek ka̱n agode.",
+    "num_words": 37
+  },
+  "hau": {
+    "lang": "hau",
+    "raw_input": "1 me ke zuwa zuciyarmu idan muka yi tunani a kan abubuwan da jehobah ya halitta",
+    "ground_truth": "1. Me ke zuwa zuciyarmu idan muka yi tunani a kan abubuwan da Jehobah ya halitta?",
+    "num_words": 16
+  },
+  "hav": {
+    "lang": "hav",
+    "raw_input": "11 gurhe yehova akarhurhabala yirhugenderera kubera bemana kuye",
+    "ground_truth": "11. Gurhe Yehova akarhurhabala yirhugenderera kubera bemana kuye?",
+    "num_words": 8
+  },
+  "ibo": {
+    "lang": "ibo",
+    "raw_input": "6 a dị ka ndị hibru 10 ​24 25 si kwuo olee otú azịza ụmụnna anyị na aza si abara anyị uru b olee otú ị ga esi egosi na obi dị gị ụtọ maka ya",
+    "ground_truth": "6. (a) Dị ka Ndị Hibru 10:​24, 25 si kwuo, olee otú azịza ụmụnna anyị na-aza si abara anyị uru? (b) Olee otú ị ga-esi egosi na obi dị gị ụtọ maka ya?",
+    "num_words": 36
+  },
+  "ida": {
+    "lang": "ida",
+    "raw_input": "muzinzu ziaro nundi valiza vulai khalondekhana na megizo ganje maa vakhana vanundi vari vulai vagonaa kushitali vugonaa khumatoo vivimba milingeti valaa zishuka lakini",
+    "ground_truth": "Muzinzu ziaro nundi valiza vulai, khalondekhana na megizo ganje, maa vakhana vanundi, vari vulai, vagonaa kushitali, vugonaa khumatoo, vivimba milingeti, valaa zishuka lakini.",
+    "num_words": 23
+  },
+  "idu": {
+    "lang": "idu",
+    "raw_input": "ofẹta chigwahanẹ ofẹnẹ ofẹnẹ chee ofẹnẹ chẹpa ofẹnẹ chẹta ofẹnẹ chẹnẹ ofẹnẹ chẹhọ ofẹnẹ chẹhili ofẹnẹ chahapa ofẹnẹ chahata ofẹnẹ chahanẹ ofẹnẹ chigwo ofẹnẹ chigwolee ofẹnẹ chigwẹpa ofẹnẹ chigwẹta ofẹnẹ chigwẹnẹ ofẹnẹ chigwẹhọ ofẹnẹ chigwẹhili ofẹnẹ chigwahapa ofẹnẹ chigwahata ofẹnẹ chigwahanẹ ofẹhọ",
+    "ground_truth": "Ofẹta-chigwahanẹ, ofẹnẹ, ofẹnẹ-chee, ofẹnẹ-chẹpa, ofẹnẹ-chẹta, ofẹnẹ-chẹnẹ, ofẹnẹ-chẹhọ, ofẹnẹ-chẹhili, ofẹnẹ-chahapa, ofẹnẹ-chahata, ofẹnẹ-chahanẹ, ofẹnẹ-chigwo, ofẹnẹ-chigwolee, ofẹnẹ-chigwẹpa, ofẹnẹ-chigwẹta, ofẹnẹ-chigwẹnẹ, ofẹnẹ-chigwẹhọ, ofẹnẹ-chigwẹhili, ofẹnẹ-chigwahapa, ofẹnẹ-chigwahata, ofẹnẹ-chigwahanẹ, ofẹhọ",
+    "num_words": 42
+  },
+  "ijc": {
+    "lang": "ijc",
+    "raw_input": "nein a sii oyi taaru feni nein a sii nein feni nein a sii oyi sonron feni nein s sii oyi sindiye feni nein a sii oyi sonoma feni nein a sii oyin nigina feni nein a sii oyi ise feni sonron a sii sonron a sii",
+    "ground_truth": "Nein a sii oyi taaru-feni, nein a sii nein-feni, nein a sii oyi sonron-feni, nein s sii oyi-sindiye-feni, nein a sii oyi-sonoma-feni, nein a sii oyin-nigina-feni, nein a sii oyi-ise-feni, sonron a sii . sonron a sii.",
+    "num_words": 47
+  },
+  "ikw": {
+    "lang": "ikw",
+    "raw_input": "nbom abali alawara abali alo abali ano abali ke abali isuru abali asa",
+    "ground_truth": "nbom, Abali-alawara, Abali-Alo, Abali-Ano, Abali-ke, Abali-Isuru, Abali- Asa",
+    "num_words": 13
+  },
+  "ish": {
+    "lang": "ish",
+    "raw_input": "kpede ohen hen bhuzala kpede ozeva bhu zala kpede bho zehar bhu zala ukpede nor zelen bhu zala kpede nor zisen bhu zala ukpede oze han bhuzala ukped bho ze <noise> hion bhu zula",
+    "ground_truth": "Kpede ohen hen bhuzala kpede ozeva bhu zala kpede bho zehar bhu zala ukpede nor zelen bhu zala kpede nor zisen bhu zala ukpede oze han bhuzala ukped bho ze <noise> hion bhu zula.",
+    "num_words": 34
+  },
+  "itw": {
+    "lang": "itw",
+    "raw_input": "otu nte iko abasi adade min e aka",
+    "ground_truth": "otu nte iko Abasi adade min e aka",
+    "num_words": 8
+  },
+  "iyx": {
+    "lang": "iyx",
+    "raw_input": "kuu ku bali na ipfu kia uvuutunu kwali peetero yowani yaki andere filipo toma baritelemi mataayi yaki mwaana alife simooni muzeloti na yuuda mwaana yaki",
+    "ground_truth": "Kuu, ku bali na ipfu kia uvuutunu, kwali: Peetero, Yowani, Yaki, Andere, Filipo, Toma, Baritelemi, Mataayi, Yaki mwaana Alife, Simooni muzeloti na Yuuda mwaana Yaki.",
+    "num_words": 25
+  },
+  "juk": {
+    "lang": "juk",
+    "raw_input": "jonwuju jenza natswi zohwa chukoue di sonfa ane gannwin aye weku khenuju",
+    "ground_truth": "Jonwuju, jenza, natswi, zohwa, chukoue, di, sonfa, ane, gannwin, aye, weku, khenuju",
+    "num_words": 12
+  },
+  "kab": {
+    "lang": "kab",
+    "raw_input": "10 acu i d ibeggnen belli yub ur ikukra ara a s yesmir ul is i yahwa ssefhem ed",
+    "ground_truth": "10. Acu i d-ibeggnen belli Yub ur ikukra ara a s-yesmir ul-is i Yahwa? Ssefhem-ed.",
+    "num_words": 19
+  },
+  "kam": {
+    "lang": "kam",
+    "raw_input": "14 nĩ matambya meva tũtonya kwosa oyu twĩyũmbanĩsye ĩvinda yĩla yũkĩte",
+    "ground_truth": "14. Nĩ matambya meva tũtonya kwosa oyu twĩyũmbanĩsye ĩvinda yĩla yũkĩte?",
+    "num_words": 11
+  },
+  "kbp": {
+    "lang": "kbp",
+    "raw_input": "6 ɛbɛ yɔɔ pɩwɛɛ se ɖɩtɔzɩ alɩwaatʋ ndʋ ɖɔ hɔʋ taa mba kaɖɩɣnɩ pana wena ɖɩñakɩ ɛsɔ sɛtʋ taa yɔ",
+    "ground_truth": "6. Ɛbɛ yɔɔ pɩwɛɛ se ɖɩtɔzɩ alɩwaatʋ ndʋ ɖɔ-hɔʋ taa mba kaɖɩɣnɩ pana wena ɖɩñakɩ Ɛsɔ sɛtʋ taa yɔ?",
+    "num_words": 20
+  },
+  "kck": {
+    "lang": "kck",
+    "raw_input": "koga kwakati atjakumbula ikoku ntumwa wa she kaboneka kunli mu hwope eti josefa nkololo wa dafite usitje kukotosa mariya nkadzi uwo ngobe tjaakazwisenga nge tje meya yakayengemala",
+    "ground_truth": "Koga kwakati atjakumbula ikoku, ntumwa wa She kaboneka kunli mu hwope eti, “Josefa nkololo wa Dafite, usitje kukotosa Mariya nkadzi uwo, ngobe tjaakazwisenga nge tje Meya yakayengemala.",
+    "num_words": 27
+  },
+  "kea": {
+    "lang": "kea",
+    "raw_input": "otu bês óras ki bu maridu ô bu mudjer fla ô faze algun kuza ki magua u pergunta bu kabésa",
+    "ground_truth": "Otu bês, óras ki bu maridu ô bu mudjer fla ô faze algun kuza ki magua-u, pergunta bu kabésa:",
+    "num_words": 20
+  },
+  "keu": {
+    "lang": "keu",
+    "raw_input": "eciye yɨ lǝǝmɨ anyɩŋyǝ kaamɨ gʊmʊrǝ wʊʊrǝ fʊlɩfʊlɩi tɛkpɛrɛ narayǝ koŋnɔrɔŋyǝ caŋciyǝ",
+    "ground_truth": "Eciye yɨ lǝǝmɨ anyɩŋyǝ kaamɨ gʊmʊrǝ wʊʊrǝ fʊlɩfʊlɩi tɛkpɛrɛ, narayǝ, koŋnɔrɔŋyǝ, caŋciyǝ.",
+    "num_words": 12
+  },
+  "kik": {
+    "lang": "kik",
+    "raw_input": "kũrĩ mũgaathe theofilo andũ aingĩ nĩmarĩĩkĩĩtie kwandĩka ũhoro wa maũndũ marĩa marĩĩkĩĩtie kuoneka gatagatĩinĩ gaitũ",
+    "ground_truth": "Kũrĩ mũgaathe Theofilo: Andũ aingĩ nĩmarĩĩkĩĩtie kwandĩka ũhoro wa maũndũ marĩa marĩĩkĩĩtie kuoneka gatagatĩinĩ gaitũ.",
+    "num_words": 15
+  },
+  "kin": {
+    "lang": "kin",
+    "raw_input": "ese utekereza ko abantu bashobora gukemura ibibazo bituma tutagira amahoro n umutekano kandi bigatuma duhangayikishwa n ejo hazaza niba twifuza gukemura ibibazo dufite tugomba kubanza kumenya ikibitera",
+    "ground_truth": "Ese utekereza ko abantu bashobora gukemura ibibazo bituma tutagira amahoro n’umutekano kandi bigatuma duhangayikishwa n’ejo hazaza? Niba twifuza gukemura ibibazo dufite, tugomba kubanza kumenya ikibitera.",
+    "num_words": 27
+  },
+  "kln": {
+    "lang": "kln",
+    "raw_input": "kowolji `chebyosochooto pharaoh koleenji ma kergei kwonyiigap yahudik ak che po misiriik",
+    "ground_truth": "” Kowolji `chebyosochooto Pharaoh koleenji; “Ma kergei kwonyiigap Yahudik ak che po Misiriik.",
+    "num_words": 12
+  },
+  "kmb": {
+    "lang": "kmb",
+    "raw_input": "15 16 a kima kyahi kya katatu ki twa tokala kulembalala b kyebhi jihova kya jimbulula yoso ya nda bhita ni oso a zoka n etu",
+    "ground_truth": "15-16. (a) Kima kyahi kya katatu ki twa tokala kulembalala? (b) Kyebhi Jihova kya jimbulula yoso ya-nda bhita ni oso a zoka n’etu?",
+    "num_words": 26
+  },
+  "kmy": {
+    "lang": "kmy",
+    "raw_input": "beti gawi baatoro choncha jumɓare kalay naturn laadi",
+    "ground_truth": "Beti, gawi, baatoro, choncha, jumɓare, kalay, naturn laadi.",
+    "num_words": 8
+  },
+  "knf": {
+    "lang": "knf",
+    "raw_input": "aya aban aneej du uko ŧakariya aşë wul eliŧabet mboş",
+    "ground_truth": "Aya aban, aneej du uko Ŧakariya, aşë wul Eliŧabet mboş.",
+    "num_words": 10
+  },
+  "kny": {
+    "lang": "kny",
+    "raw_input": "nun baan balum nwiibaneemek ​ 1 py 3 7",
+    "ground_truth": "“Nun baan-balum, . . . Nwiibaneemek.” ​— 1 PY. 3:7 .",
+    "num_words": 9
+  },
+  "kon": {
+    "lang": "kon",
+    "raw_input": "16 inki ndongisila ya mbote mpangi knorr pesaka nkento na yandi",
+    "ground_truth": "16. Inki ndongisila ya mbote mpangi Knorr pesaka nkento na yandi?",
+    "num_words": 11
+  },
+  "koo": {
+    "lang": "koo",
+    "raw_input": "haliho ebisoro ebikabeha nabi byamabya ibiri ngomwanyumba bikasiba ahu sibiwithe obuyonjo ebisoro nge mbunu ebisoro ngende ebisoro ngembulhi bikasiba bikayiniayiniaku so siwuwithe ngokuwanga byoya aliwe abandu bakana byowaya betu wamabya isiwangakyoya bikatsuka eribya bikabeha kyityakyitya iwayisangana wukakyilhabaku ikyabeha kyityakyitya",
+    "ground_truth": "Haliho ebisoro ebikabeha nabi byamabya ibiri ngomwanyumba bikasiba ahu, sibiwithe obuyonjo, ebisoro nge mbunu, ebisoro ngende, ebisoro ngembulhi, bikasiba bikayiniayiniaku, so siwuwithe ngokuwanga byoya. Aliwe abandu bakana byowaya betu wamabya isiwangakyoya bikatsuka eribya bikabeha kyityakyitya iwayisangana wukakyilhabaku ikyabeha kyityakyitya.",
+    "num_words": 39
+  },
+  "kpo": {
+    "lang": "kpo",
+    "raw_input": "alʊɛdinɩ lanutɛ tsue nɛvɛ atanɩ adʊ awʊ ɔvɛ nɔwlɔmɔ nɛkɔtɔ vɛ kalʊɛdinɩ tsue natamɩdʊ ɩtsʊnɩ nʊgbatanɩ nɛkʊnɩ tsue natamɩdʊ",
+    "ground_truth": "Alʊɛdinɩ lanutɛ tsue nɛvɛ Atanɩ adʊ awʊ ɔvɛ, nɔwlɔmɔ, nɛkɔtɔ vɛ Kalʊɛdinɩ tsue natamɩdʊ Ɩtsʊnɩ nʊgbatanɩ nɛkʊnɩ tsue natamɩdʊ",
+    "num_words": 19
+  },
+  "kqo": {
+    "lang": "kqo",
+    "raw_input": "wiki a we eh due wiki a we sororn wiki a we taan wiki a we nyieh wiki a we mm wiki a we meheh lo wiki",
+    "ground_truth": "'Wiki-a 'we-eh 'due', 'wiki-a 'we-'sororn, 'wiki-a 'we-taan, 'wiki-a 'we-nyieh, 'wiki-a 'we-mm', 'wiki-a 'we-:meheh'lo:, 'wiki",
+    "num_words": 27
+  },
+  "kri": {
+    "lang": "kri",
+    "raw_input": "14 aw di advays we de na 1 pita 3 ​8 de ɛp wi we i kam to di we aw wi de yuz soshal midia",
+    "ground_truth": "14. Aw di advays we de na 1 Pita 3:​8 de ɛp wi we i kam to di we aw wi de yuz soshal midia?",
+    "num_words": 26
+  },
+  "kss": {
+    "lang": "kss",
+    "raw_input": "10 yɛɛ ŋ nɔ yɛ ma kindiŋ le tosaa nduyɛ le yɛɛ",
+    "ground_truth": "10. Yɛɛ ŋ nɔ yɛ ma kindiŋ le tosaa nduyɛ, le yɛɛ?",
+    "num_words": 12
+  },
+  "ktu": {
+    "lang": "ktu",
+    "raw_input": "9 yinki yehova ke talaka na mosi na mosi ya beto",
+    "ground_truth": "9. Yinki Yehova ke talaka na mosi na mosi ya beto?",
+    "num_words": 11
+  },
+  "kua": {
+    "lang": "kua",
+    "raw_input": "ashike ngenge oushi omalaka nena ohodulu okukala walonga okaana koye elaka aalo tali dulu okulongifwa pofikola",
+    "ground_truth": "Ashike ngenge oushi omalaka nena ohodulu okukala walonga okaana koye elaka aalo tali dulu okulongifwa pofikola.",
+    "num_words": 16
+  },
+  "kwm": {
+    "lang": "kwm",
+    "raw_input": "eemwedhi dhokomuvo eemwedhi dhokomumvo odhili omulongo nambali ongaashi ne tadhi landula mpa januali febuluali maalitsa apilili mei juni juli aguste sepetemba okotomba novemba decemba",
+    "ground_truth": "Eemwedhi dhokomuvo, eemwedhi dhokomumvo odhili omulongo nambali. ongaashi ne tadhi landula mpa: januali, febuluali, maalitsa, apilili, mei, juni, juli, aguste, sepetemba, okotomba, novemba, decemba",
+    "num_words": 24
+  },
+  "kwn": {
+    "lang": "kwn",
+    "raw_input": "^ nsene tuna hara wopeke va tu huguvare twa hepa kuyilikida asi kuvhura kutuhuguvara mosirongwa esi tatu ka lironga eyi ya karera nomulyo tu li huguvare huguvare ntani natu ka lironga yikara eyi nayi tu vatera yipo tu kare wokuvhura kuhuguvara",
+    "ground_truth": "^ Nsene tuna hara wopeke va tu huguvare twa hepa kuyilikida asi kuvhura kutuhuguvara. Mosirongwa esi tatu ka lironga eyi ya karera nomulyo tu li huguvare-huguvare ntani natu ka lironga yikara eyi nayi tu vatera yipo tu kare wokuvhura kuhuguvara.",
+    "num_words": 41
+  },
+  "kwy": {
+    "lang": "kwy",
+    "raw_input": "11 nkia sono ya nkand a nzambi ilenda kutusadisa mu sunda o wonga",
+    "ground_truth": "11. Nkia sono ya Nkand’a Nzambi ilenda kutusadisa mu sunda o wonga?",
+    "num_words": 13
+  },
+  "lag": {
+    "lang": "lag",
+    "raw_input": "nkooya mikono yeera chwee na sabuni nkaakikisha yeere chwe ukaikausha vyaboowa ili ikale salama vyaboha",
+    "ground_truth": "Nkooya mikono yeera chwee na sabuni, nkaakikisha yeere chwe ukaikausha vyaboowa, ili ikale salama vyaboha.",
+    "num_words": 15
+  },
+  "ldi": {
+    "lang": "ldi",
+    "raw_input": "8 mu bungu dia nti tuzoloko ti yezu kabâ mutinu eto",
+    "ground_truth": "8. Mu bungu dia nti tuzoloko ti Yezu kabâ Mutinu’eto?",
+    "num_words": 11
+  },
+  "leh": {
+    "lang": "leh",
+    "raw_input": "3 ino beneklistu boonse balyeelete kucita buyani pesule lyakubombekwa",
+    "ground_truth": "3. Ino Beneklistu boonse balyeelete kucita buyani pesule lyakubombekwa?",
+    "num_words": 9
+  },
+  "lin": {
+    "lang": "lin",
+    "raw_input": "nzambe abengaki mabele ya kokawuka mokili mpe abengaki mayi oyo esanganaki esika moko ebale monene",
+    "ground_truth": "Nzambe abengaki mabele ya kokawuka « mokili, » mpe abengaki mayi oyo esanganaki esika moko « ebale monene.",
+    "num_words": 15
+  },
+  "lir": {
+    "lang": "lir",
+    "raw_input": "ley next ten years i hope to see myself in america as a as a electrician in america in ley next ten year i pray dah i will see myself the as a great electrician",
+    "ground_truth": "Ley next ten years I hope to see myself in america as a as a electrician in america in ley next ten year I pray dah I will see myself the as a great electrician.",
+    "num_words": 35
+  },
+  "lkb": {
+    "lang": "lkb",
+    "raw_input": "shichira olenya olenya fundu fwo fwo khukhola olava tsa idle taa shichira nova idle onyela khukhola fundu fundi lakini tsikasi tsino tsilakhuyeta khu khu khu khwisunda imberi alafu nonyela khwitsa khukhola tsikasi tsino",
+    "ground_truth": "Shichira olenya olenya fundu fwo fwo khukhola olava tsa idle taa shichira nova idle onyela khukhola fundu fundi lakini tsikasi tsino tsilakhuyeta khu khu khu khwisunda imberi alafu nonyela khwitsa khukhola tsikasi tsino.",
+    "num_words": 33
+  },
+  "lom": {
+    "lang": "lom",
+    "raw_input": "kwena 50 ɓɔɔ wo kɛɛ gala goo wotii zu zɛɓɛi wo maa wolia",
+    "ground_truth": "Kwena 50 ɓɔɔ wo kɛɛ Gala goo wotii zu, zɛɓɛi wo maa wolia?",
+    "num_words": 13
+  },
+  "loz": {
+    "lang": "loz",
+    "raw_input": "a biza mubu lifasi mi mezi a na kubukani mwa sibaka si li siñwi a li ki liwate",
+    "ground_truth": "A biza mubu Lifasi, mi mezi a na kubukani mwa sibaka si li siñwi, a li ki Liwate.",
+    "num_words": 18
+  },
+  "lua": {
+    "lang": "lua",
+    "raw_input": "mukalenga wa bena ejipitu udi ukengesha bena izrayele",
+    "ground_truth": "Mukalenga wa bena Ejipitu udi ukengesha bena Izrayele.",
+    "num_words": 8
+  },
+  "lub": {
+    "lang": "lub",
+    "raw_input": "tutalei madingi amo a kamweno abwanya kwitukwasha twikale bampikwa mboloji",
+    "ground_truth": "Tutalei madingi amo a kamweno abwanya kwitukwasha twikale bampikwa mboloji.",
+    "num_words": 10
+  },
+  "lug": {
+    "lang": "lug",
+    "raw_input": "awo musa yali ngalunda ekisibo kya yesero mukoddomi we kabona we midiyaani natwala ekisibo nakiyisa mu ddungu natuuka ku lusozi lwa katonda oluyitibwa kolebu",
+    "ground_truth": "Awo Musa yali ngalunda ekisibo kya Yesero mukoddomi we, kabona we Midiyaani; natwala ekisibo nakiyisa mu ddungu, natuuka ku lusozi lwa Katonda oluyitibwa Kolebu.",
+    "num_words": 24
+  },
+  "lun": {
+    "lang": "lun",
+    "raw_input": "11 yehova wamwakwili ñahi yoba kutalisha hakashinshi kindi",
+    "ground_truth": "11. Yehova wamwakwili ñahi Yoba kutalisha hakashinshi kindi?",
+    "num_words": 8
+  },
+  "luo": {
+    "lang": "luo",
+    "raw_input": "4 ang o momiyo jomoko niga gi kiawa ka be weche manie muma gin kaka nokwong ndikgi",
+    "ground_truth": "4. Ang’o momiyo jomoko niga gi kiawa ka be weche manie Muma gin kaka nokwong ndikgi?",
+    "num_words": 17
+  },
+  "lwg": {
+    "lang": "lwg",
+    "raw_input": "<hesitation> ndakhachamire khubola maybe khubindu bindachama khulomalomerakho nebyio endio",
+    "ground_truth": "<hesitation> ndakhachamire khubola maybe khubindu bindachama khulomalomerakho nebyio endio.",
+    "num_words": 9
+  },
+  "maf": {
+    "lang": "maf",
+    "raw_input": "gagèd mburom <hesitation> ntsenad <hesitation> guv dad min ndèk <noise> gwèna toh <hesitation> sai mè kuma mburom na fada ba <noise>",
+    "ground_truth": "Gagèd'mburom, <hesitation> ntsenad <hesitation> guv'dad min'ndèk' <noise> gwèna, toh <hesitation> sai mè kuma, mburom na fada ba? <noise>.",
+    "num_words": 21
+  },
+  "mas": {
+    "lang": "mas",
+    "raw_input": "inzofu nga ili kukenda imboofu nga ilikhukenda mushisaali mulimo shikona ni zikhu zamenyeka ni kumumu kwamubirile khumaru",
+    "ground_truth": "Inzofu nga ili kukenda imboofu nga ilikhukenda mushisaali mulimo shikona ni zikhu zamenyeka ni kumumu kwamubirile khumaru.",
+    "num_words": 17
+  },
+  "mck": {
+    "lang": "mck",
+    "raw_input": "oloni mwapande kuya ku vimanga vakuzimbala va muyati wa isalele",
+    "ground_truth": "Oloni mwapande kuya ku vimanga vakuzimbala va muyati wa Isalele.",
+    "num_words": 10
+  },
+  "men": {
+    "lang": "men",
+    "raw_input": "ji nyahaloi a jɔkɔ mahei gama ti na gbi velɔ ngi wɛ a mɔli na kɔɔ i gbua la nyahangaa ti wɛlɛbu li va la mahei wɛlei bu",
+    "ground_truth": "Ji nyahaloi a jɔkɔ mahei gama, ti na gbi velɔ ngi wɛ a mɔli na kɔɔ i gbua la nyahangaa ti wɛlɛbu li va la mahei wɛlei bu.",
+    "num_words": 28
+  },
+  "mer": {
+    "lang": "mer",
+    "raw_input": "mirongo kenda na mugwanja mirongo kenda na inyanya mirongo kenda na kenda <noise> igana",
+    "ground_truth": "Mirongo kenda na mugwanja, mirongo kenda na inyanya. mirongo kenda na kenda <noise> igana.",
+    "num_words": 14
+  },
+  "mfe": {
+    "lang": "mfe",
+    "raw_input": "6 kouma zeremi ek baruk ti fer fas ar lopozision",
+    "ground_truth": "6. Kouma Zeremi ek Baruk ti fer fas ar lopozision?",
+    "num_words": 10
+  },
+  "mfo": {
+    "lang": "mfo",
+    "raw_input": "ko lehnue uhylenu ahieh nue ifikie rie but enap nap opieh bie yureh ehie nghehri aleh nue nkiehnue gleh wunue ko mieh o sen ifupfuh opie bieyunu kieleh oo l ennu bieri pute nten arieh fieh so",
+    "ground_truth": "Ko lehnue uhylenu ahieh nue, ifikie rie but enap-nap opieh bie yureh ehie nghehri aleh nue, nkiehnue gleh-wunue, ko mieh o'sen-ifupfuh, opie bieyunu kieleh oo, l'ennu. bieri pute nten arieh fieh so",
+    "num_words": 37
+  },
+  "mfv": {
+    "lang": "mfv",
+    "raw_input": "ngëëmani cum ngëësifa uwaw umani uñíinkáaţan uwí jenk káaceep umëënţun bëënjúŋar uwël kalon ací pëënjúŋëna díwëlin maa umani umáak aka bëënjëlan uwël ací bëënjëlan uyac bëënjëlan uliyëk ná ungamb bëyac cíiwun ungambël <hesitattion>",
+    "ground_truth": "Ngëëmani cum ngëësifa uwaw umani uñíinkáaţan uwí jenk káaceep. Umëënţun bëënjúŋar uwël kalon ací pëënjúŋëna díwëlin. Maa umani umáak aka bëënjëlan uwël, ací bëënjëlan uyac, bëënjëlan uliyëk ná ungamb bëyac cíiwun ungambël <hesitattion>.",
+    "num_words": 33
+  },
+  "mgh": {
+    "lang": "mgh",
+    "raw_input": "1 isiyani davidi yuulumalyaawe nhina wiiyeviha wa yehova",
+    "ground_truth": "1. Isiyani Davidi yuulumalyaawe nhina wiiyeviha wa Yehova?",
+    "num_words": 8
+  },
+  "mgr": {
+    "lang": "mgr",
+    "raw_input": "ilembo lya mwaka ansansa aantu aakalondesya vyakwe leza mate 5 3",
+    "ground_truth": "ILEMBO LYA MWAKA: “Ansansa aantu aakalondesya vyakwe Leza.” — MATE. 5:3 .",
+    "num_words": 11
+  },
+  "mkf": {
+    "lang": "mkf",
+    "raw_input": "<hesitation> munalu ghtru mana vurkau a su afu su tumaku su burgu <noise> su burgu su lhurkau shikenan hamba munda luka jika munkiya dababi",
+    "ground_truth": "<hesitation> munalu ghtru mana vurkau a su afu su tumaku su burgu <noise> su burgu su lhurkau shikenan hamba munda luka jika munkiya dababi.",
+    "num_words": 24
+  },
+  "mlg": {
+    "lang": "mlg",
+    "raw_input": "eritrereto izao ahoana no hampisehoanao hoe mangoraka ianao rehefa mifandray amin ny namanao amin ny alalan ny fitaovana elektronika 1 petera 3 8",
+    "ground_truth": "ERITRERETO IZAO: Ahoana no hampisehoanao hoe ‘mangoraka’ ianao, rehefa mifandray amin’ny namanao amin’ny alalan’ny fitaovana elektronika?— 1 PETERA 3:8 .",
+    "num_words": 23
+  },
+  "mlq": {
+    "lang": "mlq",
+    "raw_input": "saŋo be wolu kono le <hesitation> baa fanaŋ feereeta baake le",
+    "ground_truth": "Saŋo be wolu kono le, <hesitation> baa fanaŋ feereeta baake le",
+    "num_words": 11
+  },
+  "mny": {
+    "lang": "mny",
+    "raw_input": "oliye oojhehera sidadi enna ntxikwa nebaribari yegeredhiwe ni esasanyiwe ni mulugu heb 11 10",
+    "ground_truth": "‘ Oliye oojhehera sidadi enna ntxikwa nebaribari, yegeredhiwe ni esasanyiwe ni Mulugu .’ — HEB. 11:10 .",
+    "num_words": 14
+  },
+  "mos": {
+    "lang": "mos",
+    "raw_input": "1 bõe yĩng tɩ d segd n segl d meng namsgã yĩnga",
+    "ground_truth": "1. Bõe yĩng tɩ d segd n segl d meng namsgã yĩnga?",
+    "num_words": 12
+  },
+  "mrt": {
+    "lang": "mrt",
+    "raw_input": "a hiyan umvo litilin talaku laraba lamisu zumawa zumawa umdanu jumawa alan subdue tika ladu",
+    "ground_truth": "A hiyan umvo litilin, talaku, laraba, lamisu, zumawa, zumawa umdanu jumawa alan, subdue tika ladu.",
+    "num_words": 15
+  },
+  "msh": {
+    "lang": "msh",
+    "raw_input": "<noise>io koahy tsy voa tsy voafaritsy io fa zay itiavany vatany avao laha fa te hihetsiky i mihetsiky fa tsy hay marina rahany raha reo fa zay itiavany any vatany avao <noise>",
+    "ground_truth": "<noise>Io koahy tsy voa tsy voafaritsy io fa zay itiavany vatany avao.\nLaha fa te hihetsiky i mihetsiky, fa tsy hay marina rahany raha reo fa zay itiavany any vatany avao. <noise>",
+    "num_words": 32
+  },
+  "msw": {
+    "lang": "msw",
+    "raw_input": "nop atgiang alomin kor lottge korlolo aktiek hore orom atging aktiek hore orom alomin aktiek hoe orom kor lotge aktiek hore korlolo loktiek",
+    "ground_truth": "Nop, atgiang. Alomin kor lottge, korlolo. Aktiek hore orom atging, aktiek hore orom alomin aktiek hoe orom kor lotge. Aktiek hore korlolo, loktiek.",
+    "num_words": 23
+  },
+  "mwn": {
+    "lang": "mwn",
+    "raw_input": "uwawizya amazwi mbali nukuwasambilizya nukutechelela konsi 2 tim 4 2",
+    "ground_truth": "“Uwawizya amazwi . . . mbali nukuwasambilizya nukutechelela konsi.” — 2 TIM. 4:2 .",
+    "num_words": 10
+  },
+  "myj": {
+    "lang": "myj",
+    "raw_input": "menurukku iyaq hewan yang <noise> makajaq e sibawa marotak e iyanaritu asu magina asu nasabaq ku telli jambangngi sembarang tega tega lo nonroi sibawa teme",
+    "ground_truth": "Menurukku iyaq, hewan yang <noise> makajaq e sibawa marotak e, iyanaritu asu. Magina asu. Nasabaq, ku telli jambangngi, sembarang tega-tega lo nonroi, sibawa teme.",
+    "num_words": 25
+  },
+  "naq": {
+    "lang": "naq",
+    "raw_input": "4 ǀgôa ǀgaiǃkhōs ge ǁgai ǀamǂoade ūhâ nēs ge ǀgaiǃkhō e go khoe e ra tsâǀkhā tsî ǁî e ra kōǃgâ khoen omaris khoen tsî ǁî i di ǀhaohâb xristeǁîn tsîna ra tsâǀkhā ǀgôa ǀgaiǃkhōs ge a ǁgai ǁore",
+    "ground_truth": "4 ǀGôa ǀgaiǃkhōs ge ǁgai ǀamǂoade ūhâ. Nēs ge ǀgaiǃkhō-e go khoe-e ra tsâǀkhā tsî ǁî-e ra kōǃgâ khoen, omaris khoen tsî ǁî-i di ǀhaohâb Xristeǁîn tsîna ra tsâǀkhā. ǀGôa ǀgaiǃkhōs ge a ǁgai ǁore.",
+    "num_words": 39
+  },
+  "nba": {
+    "lang": "nba",
+    "raw_input": "vakua ndzolela va pua vaze va ve ku luisa omo lia vuviuke mat 5 10 nwt talenu vinanga 2 3 d",
+    "ground_truth": "“Vakua ndzolela va pua vaze va ve ku luisa omo lia vuviuke.”— Mat. 5:10 , NWT (Talenu vinanga 2-3) d",
+    "num_words": 21
+  },
+  "nbl": {
+    "lang": "nbl",
+    "raw_input": "uzimu walithanda khulu iphasi kangangobana wanikela ngendodanakhe ebelethwe yodwa jwa 3 16",
+    "ground_truth": "“UZimu walithanda khulu iphasi kangangobana wanikela ngeNdodanakhe ebelethwe yodwa.” — JWA. 3:16 .",
+    "num_words": 12
+  },
+  "ndc": {
+    "lang": "ndc",
+    "raw_input": "14 zvicinyi zvatinodikana kuita kuti tiashire mweya mupsene wa mwari",
+    "ground_truth": "14. Zvicinyi zvatinodikana kuita kuti tiashire mweya mupsene wa Mwari?",
+    "num_words": 10
+  },
+  "nde": {
+    "lang": "nde",
+    "raw_input": "8 u isaya 55 11 usifundisani ngalokho ujehova ahlose ukusenzela khona",
+    "ground_truth": "8. U-Isaya 55:11 usifundisani ngalokho uJehova ahlose ukusenzela khona?",
+    "num_words": 11
+  },
+  "ngb": {
+    "lang": "ngb",
+    "raw_input": "8 mbeka tɛ asa mɛndó aya izraɛlɛ ndo hɛ̃ ndo fandó nɛ balevi 4 ​27 29 17 11",
+    "ground_truth": "8. Mbeka tɛ asa mɛndó aya Izraɛlɛ ndo hɛ̃ ndo fandó nɛ? ( Balevi 4:​27-29; 17:11 )",
+    "num_words": 18
+  },
+  "ngl": {
+    "lang": "ngl",
+    "raw_input": "14 yesu aakhulenle hai vaavaa aavekiweiye murici yoowo ahaaphwaneleiye ovaha",
+    "ground_truth": "14. Yesu aakhulenle hai vaavaa aavekiweiye murici yoowo ahaaphwaneleiye ovaha?",
+    "num_words": 10
+  },
+  "nnb": {
+    "lang": "nnb",
+    "raw_input": "6 wangayira uti erisoma ebiblia abye mwatsi w erihira embere omo ngebe yaghu ulebaye n epitsa",
+    "ground_truth": "6. Wangayira uti erisoma eBiblia abye mwatsi w’erihira embere omo ngebe yaghu? (Ulebaye n’epitsa.)",
+    "num_words": 16
+  },
+  "nse": {
+    "lang": "nse",
+    "raw_input": "9 10 kansi muphunzila chinji pa vechitikila angelena onanisoti chithunzi",
+    "ground_truth": "9-10. Kansi muphunzila chinji pa vechitikila Angelena? (Onanisoti chithunzi.)",
+    "num_words": 10
+  },
+  "nso": {
+    "lang": "nso",
+    "raw_input": "amogela ge e ba o kgopišitše motho yo mongwe gomme o kgopele tshwarelo ka pela ge o dira khutšo le ba bangwe o tlo thaba mateo 5 23 24",
+    "ground_truth": "Amogela ge e ba o kgopišitše motho yo mongwe gomme o kgopele tshwarelo ka pela. Ge o dira khutšo le ba bangwe, o tlo thaba.— Mateo 5:23, 24",
+    "num_words": 29
+  },
+  "nya": {
+    "lang": "nya",
+    "raw_input": "simuyenela kucita kukhala asayansi kuti mudziŵe kuti cinacake cikuwononga dziko lapansi madzi abwino nyanja zamcele nkhalango ngakhale mpweya zikuwonongedwa kodi dziko lapansi lidzapulumuka onani zifukwa zimene tingakhalile na ciyembekezo",
+    "ground_truth": "Simuyenela kucita kukhala asayansi kuti mudziŵe kuti cinacake cikuwononga dziko lapansi. Madzi abwino, nyanja zamcele, nkhalango, ngakhale mpweya zikuwonongedwa. Kodi dziko lapansi lidzapulumuka? Onani zifukwa zimene tingakhalile na ciyembekezo.",
+    "num_words": 29
+  },
+  "nyk": {
+    "lang": "nyk",
+    "raw_input": "vokuelinepa tyina velihole umwe unene vakala nawa mokonda vetyii okuti vena okukala kumwe apeho aveho vevali vena onthumbi yokuti ovipuka nga vilema lema umwe mukuavo kamemuyeke po",
+    "ground_truth": "Vokuelinepa tyina velihole umwe unene, vakala nawa mokonda vetyii okuti vena okukala kumwe apeho. Aveho vevali vena onthumbi yokuti ovipuka nga vilema-lema umwe, mukuavo kamemuyeke-po.",
+    "num_words": 27
+  },
+  "nyn": {
+    "lang": "nyn",
+    "raw_input": "9 10 omushaija n omukazi we bakareeba bata okuhikiirira kw ebigambo bya yesu ebiri omu matayo 6 33",
+    "ground_truth": "9-10. Omushaija n’omukazi we bakareeba bata okuhikiirira kw’ebigambo bya Yesu ebiri omu Matayo 6:33 ?",
+    "num_words": 18
+  },
+  "nyu": {
+    "lang": "nyu",
+    "raw_input": "5 kodi abalahamu adalatiza tani kuti akhadikhiriradi mzinda ayai umambo bwakukhazikisidwa na mulungu",
+    "ground_truth": "5. Kodi Abalahamu adalatiza tani kuti akhadikhiriradi mzinda, ayai Umambo bwakukhazikisidwa na Mulungu?",
+    "num_words": 13
+  },
+  "nzi": {
+    "lang": "nzi",
+    "raw_input": "5 adenle boni a bɛluale zo bɛhɛlɛle hibulu ngɛlɛlera ne bie a nea ɔ nyunlu nvoninli ne",
+    "ground_truth": "5. Adenle boni a bɛluale zo bɛhɛlɛle Hibulu Ngɛlɛlera ne bie a? (Nea ɔ nyunlu nvoninli ne.)",
+    "num_words": 17
+  },
+  "orc": {
+    "lang": "orc",
+    "raw_input": "binness anin lilah feed biness ka worra suunen lawoon lawoon maanif feeda lawonin binees fujo kabumuu woyuu inamaraa hinyakuu lamesitinen aneen iraa dugaa aneeni fooni dadda addanoa kulii irra dargetaa binees akaas tukufuua hindargenuu annenen jannah kassit dugenii",
+    "ground_truth": "binness anin lilah feed biness ka worra suunen lawoon,lawoon maanif feeda lawonin binees fujo kabumuu,woyuu inamaraa hinyakuu.lamesitinen aneen iraa dugaa, aneeni,fooni,dadda,addanoa.kulii irra dargetaa binees akaas tukufuua hindargenuu,annenen jannah kassit dugenii.",
+    "num_words": 38
+  },
+  "orm": {
+    "lang": "orm",
+    "raw_input": "miʼoonni qabdu yeroo dheeraa akka si tajaajilaniif kunuunsi baasii hedduu si hin baasisu yoo taʼemmoo yeroo cabanitti suphisiisi miʼoota hamma tokko tajaajilan bitachuus ni dandeessa",
+    "ground_truth": "Miʼoonni qabdu yeroo dheeraa akka si tajaajilaniif kunuunsi; baasii hedduu si hin baasisu yoo taʼemmoo, yeroo cabanitti suphisiisi. Miʼoota hamma tokko tajaajilan bitachuus ni dandeessa.",
+    "num_words": 25
+  },
+  "phm": {
+    "lang": "phm",
+    "raw_input": "7 ninga mwaikufotokozera lemba ya chivumbulutso 7 9 10 ko yohane adawona chani m masomphenya ndipo iwo akuchita chani onani foto ya pakhava",
+    "ground_truth": "7. Ninga mwaikufotokozera lemba ya Chivumbulutso 7:9, 10 , ko Yohane adawona chani m’masomphenya, ndipo iwo akuchita chani? (Onani foto ya pakhava.)",
+    "num_words": 23
+  },
+  "pip": {
+    "lang": "pip",
+    "raw_input": "mommo we shinaru mommo we shinne naƙƙo yuwani lokaci illanno shina shi shiƙana ar taɓu sheƙanim",
+    "ground_truth": "mommo we shinaru mommo we shinne naƙƙo yuwani lokaci illanno shina shi shiƙana ar taɓu sheƙanim.",
+    "num_words": 16
+  },
+  "pko": {
+    "lang": "pko",
+    "raw_input": "atupo anengla adeny somon angwan mut mut nyo akong a nyo adeny nge somoth ngo ongwan taman ngo akongia ngo odeny nys somox nge angwan <unintelligible>",
+    "ground_truth": "Atupo, anengla, adeny, somon, angwan, mut mut nyo akong'a, nyo adeny, nge somoth, ngo ongwan, taman, ngo akongia, ngo odeny nys somox nge angwan <unintelligible>.",
+    "num_words": 26
+  },
+  "plt": {
+    "lang": "plt",
+    "raw_input": "i intelo isan andro ny fampiasan tena amin ny alika ny maraina izy hoetina mandeha mihazakazaka ny antoandro izy dresser na ny hariva izy ampianarina",
+    "ground_truth": "I- intelo isan'andro ny fampiasan-tena amin ny alika, ny maraina izy hoetina mandeha mihazakazaka, ny antoandro izy dresser-na, ny hariva izy ampianarina.",
+    "num_words": 25
+  },
+  "pov": {
+    "lang": "pov",
+    "raw_input": "9 ke ku no pirsisa di fasi pa ntindi profesias di biblia bu pudi splika",
+    "ground_truth": "9. Ke ku no pirsisa di fasi pa ntindi profesias di Biblia? Bu pudi splika.",
+    "num_words": 15
+  },
+  "puu": {
+    "lang": "puu",
+    "raw_input": "nsambi amabagabila miula na amabatsingula rie funanu na burasananu basanu butamba de na barumianu banu bafumu banyama tsimamba nesi batsoli nesi bibulu biminongu na minongu",
+    "ground_truth": "Nsambi amabagabila miula na amabatsingula rie: Funanu na burasananu, basanu butamba de na barumianu, banu bafumu banyama tsimamba nesi batsoli nesi bibulu biminongu na minongu.",
+    "num_words": 25
+  },
+  "rag": {
+    "lang": "rag",
+    "raw_input": "havanaah havoo neewanyolee sukuluukukolah kukwimizanee kuvenamang anagaraa kurihizii mbambizia vanaa vagee ndambizia navaragoli nakumbizia navagoli kwambendii kwiyombolah nye sa <hesitation> hambe <hesitation> zinganaganii zambenazoo hii zakwimbizana kukor <hesitation> vurahi agoogen <hesitation> nye sa <hesitation> harindee",
+    "ground_truth": "Havanaah. havoo. neewanyolee. sukuluukukolah. Kukwimizanee. kuvenamang'anagaraa. kurihizii. mbambizia, vanaa vagee. ndambizia. navaragoli. nakumbizia navagoli kwambendii. kwiyombolah! Nye'sa <hesitation> hambe <hesitation> zinganaganii! Zambenazoo. hii. zakwimbizana, kukor <hesitation> vurahi. agoogen <hesitation> nye'sa <hesitation> harindee.",
+    "num_words": 35
+  },
+  "rcf": {
+    "lang": "rcf",
+    "raw_input": "mèm dan zot vié jour banna va kontinié charjé ps 92 14",
+    "ground_truth": "« Mèm dan zot vié jour, banna va kontinié charjé » ( PS. 92:14 ).",
+    "num_words": 12
+  },
+  "rif": {
+    "lang": "rif",
+    "raw_input": "ṯamɣarṯ nnec ilizabet aḏac d ṯejj ijjen n uḥenjir aṯ ṯsemmiḏ cek yaḥya",
+    "ground_truth": "Ṯamɣarṯ nnec Ilizabet aḏac d ṯejj ijjen n uḥenjir, aṯ ṯsemmiḏ cek Yaḥya.",
+    "num_words": 13
+  },
+  "rng": {
+    "lang": "rng",
+    "raw_input": "10 xana u fanela ku yentxa yini loko u vona ingiki a vakulu a va khomi timhaka a bandleni hi lani swi fanelaka ha kone",
+    "ground_truth": "10. Xana u fanela ku yentxa yini loko u vona ingiki a vakulu a va khomi timhaka a bandleni hi lani swi fanelaka ha kone?",
+    "num_words": 25
+  },
+  "rof": {
+    "lang": "rof",
+    "raw_input": "kwetre we ilima mndu elima iishi maisha yakwe moose piu kwa furaha tu fo lasma kwetre fumia nndo cheshemfanya apate machungu pia",
+    "ground_truth": "Kwetre we ilima- mndu elima iishi maisha yakwe moose piu kwa furaha tu fo, lasma kwetre fumia nndo cheshemfanya apate machungu pia.",
+    "num_words": 22
+  },
+  "run": {
+    "lang": "run",
+    "raw_input": "ikirere kiratuma ubuzima bushoboka zirikana inguvu abahinga bita interaction faible zituma izuba riguma ryaka ku rugero rwiza iyo izo nguvu ziba nke cane ntitwari kwigera tubona izuba iyo ziba nyinshi cane na ho izuba riba ryarazimanganye",
+    "ground_truth": "Ikirere kiratuma ubuzima bushoboka. Zirikana inguvu abahinga bita interaction faible. Zituma izuba riguma ryaka ku rugero rwiza. Iyo izo nguvu ziba nke cane, ntitwari kwigera tubona izuba. Iyo ziba nyinshi cane na ho, izuba riba ryarazimanganye.",
+    "num_words": 36
+  },
+  "sag": {
+    "lang": "sag",
+    "raw_input": "genèse 1 20 27 afa so a sara asusu andeke anyama na nda ni a sara zo ascientifique ayeda so asusu la abâ gigi angu mingi kozo na anyama na pekoni la azo abâ gigi",
+    "ground_truth": "Genèse 1:20-27 afa so a sara asusu, andeke, anyama, na nda ni a sara zo. Ascientifique ayeda so asusu la abâ gigi angu mingi kozo na anyama, na pekoni la azo abâ gigi.",
+    "num_words": 35
+  },
+  "sba": {
+    "lang": "sba",
+    "raw_input": "tɔɓəi ala unda da manje gə́ boi boi ləm gə nékundaje lai gə́ d aw kəmba dan mán g deḛ gə́ manje ɓa teḛ sə dee digi digi gə gel dee gel dee ləm tɔ",
+    "ground_truth": "Tɔɓəi Ala unda da-manje gə́ boi-boi ləm, gə nékundaje lai gə́ d’aw kəmba dan mán’g, deḛ gə́ manje ɓa teḛ sə dee digi-digi gə gel dee gel dee ləm tɔ.",
+    "num_words": 35
+  },
+  "seh": {
+    "lang": "seh",
+    "raw_input": "7 thangwi yanji abhrahamu akhanyindira kuti yahova mbadatsidzikiza iye pabodzi na banja yace",
+    "ground_truth": "7. Thangwi yanji Abhrahamu akhanyindira kuti Yahova mbadatsidzikiza iye pabodzi na banja yace?",
+    "num_words": 13
+  },
+  "sfw": {
+    "lang": "sfw",
+    "raw_input": "12 kyɛbɔ asomafoɛ 4 29 31 kyire ne nzu yeɛ asũafoɛ nemɔ yɛle ɔ",
+    "ground_truth": "12. Kyɛbɔ Asomafoɛ 4:29, 31 kyire ne, nzu yeɛ asũafoɛ nemɔ yɛle ɔ?",
+    "num_words": 14
+  },
+  "shi": {
+    "lang": "shi",
+    "raw_input": "walaynni tilli ssarunin ar‑tuqqarnt rbbi ur‑skirnt s‑wawal n‑ugllid n‑miṣr adjnt iḥšmiyn ad‑ddrn",
+    "ground_truth": "» walaynni tilli ssarunin ar‑tuqqarnt rbbi, ur‑skirnt s‑wawal n‑ugllid n‑miṣr, adjnt iḥšmiyn ad‑ddrn.",
+    "num_words": 12
+  },
+  "shk": {
+    "lang": "shk",
+    "raw_input": "kɑ ge ólöggø kinni mɑ̈nni tyëng ibru pɑ pɑ̈r ki mɑ̈nni rïp pɑ̈dhi gen piny yööd ge nyi pɑ̈dhi piny e gɑ̈ɑ̈mi nuti wɑ̈dhi yï gen",
+    "ground_truth": "Kɑ ge ólöggø kinni, “Mɑ̈nni tyëng Ibru pɑ pɑ̈r ki mɑ̈nni Rïp, pɑ̈dhi gen piny yööd, ge nyi pɑ̈dhi piny e gɑ̈ɑ̈mi nuti wɑ̈dhi yï gen.",
+    "num_words": 26
+  },
+  "shr": {
+    "lang": "shr",
+    "raw_input": "olwandiko lw ennanga 12 1 luganirire akanga k abikubagirwa nkaba bakag irhebwa enyuma z aho hali enderho ziyerekine oku yehova ahana balya bakolesa olulimi lwabo kubi olo lulanga lurhuyemezize n obwalagale oku mungu ahalira abantu bage bulya emyanzi yage eba ecîre",
+    "ground_truth": "Olwandiko lw’ Ennanga 12:1 luganirire akanga k’“abikubagirwa” nkaba bakag’irhebwa. Enyuma z’aho, hali enderho ziyerekine oku Yehova ahana balya bakolesa olulimi lwabo kubi. Olo lulanga lurhuyemezize n’obwalagale oku Mungu ahalira abantu bage bulya emyanzi yage eba ecîre.",
+    "num_words": 41
+  },
+  "sid": {
+    "lang": "sid",
+    "raw_input": "hawaasa sidaamu quchumira afantanno sumudda giddo afamannohu kuni sumudi sidaamunnita mi nate bude mannu galanno galtoomanna sidaamu mamminni jammarinoro leelishanno sumudaati yaate",
+    "ground_truth": "hawaasa sidaamu quchumira afantanno sumudda giddo afamannohu kuni sumudi sidaamunnita mi'nate bude mannu galanno galtoomanna sidaamu mamminni jammarinoro leelishanno sumudaati yaate.",
+    "num_words": 22
+  },
+  "skg": {
+    "lang": "skg",
+    "raw_input": "laha gny fahaizako hoe biby aloha amin ny ankamaroany ma mana maso iaby fa <hesitation> ny sisan ny tsy manamaso haiko zao regny kànka reny olitsy regny",
+    "ground_truth": "Laha gny fahaizako hoe biby aloha, amin’ny ankamaroany ma- mana maso iaby. \n\nFa <hesitation> ny sisan’ny tsy manamaso haiko zao: regny kànka, reny olitsy regny.",
+    "num_words": 27
+  },
+  "sna": {
+    "lang": "sna",
+    "raw_input": "vana vedu vaingoita zvekunzwa nezvemafambiro aita basa rekuvaka kuno kuchel sport pajaw org iyezvino vazokwanisa kunyatsoriwona ndaisambofunga kuti zvaizoitika",
+    "ground_truth": "vana vedu vaingoita zvekunzwa nezvemafambiro aita basa rekuvaka kuno kuchel sport pajaw.org iyezvino vazokwanisa kunyatsoriwona ndaisambofunga kuti zvaizoitika",
+    "num_words": 19
+  },
+  "snk": {
+    "lang": "snk",
+    "raw_input": "ogani koutou bakéy oni ro djinŋa guét djin ntéyé ona réy ogana ro djin ntéyé inda bogou ona dagui sampa fanŋé o danda ri ona fi féssi igana féssi hakhati kébé ga rini oni khoungou <noise>",
+    "ground_truth": "Ogani koutou bakéy, oni ro djinŋa, guét, djin ntéyé, ona réy, ogana ro djin ntéyé, inda bogou ona dagui sampa fanŋé, o danda ri, ona fi féssi, igana féssi, hakhati kébé ga rini, oni khoungou <noise>.",
+    "num_words": 36
+  },
+  "som": {
+    "lang": "som",
+    "raw_input": "oo ilaah wuxuu yidhi biyuhu aad ha u soo bixiyeen uun dhaqdhaqaaqa oo badan oo naf nool leh haadduna ha duusho dhulka dushiisa xagga meeshii bannaanayd oo samada dhex ahayd",
+    "ground_truth": "Oo Ilaah wuxuu yidhi, Biyuhu aad ha u soo bixiyeen uun dhaqdhaqaaqa oo badan, oo naf nool leh, haadduna ha duusho dhulka dushiisa xagga meeshii bannaanayd oo samada dhex ahayd.",
+    "num_words": 30
+  },
+  "sop": {
+    "lang": "sop",
+    "raw_input": "2 tuusha kileshesho akipushisha kuuka lukalo lobe lua mianda ya mu kikudi",
+    "ground_truth": "2. Tuusha kileshesho akipushisha ‘kuuka lukalo [lobe] lua mianda ya mu kikudi.’",
+    "num_words": 12
+  },
+  "sot": {
+    "lang": "sot",
+    "raw_input": "7 ngwanana e mong ya bitswang makayla o ne a tshabang hona hobaneng",
+    "ground_truth": "7. Ngwanana e mong ya bitswang Makayla o ne a tshabang, hona hobaneng?",
+    "num_words": 13
+  },
+  "ssw": {
+    "lang": "ssw",
+    "raw_input": "8 nguyiphi lenye indlela lesingadvumisa ngayo jehova tihlabelelo 96 1 3",
+    "ground_truth": "8. Nguyiphi lenye indlela lesingadvumisa ngayo Jehova? ( Tihlabelelo 96:1-3 )",
+    "num_words": 11
+  },
+  "suk": {
+    "lang": "suk",
+    "raw_input": "nguno ū ngwikanza lyenīlo mukwinhwa ū gwa kūhaya",
+    "ground_truth": "Nguno ū ngwikanza lyenīlo mukwinhwa ū gwa kūhaya.",
+    "num_words": 8
+  },
+  "swc": {
+    "lang": "swc",
+    "raw_input": "b angaria mufano ya dennis christensen na bibi yake irina mu ripoti ya 5 ya 2023 ya baraza yenye kuongoza ile iko ku jw org",
+    "ground_truth": "b Angaria mufano ya Dennis Christensen na bibi yake Irina mu Ripoti ya 5 ya 2023 ya Baraza Yenye Kuongoza ile iko ku jw.org .",
+    "num_words": 25
+  },
+  "swh": {
+    "lang": "swh",
+    "raw_input": "kanuni ya biblia ilinde hekima inayotumika na uwezo wa kufikiri ​ methali 3 21",
+    "ground_truth": "KANUNI YA BIBLIA: “Ilinde hekima inayotumika na uwezo wa kufikiri.”​— METHALI 3:21 .",
+    "num_words": 14
+  },
+  "tan": {
+    "lang": "tan",
+    "raw_input": "kayị mịn paịɗayị tama tama wụlị mọnọn yaag kon wụlị ɗịkɗịk mịn ɗịjin kịị samam mịn kụmụk taa ana laịmụn wụpamgụ mịn pụụdụn mịn lọn pọ ape mịn yaan wụlmụ wụlmụ yaan yad kọn kịbịịz ụk pọ kwanun kaɗsị yaajị",
+    "ground_truth": "Kayị mịn paịɗayị tama tama, wụlị mọnọn yaag kon, wụlị ɗịkɗịk, mịn ɗịjin kịị, samam mịn kụmụk taa ana laịmụn wụpamgụ, mịn pụụdụn mịn lọn pọ ape mịn yaan wụlmụ wụlmụ yaan yad kọn kịbịịz ụk pọ kwanun kaɗsị yaajị.",
+    "num_words": 40
+  },
+  "tap": {
+    "lang": "tap",
+    "raw_input": "11 wewe kunti wabakwasia syani bange mona ni ma foto",
+    "ground_truth": "11. Wewe kunti wabakwasia syani bange? (Mona ni ma foto.)",
+    "num_words": 10
+  },
+  "tdx": {
+    "lang": "tdx",
+    "raw_input": "<noise> bibilava <noise> sokatry <noise> lamboa <noise> maky <noise> lalitry an tany <noise> tagnalahy <noise> songotany <noise>",
+    "ground_truth": "<noise> Bibilava, <noise> sokatry, <noise> lamboa, <noise> maky, <noise> lalitry an-tany, <noise> tagnalahy, <noise> songotany <noise>.",
+    "num_words": 17
+  },
+  "thv": {
+    "lang": "thv",
+    "raw_input": "ⵟāⵜⵡⴰ ⵉ ⵟūṣⵉⵢⵉⵏ ⵡⴰ ṣīṣⵉⵏ ⵟā ⴰ ⵀⴰⴷīⵏ ⵟīⵏ ⵏīⵏⵢ ⴰⴷⵇāⵜ ⵟⵓⵎⵉⵣⴷāⵏ ā ⴰ ʿⴰ ⴰ ʿⴰⴷⵉⵎⵓⵀⵍāⵇⵓⵙ ⵟāⵜⵡⴰ ⴰ āⵜⵉⵢⴰⵏ ⵟⴰⵇⴰⵍ ⵟūⵔāⵏⴰ ⵟⴰ ⴰ ʿⴰⵀⵉⵢⴰⵢⴰⵀⴰⴷīⵏ ⵟūṣⵉⵢⵉⵏ ⵡⴰ ʿⴰⵢⵢⴰⵢⵉ ⵟūⴷⵓⵙ",
+    "ground_truth": "ⵟāⵜⵡⴰ'ⵉ ⵟūṣⵉⵢⵉⵏ ⵡⴰ ṣīṣⵉⵏ ⵟā'ⴰ ⵀⴰⴷīⵏ ⵟīⵏ ⵏīⵏⵢ ⴰⴷⵇāⵜ ⵟⵓⵎⵉⵣⴷāⵏ ā'ⴰ ʿⴰ'ⴰ ʿⴰⴷⵉⵎⵓⵀⵍāⵇⵓⵙ ⵟāⵜⵡⴰ'ⴰ Āⵜⵉⵢⴰⵏ ⵟⴰⵇⴰⵍ ⵟūⵔāⵏⴰ ⵟⴰ'ⴰ ʿⴰⵀⵉⵢⴰⵢⴰⵀⴰⴷīⵏ ⵟūṣⵉⵢⵉⵏ ⵡⴰ ʿⴰⵢⵢⴰⵢⵉ ⵟūⴷⵓⵙ.",
+    "num_words": 29
+  },
+  "tir": {
+    "lang": "tir",
+    "raw_input": "ምኽንያቱ እቶም ኣ ዋት ናብ ቤት ማእሰርቲ እናተወስዱ ን ና ግን ን ጎስን ንዝምርን ኔርና",
+    "ground_truth": "ምኽንያቱ እቶም ኣ ዋት ናብ ቤት ማእሰርቲ እናተወስዱ ን ና ግን ን ጎስን ንዝምርን ኔርና።",
+    "num_words": 15
+  },
+  "tiv": {
+    "lang": "tiv",
+    "raw_input": "14 isholibo na mlu wase vea yehova hingir nena man ka sha ci u nyi",
+    "ground_truth": "14. Isholibo na mlu wase vea Yehova hingir nena, man ka sha ci u nyi?",
+    "num_words": 15
+  },
+  "tkg": {
+    "lang": "tkg",
+    "raw_input": "gn amboa zashy raha indesy mandendeha izy da on ndroy isaky on droy isan andro zashy e mety amin azy indesy izy mandraigna igny da indesy avao koa izy rehefa hariva izay zashy ny amin azy",
+    "ground_truth": "Gn'amboa zashy raha indesy mandendeha izy da on-ndroy isaky on-droy isan'andro zashy e mety amin'azy, indesy izy mandraigna igny, da indesy avao koa izy rehefa hariva, izay zashy ny amin'azy.",
+    "num_words": 36
+  },
+  "tll": {
+    "lang": "tll",
+    "raw_input": "8 ngande wakoka pami mbeka dia monga owandji wa nkumbo wa dimɛna",
+    "ground_truth": "8. Ngande wakoka pami mbeka dia monga owandji wa nkumbo wa dimɛna?",
+    "num_words": 12
+  },
+  "tog": {
+    "lang": "tog",
+    "raw_input": "10 kumbi ŵanthu akhumbikanga kuchitanji kuti azilonde umoyu wamuyaya",
+    "ground_truth": "10. Kumbi ŵanthu akhumbikanga kuchitanji kuti azilonde “umoyu wamuyaya”?",
+    "num_words": 9
+  },
+  "toh": {
+    "lang": "toh",
+    "raw_input": "7 khu ginani abrahama a nga ba a yede gu tumba khu monyo waye watshavbo gu khuye jehovha a di hadzi gu mu vhikeya gumogo ni ndranga yaye",
+    "ground_truth": "7. Khu ginani Abrahama a nga ba a yede gu tumba khu monyo waye watshavbo gu khuye Jehovha a di hadzi gu mu vhikeya gumogo ni ndranga yaye?",
+    "num_words": 28
+  },
+  "toi": {
+    "lang": "toi",
+    "raw_input": "10 tulibona biyeni bbayibbili 2 timoti 3 ​16 17",
+    "ground_truth": "10. Tulibona biyeni Bbayibbili? ( 2 Timoti 3:​16, 17 )",
+    "num_words": 9
+  },
+  "tsc": {
+    "lang": "tsc",
+    "raw_input": "7 hikuyini zvi nga lava ku abrahama a tsumba ku jehovha i wa ta mu vhikela yena ni ngango wakwe",
+    "ground_truth": "7. Hikuyini zvi nga lava ku Abrahama a tsumba ku Jehovha i wa ta mu vhikela yena ni ngango wakwe?",
+    "num_words": 20
+  },
+  "tsn": {
+    "lang": "tsn",
+    "raw_input": "15 a ke eng se se ileng sa thusa jobe gore a tswelele a ikanyega b ke eng se se tla re thusang gore re se ka ra lebala dilo tse modimo a re solofetsang tsone",
+    "ground_truth": "15. (a) Ke eng se se ileng sa thusa Jobe gore a tswelele a ikanyega? (b) Ke eng se se tla re thusang gore re se ka ra lebala dilo tse Modimo a re solofetsang tsone?",
+    "num_words": 36
+  },
+  "tso": {
+    "lang": "tso",
+    "raw_input": "eka malembe ya dzana lama hundzeke",
+    "ground_truth": "EKA MALEMBE YA DZANA LAMA HUNDZEKE, . . .",
+    "num_words": 6
+  },
+  "ttj": {
+    "lang": "ttj",
+    "raw_input": "ebisolo ebimanyire kununka kubi haroho embuzi embuzi empire enunkira kubi munno embwa eiteirwe enjura enunkira kubi munno muno ngira nibyo ebisooro ebyemanyire ebi ebyokusobora kuba haiiyi ebye nkusobora kumanya ebikununka",
+    "ground_truth": "Ebisolo ebimanyire kununka kubi, haroho embuzi, embuzi empire enunkira kubi munno. Embwa eiteirwe enjura enunkira kubi munno muno. Ngira nibyo ebisooro ebyemanyire ebi- ebyokusobora kuba haiiyi ebye'nkusobora kumanya ebikununka.",
+    "num_words": 30
+  },
+  "tui": {
+    "lang": "tui",
+    "raw_input": "baa da jar maa ti tamsir wo la debaŋ raw hã wel ɓe maa boŋ go jaŋ 3 16",
+    "ground_truth": "“Baa da jar maa ti tamsir wo la debaŋ, raw hã wel ɓe maa boŋ go.” — JAŊ 3:16 .",
+    "num_words": 19
+  },
+  "tul": {
+    "lang": "tul",
+    "raw_input": "ka ni tumi yinge neni nwe di̱bwi we tibe nubu nge ni fun ti̱bwi ke nu tunbu ni nura kulungu chire nge ng ti ki̱ning ki̱fwiye ke a makani",
+    "ground_truth": "Ka ni tumi yinge neni nwe di̱bwi we tibe nubu nge, ni fun ti̱bwi ke nu tunbu ni nura kulungu chire nge ng ti ki̱ning ki̱fwiye ke a makani.",
+    "num_words": 29
+  },
+  "tum": {
+    "lang": "tum",
+    "raw_input": "usange ndi mwana mwanarume mumukomenge kweni usange ndi mwana mwanakazi mumureke waŵe wa moyo",
+    "ground_truth": "Usange ndi mwana mwanarume, mumukomenge, kweni usange ndi mwana mwanakazi, mumureke waŵe wa moyo.",
+    "num_words": 14
+  },
+  "tuv": {
+    "lang": "tuv",
+    "raw_input": "na apei na angarei na angauni na ang omwon na angakan na ngakan kapei na ngakan kaarei",
+    "ground_truth": "Na  apei. na angarei na angauni. na ang’omwon. na angakan. na ngakan kapei. na ngakan kaarei.",
+    "num_words": 17
+  },
+  "tuy": {
+    "lang": "tuy",
+    "raw_input": "ee achame awa amerika amu kararan mito kalyet <hesitation> syia syachame yundok <hesitation> ko mi parak kora rapinik chekelipani chii eng likaiyai paisho",
+    "ground_truth": "Ee achame awa amerika, amu kararan, mito kalyet, <hesitation> syia syachame yundok <hesitation> ko mi parak kora rapinik chekelipani chii, eng' likaiyai paisho.",
+    "num_words": 23
+  },
+  "twi": {
+    "lang": "twi",
+    "raw_input": "mommma sikanibere mmma mo abrabɔ mu mmom momma mo ani nsɔ nea mowɔ ​ hebrifo 13 5",
+    "ground_truth": "“Mommma sikanibere mmma mo abrabɔ mu, mmom momma mo ani nsɔ nea mowɔ.”​— HEBRIFO 13:5 .",
+    "num_words": 17
+  },
+  "twx": {
+    "lang": "twx",
+    "raw_input": "kuita hingana murimi unoseenza uye pa nguwa imweyo unoetsera isusuwo tinoetsera kuti tione makomborero e basa redu onai mandima 10 11",
+    "ground_truth": "Kuita hingana murimi unoseenza uye pa nguwa imweyo unoetsera, isusuwo tinoetsera kuti tione makomborero e basa redu (Onai mandima 10-11)",
+    "num_words": 21
+  },
+  "txy": {
+    "lang": "txy",
+    "raw_input": "no loko jaune koa izy gny tonga andohako ato voalohany da ah vonikazo ohatsy hoe tournessol regny regny zao jaune ah gny magnaraky zao novo tonga andohako koa vo miresaky tournessol avao sika da gny menaky menaky koa jaune",
+    "ground_truth": "No loko jaune koa izy, gny tonga andohako ato voalohany da ah vonikazo, ohatsy hoe, tournessol regny, regny zao jaune. Ah gny magnaraky zao novo tonga andohako koa vo miresaky tournessol avao sika, da gny menaky, menaky koa jaune.",
+    "num_words": 39
+  },
+  "umb": {
+    "lang": "umb",
+    "raw_input": "a yehova ohongele yolondaka viove oyo ocili osamo 119 159 160",
+    "ground_truth": "“A Yehova, . . . ohongele yolondaka viove, oyo ocili.” — OSAMO 119:159, 160 .",
+    "num_words": 11
+  },
+  "urh": {
+    "lang": "urh",
+    "raw_input": "dẹ uyota reyọ wọ shẹ ẹ dẹ aghwanre kugbe uyono vẹ ẹruọ ​ isẹ 23 23",
+    "ground_truth": "“Dẹ uyota reyọ, wọ shẹ-ẹ; dẹ aghwanre, kugbe uyono, vẹ ẹruọ.”​— ISẸ 23:23 .",
+    "num_words": 16
+  },
+  "vai": {
+    "lang": "vai",
+    "raw_input": "lɔ̀ndɔ́ fɛ́la sakpa naani soolu soŋlɔndɔ́ soŋfɛ́la soŋsakpaa sɔŋ naanì taŋ taŋ lɔndɔ́ taŋ fɛ́la taŋ sakpaa taŋ naani taŋ soolu taŋ sɔŋlɔndɔ́ taŋ sɔŋ fɛ́la taŋ sɔŋ sakpaa",
+    "ground_truth": "Lɔ̀ndɔ́. Fɛ́la. Sakpa. Naani. Soolu. Soŋlɔndɔ́. Soŋfɛ́la. Soŋsakpaa. Sɔŋ naanì. Taŋ. Taŋ lɔndɔ́. Taŋ fɛ́la. Taŋ sakpaa. Taŋ naani. Taŋ soolu. Taŋ sɔŋlɔndɔ́. Taŋ sɔŋ fɛ́la. Taŋ sɔŋ sakpaa",
+    "num_words": 29
+  },
+  "ven": {
+    "lang": "ven",
+    "raw_input": "8 u sa farwa zwavhuḓi zwo kwama hani muṅwe wahashu",
+    "ground_truth": "8. U sa farwa zwavhuḓi zwo kwama hani muṅwe wahashu?",
+    "num_words": 10
+  },
+  "vmk": {
+    "lang": "vmk",
+    "raw_input": "atthu a vaate yakhala oophwanela murettelaanyu wakhale ni yaawo yaahikhalatho murettelaanyu woohokoleeleni nyuwo",
+    "ground_truth": "Atthu a vaate yakhala oophwanela, murettelaanyu wakhale ni yaawo; yaahikhalatho, murettelaanyu woohokoleeleni nyuwo.",
+    "num_words": 13
+  },
+  "vmw": {
+    "lang": "vmw",
+    "raw_input": "2 xeeni okathi mukina nikhanle ahu oowiiwexexa mwa enamuna yoohiloka eprofesia ya mbiibiliyani",
+    "ground_truth": "2. Xeeni okathi mukina nikhanle ahu oowiiwexexa mwa enamuna yoohiloka eprofesia ya mBiibiliyani?",
+    "num_words": 13
+  },
+  "wal": {
+    "lang": "wal",
+    "raw_input": "nuuni ubbatoo ayyaanaabaa qumaa maana maayuwa maayananne keettan deꞌana koshshees mentto 18 xeella a",
+    "ground_truth": "Nuuni ubbatoo ayyaanaabaa qumaa maana, maayuwa maayananne keettan deꞌana koshshees (Mentto 18 xeella) a",
+    "num_words": 14
+  },
+  "wes": {
+    "lang": "wes",
+    "raw_input": "5 we fit really follow jesus example even as we de make mistake explain",
+    "ground_truth": "5. We fit really follow Jesus example even as we de make mistake? Explain.",
+    "num_words": 14
+  },
+  "wof": {
+    "lang": "wof",
+    "raw_input": "waaw lu deme ni mbaxal cuuraay gerte mbuumu nebedaay bii nga def si gerte boobi it boo ko lekkee sa yaram wi dina sawar",
+    "ground_truth": "Waaw lu deme ni mbaxal, cuuraay gerte, mbuumu nebedaay bii nga def si gerte. Boobi it boo ko lekkee sa yaram wi dina sawar.",
+    "num_words": 24
+  },
+  "wol": {
+    "lang": "wol",
+    "raw_input": "lu mettee ngii lu ma gis fi kaw suuf",
+    "ground_truth": "Lu mettee ngii lu ma gis fi kaw suuf.",
+    "num_words": 9
+  },
+  "xho": {
+    "lang": "xho",
+    "raw_input": "sisoloko sisiva ukuba kumoshakele ndawoni kwezinye iintsapho kodwa yintoni enceda ezinye ukuba ziqhube kakuhle",
+    "ground_truth": "Sisoloko sisiva ukuba kumoshakele ndawoni kwezinye iintsapho. Kodwa yintoni enceda ezinye ukuba ziqhube kakuhle?",
+    "num_words": 14
+  },
+  "xmc": {
+    "lang": "xmc",
+    "raw_input": "5 itthu seeni woonawene dhaakhanle omwiiriha mwene davidi wiikuserera",
+    "ground_truth": "5. Itthu seeni woonawene dhaakhanle omwiiriha mwene Davidi wiikuserera?",
+    "num_words": 9
+  },
+  "xmv": {
+    "lang": "xmv",
+    "raw_input": "antsika malagasy baka tsy de <hesitation> mavatra mampan̈ano spaoro amboa fa matetiky ko fahitako vazaha àby ren̈y matetiky irô isan andra ndesindreo miboaka irô ampisômandreo ampisômandreo <hesitation> baikondrô <hesitation> la marsy hely àby in̈y izy",
+    "ground_truth": "Antsika Malagasy baka tsy de <hesitation> mavatra mampan̈ano spaoro amboa.\nFa matetiky ko fahitako vazaha àby ren̈y, matetiky irô isan'andra ndesindreo miboaka irô, ampisômandreo ampisômandreo, <hesitation> baikondrô, <hesitation> la marsy hely àby in̈y izy.",
+    "num_words": 35
+  },
+  "xmw": {
+    "lang": "xmw",
+    "raw_input": "aminay akagny edy malôha tsy de misy e fa za ndraiky e kaofa nandalo teto antananarivo karaoty matetiky fampiasan ôlogno aketo zany managatsara ma môra mampahita ya tsaramaso koa mety zany no ma mampahatsara maso an izaho magnampy koa zany volanin jareo",
+    "ground_truth": "Aminay akagny edy malôha tsy de misy e fa za ndraiky e kaofa nandalo teto Antananarivo karaoty matetiky fampiasan'ôlogno aketo zany, managatsara ma- môra mampahita, ya tsaramaso koa mety, zany no ma-  mampahatsara maso an'izaho,  magnampy koa zany volanin-jareo.",
+    "num_words": 42
+  },
+  "xog": {
+    "lang": "xog",
+    "raw_input": "abasaadha bali mulyaato tibambaire ngoye bagemye emilagho debeeta enkasi emilagho bagemye enkasi bali mumaato munhaandha tibambaire ngoye",
+    "ground_truth": "Abasaadha bali mulyaato tibambaire ngoye. Bagemye emilagho debeeta enkasi emilagho. Bagemye enkasi bali mumaato munhaandha. Tibambaire ngoye.",
+    "num_words": 17
+  },
+  "xpe": {
+    "lang": "xpe",
+    "raw_input": "gɔ́lɛ ɣaloŋ leei nyéŋ yeŋ vûu laɣii dɛ́niŋ gâli kalai niɣɛ liɣɛi gbɔɔyɔɔ̂i manâai danai ŋweei bɔ̂rɔŋ kpálai gɔ́lɛ ɣaloŋ loŋ",
+    "ground_truth": "Gɔ́lɛ ɣaloŋ leei \n\tNyéŋ yeŋ\n\tVûu laɣii\n\tDɛ́niŋ\n\tGâli kalai\n\tNiɣɛ liɣɛi\n\tGbɔɔyɔɔ̂i\n\tManâai\n\tDanai\n\tŋweei\n\tBɔ̂rɔŋ kpálai\n\tGɔ́lɛ ɣaloŋ loŋ",
+    "num_words": 21
+  },
+  "yao": {
+    "lang": "yao",
+    "raw_input": "6 ŵandu ŵajinji masiku agano ngakusamtumichila yehofa ligongo lyakuti ngakusamanyilila ndamo syambone syakwete yehofajo soni yindu yambone yaŵatendele jemanjajo mwelemu ni muyaŵelelesoni ni ŵandu ŵa ku atene ŵaŵalalichile ndumetume paulo mase 17 ​19 20 30 34",
+    "ground_truth": "6 Ŵandu ŵajinji masiku agano ngakusamtumichila Yehofa ligongo lyakuti ngakusamanyilila ndamo syambone syakwete Yehofajo soni yindu yambone yaŵatendele jemanjajo. Mwelemu ni muyaŵelelesoni ni ŵandu ŵa ku Atene ŵaŵalalichile ndumetume Paulo.— Mase. 17:​19, 20, 30, 34 .",
+    "num_words": 36
+  },
+  "ydd": {
+    "lang": "ydd",
+    "raw_input": "כ בין נישט זיכער וויפיל א א הונט דארף טון איבונגען <hesitation> באט ער דארף זיך קענען ארומריקן אסאך אין טאג אז ער זאל נישט בלייבן פויל אויף די ערד",
+    "ground_truth": "כ'בין נישט זיכער וויפיל א- א הונט דארף טון איבונגען,  <hesitation> באט ער דארף זיך קענען ארומריקן אסאך אין טאג אז ער זאל נישט בלייבן פויל אויף די ערד.",
+    "num_words": 30
+  },
+  "yom": {
+    "lang": "yom",
+    "raw_input": "10 bila mbi tufueti mangina sadila mu phila yimbimbi dikaba dituba dio batuveni zaki 1 26",
+    "ground_truth": "10. Bila mbi tufueti mangina sadila mu phila yimbimbi dikaba dituba dio batuveni? ( Zaki 1:26 )",
+    "num_words": 16
+  },
+  "yor": {
+    "lang": "yor",
+    "raw_input": "tí ohun kan bá wà tí ìjọba tàbí àwọn ará ìlú ṣètò láti fi ran àwọn èèyàn lọ́wọ́ o lè ní kí wọ́n ràn ẹ́ lọ́wọ́",
+    "ground_truth": "Tí ohun kan bá wà tí ìjọba tàbí àwọn ará ìlú ṣètò láti fi ran àwọn èèyàn lọ́wọ́, o lè ní kí wọ́n ràn ẹ́ lọ́wọ́.",
+    "num_words": 26
+  },
+  "zga": {
+    "lang": "zga",
+    "raw_input": "<noise> ndino urafiki kama vahano <noise> pana unaumi alini arobena nne <noise> palii ujuli mlowe alini arobaini <noise> pwali usala alini arobaini alafu pali pali udalaida alini arubena tano <noise> pali umehila alini arubena saba <noise>",
+    "ground_truth": "<noise> ndino urafiki kama vahano, <noise> pana Unaumi alini arobena nne, <noise> palii Ujuli Mlowe, alini arobaini <noise>, pwali Usala, alini arobaini, alafu pali- pali Udalaida alini arubena tano, <noise> pali Umehila alini arubena saba <noise>.",
+    "num_words": 36
+  },
+  "zul": {
+    "lang": "zul",
+    "raw_input": "njengoba ujesu asho emthandazweni wakhe oyisibonelo umbuso kankulunkulu uzokwenza ukuba intando kankulunkulu yenzeke emhlabeni lapho sekubusa lo mbuso abantu bazofunda ukuphatha kahle umhlaba okuzolungisa umonakalo osuwenzekile kuwo",
+    "ground_truth": "Njengoba uJesu asho emthandazweni wakhe oyisibonelo, uMbuso kaNkulunkulu uzokwenza ukuba intando kaNkulunkulu yenzeke emhlabeni. Lapho sekubusa lo Mbuso abantu bazofunda ukuphatha kahle umhlaba, okuzolungisa umonakalo osuwenzekile kuwo.",
+    "num_words": 27
+  }
+}

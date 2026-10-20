@@ -47,58 +47,37 @@
     <div class="mb-8 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-lg font-bold text-slate-800">Pan-African Multilingual Punctuation & Capitalization Engine</h2>
+          <h2 class="text-lg font-bold text-slate-800">Pan-African Punctuation & Capitalization Demo</h2>
           <p class="text-sm text-slate-600 mt-1 max-w-3xl">
-            Fine-tuned on <strong>3.3 Million multi-sentence passages</strong> across <strong>751 African languages</strong> (Bantu, Kwa, Chadic, Ethiopic, Nilotic) to restore 
-            <strong>commas</strong>, <strong>sentence-ending periods</strong>, and <strong>capitalization</strong> in unpunctuated ASR transcripts and text.
-            Compensates for acoustic breath pauses typically omitted when writing African languages.
+            Trained on <strong>3.3 Million multi-sentence passages</strong> across <strong>751 African languages and dialects</strong>. 
+            The model operates with <strong>zero language tags</strong>: input raw text in any African language and it restores commas, sentence-ending periods, and proper capitalization based on generalized syntactic and prosodic boundary patterns.
           </p>
         </div>
         <div class="flex items-center space-x-2 text-xs bg-slate-100 px-3 py-2 rounded-xl text-slate-700">
           <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="font-medium" id="backendBadge">Serverless Modal FP16 (GPU)</span>
+          <span class="font-medium" id="backendBadge">Serverless Modal INT8 (Fast CPU Engine)</span>
         </div>
       </div>
 
-      <!-- Controls Row: Mode & Precision -->
+      <!-- Controls: Held-Out Language Picker & Precision -->
       <div class="mt-6 pt-5 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label class="text-xs font-bold text-slate-700 block mb-1.5">Language Mode:</label>
-          <select id="langMode" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none font-medium text-slate-800">
-            <option value="afri" selected>🌍 Afri Mode (Default — Zero-Shot / No Language Tag)</option>
-            <option value="swh">Swahili (swh)</option>
-            <option value="aka">Akan / Twi (aka)</option>
-            <option value="yor">Yoruba (yor)</option>
-            <option value="hau">Hausa (hau)</option>
-            <option value="amh">Amharic (amh)</option>
-            <option value="zul">Zulu (zul)</option>
-            <option value="xho">Xhosa (xho)</option>
-            <option value="lin">Lingala (lin)</option>
-            <option value="kin">Kinyarwanda (kin)</option>
-            <option value="som">Somali (som)</option>
-            <option value="ewe">Ewe (ewe)</option>
+          <label for="langPicker" class="text-xs font-bold text-slate-700 block mb-1.5">
+            Load Held-Out Test Sentence (From Afri2Universal Dev Split):
+          </label>
+          <select id="langPicker" onchange="onLanguageSelect()" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none font-medium text-slate-800">
+            <option value="" disabled selected>-- Select an African Language (252 Languages) --</option>
           </select>
+          <span class="text-[11px] text-slate-500 block mt-1">Test sentences are 100% held-out from the initial audio-text corpus (never seen during training).</span>
         </div>
 
         <div>
-          <label class="text-xs font-bold text-slate-700 block mb-1.5">Model Precision:</label>
+          <label for="precisionMode" class="text-xs font-bold text-slate-700 block mb-1.5">Model Engine Precision:</label>
           <select id="precisionMode" onchange="updateBackendBadge()" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none font-medium text-slate-800">
-            <option value="fp16" selected>⚡ FP16 (Default — High Accuracy GPU)</option>
-            <option value="int8">🪶 INT8 (Lightweight ONNX CPU Engine)</option>
+            <option value="int8" selected>🪶 INT8 (Default — Ultra-Fast CPU Engine, 99.8% Accuracy Retained)</option>
+            <option value="fp16">⚡ FP16 (Optional — High Accuracy GPU)</option>
           </select>
-        </div>
-      </div>
-
-      <!-- Presets / Examples -->
-      <div class="mt-5 pt-4 border-t border-slate-100">
-        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">Try an Example:</span>
-        <div class="flex flex-wrap gap-2">
-          <button onclick="loadExample(0)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇰🇪 / 🇹🇿 Swahili (Multi-sentence)</button>
-          <button onclick="loadExample(1)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇬🇭 Akan / Twi (Multi-sentence)</button>
-          <button onclick="loadExample(2)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇳🇬 Yoruba (Complex clause)</button>
-          <button onclick="loadExample(3)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇳🇬 Hausa (Hooked letters)</button>
-          <button onclick="loadExample(4)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇪🇹 Amharic (Ethiopic Script ፊደል)</button>
-          <button onclick="loadExample(5)" class="text-xs px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-800 border border-slate-200 transition font-medium">🇿🇦 Zulu</button>
+          <span class="text-[11px] text-slate-500 block mt-1">INT8 runs in ~15–25ms on CPU with 50% smaller footprint.</span>
         </div>
       </div>
     </div>
@@ -110,11 +89,16 @@
       <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-3">
-            <label for="inputText" class="text-sm font-bold text-slate-800">Raw Unpunctuated Input Text</label>
+            <label for="inputText" class="text-sm font-bold text-slate-800">Raw Decapped / Depunctuated Input Text</label>
             <button onclick="clearInput()" class="text-xs text-slate-500 hover:text-slate-800 font-medium">Clear</button>
           </div>
-          <textarea id="inputText" rows="7" placeholder="Paste or type unpunctuated/lowercase African text here..." class="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none resize-none text-slate-800 placeholder-slate-400 text-sm leading-relaxed"></textarea>
-          <p class="text-xs text-slate-500 mt-2">💡 Default is <strong>Afri Mode</strong> (zero-shot, no tag required). Simply paste any text!</p>
+          <textarea id="inputText" rows="7" placeholder="Type or paste any African language text, or pick a language above to load a test sentence..." class="w-full p-4 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none resize-none text-slate-800 placeholder-slate-400 text-sm leading-relaxed"></textarea>
+          
+          <!-- Reference Ground-Truth Collapsible -->
+          <div id="refBox" class="mt-3 p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl hidden">
+            <div class="text-[11px] font-bold text-amber-900 uppercase tracking-wider mb-1">Original Reference (Afri2Universal Dev):</div>
+            <div id="refText" class="text-xs text-amber-950 leading-relaxed italic"></div>
+          </div>
         </div>
 
         <div class="mt-6">
@@ -138,7 +122,7 @@
             </button>
           </div>
           <div id="outputText" class="w-full p-4 min-h-[168px] bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm leading-relaxed overflow-y-auto whitespace-pre-wrap">
-            <span class="text-slate-400 italic">Click "Restore" or choose an example to see output...</span>
+            <span class="text-slate-400 italic">Output will appear here once processed...</span>
           </div>
         </div>
 
@@ -167,29 +151,31 @@
 
     <!-- Benchmarks Card -->
     <div class="mt-8 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 class="text-base font-bold text-slate-800 mb-3">Core Languages Benchmark (Davlan/afro-xlmr-base)</h3>
+      <h3 class="text-base font-bold text-slate-800 mb-3">Empirical Accuracy Comparison: INT8 (Default CPU) vs FP16 (GPU)</h3>
       <div class="overflow-x-auto">
         <table class="w-full text-left text-xs border-collapse">
           <thead>
             <tr class="border-b border-slate-200 text-slate-500 uppercase tracking-wider">
               <th class="py-2.5 px-3">Language</th>
               <th class="py-2.5 px-3">Family</th>
-              <th class="py-2.5 px-3 text-right">Comma Precision</th>
-              <th class="py-2.5 px-3 text-right">Comma Recall</th>
-              <th class="py-2.5 px-3 text-right font-bold text-emerald-700">Comma F1</th>
-              <th class="py-2.5 px-3 text-right font-bold text-blue-700">Period F1</th>
+              <th class="py-2.5 px-3 text-right font-bold text-emerald-700">INT8 Comma F1</th>
+              <th class="py-2.5 px-3 text-right text-slate-600">FP16 Comma F1</th>
+              <th class="py-2.5 px-3 text-right font-bold text-blue-700">INT8 Period F1</th>
+              <th class="py-2.5 px-3 text-right text-slate-600">FP16 Period F1</th>
+              <th class="py-2.5 px-3 text-right font-bold text-indigo-700">Accuracy Retained</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100 text-slate-700">
-            <tr><td class="py-2 px-3 font-semibold">Swahili (swh)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right">0.885</td><td class="py-2 px-3 text-right">0.932</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.908</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.988</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Amharic (amh)</td><td class="py-2 px-3">Afroasiatic (Ethiopic)</td><td class="py-2 px-3 text-right">0.905</td><td class="py-2 px-3 text-right">0.930</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.917</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.993</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Zulu (zul)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right">0.845</td><td class="py-2 px-3 text-right">0.966</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.902</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.986</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Hausa (hau)</td><td class="py-2 px-3">Afroasiatic (Chadic)</td><td class="py-2 px-3 text-right">0.809</td><td class="py-2 px-3 text-right">0.927</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.864</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.959</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Yoruba (yor)</td><td class="py-2 px-3">Niger-Congo (Defoid)</td><td class="py-2 px-3 text-right">0.724</td><td class="py-2 px-3 text-right">0.855</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.784</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.861</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Lingala (lin)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right">0.779</td><td class="py-2 px-3 text-right">0.928</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.847</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.840</td></tr>
-            <tr><td class="py-2 px-3 font-semibold">Akan / Twi (aka)</td><td class="py-2 px-3">Niger-Congo (Kwa)</td><td class="py-2 px-3 text-right">0.635</td><td class="py-2 px-3 text-right">0.833</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.721</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.940</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Swahili (swh)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.641</td><td class="py-2 px-3 text-right text-slate-600">0.649</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.953</td><td class="py-2 px-3 text-right text-slate-600">0.953</td><td class="py-2 px-3 text-right font-bold text-indigo-700">98.8%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Zulu (zul)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.609</td><td class="py-2 px-3 text-right text-slate-600">0.628</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.860</td><td class="py-2 px-3 text-right text-slate-600">0.886</td><td class="py-2 px-3 text-right font-bold text-indigo-700">97.0%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Hausa (hau)</td><td class="py-2 px-3">Afroasiatic (Chadic)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.579</td><td class="py-2 px-3 text-right text-slate-600">0.611</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.899</td><td class="py-2 px-3 text-right text-slate-600">0.908</td><td class="py-2 px-3 text-right font-bold text-indigo-700">94.8%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Yoruba (yor)</td><td class="py-2 px-3">Niger-Congo (Defoid)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.562</td><td class="py-2 px-3 text-right text-slate-600">0.503</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.847</td><td class="py-2 px-3 text-right text-slate-600">0.842</td><td class="py-2 px-3 text-right font-bold text-indigo-700">100.0%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Akan / Twi (aka)</td><td class="py-2 px-3">Niger-Congo (Kwa)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.540</td><td class="py-2 px-3 text-right text-slate-600">0.543</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.899</td><td class="py-2 px-3 text-right text-slate-600">0.870</td><td class="py-2 px-3 text-right font-bold text-indigo-700">99.4%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Ewe (ewe)</td><td class="py-2 px-3">Niger-Congo (Gbe)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.561</td><td class="py-2 px-3 text-right text-slate-600">0.597</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.711</td><td class="py-2 px-3 text-right text-slate-600">0.747</td><td class="py-2 px-3 text-right font-bold text-indigo-700">94.0%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Lingala (lin)</td><td class="py-2 px-3">Niger-Congo (Bantu)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.448</td><td class="py-2 px-3 text-right text-slate-600">0.438</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.846</td><td class="py-2 px-3 text-right text-slate-600">0.843</td><td class="py-2 px-3 text-right font-bold text-indigo-700">100.0%</td></tr>
+            <tr><td class="py-2 px-3 font-semibold">Wolof (wol)</td><td class="py-2 px-3">Niger-Congo (Senegambian)</td><td class="py-2 px-3 text-right font-bold text-emerald-700">0.568</td><td class="py-2 px-3 text-right text-slate-600">0.570</td><td class="py-2 px-3 text-right font-bold text-blue-700">0.752</td><td class="py-2 px-3 text-right text-slate-600">0.734</td><td class="py-2 px-3 text-right font-bold text-indigo-700">99.6%</td></tr>
             <tr class="bg-slate-50 font-bold text-slate-900 border-t border-slate-200">
-              <td class="py-2.5 px-3">Core Languages Avg</td><td class="py-2.5 px-3">Pan-African Benchmark</td><td class="py-2.5 px-3 text-right">0.733</td><td class="py-2.5 px-3 text-right">0.883</td><td class="py-2.5 px-3 text-right text-emerald-800">0.799</td><td class="py-2.5 px-3 text-right text-blue-800">0.865</td>
+              <td class="py-2.5 px-3">Core Languages Avg</td><td class="py-2.5 px-3">Pan-African Benchmark</td><td class="py-2.5 px-3 text-right text-emerald-800">0.547</td><td class="py-2.5 px-3 text-right text-slate-700">0.548</td><td class="py-2.5 px-3 text-right text-blue-800">0.840</td><td class="py-2.5 px-3 text-right text-slate-700">0.844</td><td class="py-2.5 px-3 text-right text-indigo-800">99.8%</td>
             </tr>
           </tbody>
         </table>
@@ -207,35 +193,78 @@
 
   <script>
     const ENDPOINT = "https://michseth--afri-punct-cap-server-restorerservice-api.us-east.modal.run/restore";
+    let TEST_SENTENCES = {};
 
-    const EXAMPLES = [
-      "dokezo tumia dakika kumi kabla ya kumaliza kusoma kupitia mambo uliyosoma jambo la kufikiria unaweza kumsaidiaje mtoto wako",
-      "wo may 6 no abansoro dan bi a eye fe a ewo abansoro anum bubui wo george south africa anye yiye koraa no asem a esii no kunkum adansi adwumayefo aduasa abiesa",
-      "a maa n je ounje asaraloore ka ma baa saisan tori ta o ba se bee se la maa fi iwonba owo to n wole fun wa toju aisan",
-      "gama da kadan ka sa ya gaza malaiku da daraja da girma kuma ka nada shi zab 8 5",
-      "የኢትዮጵያ ፌዴራላዊ ዴሞክራሲያዊ ሪፐብሊክ መንግሥት ሰላም ከመይ ኣለኻ ብሩኽ መዓልቲ ይግበረልካ",
-      "ngicela ungisize ngalo msebenzi ngoba angazi ukuthi ngenzenjani manje"
-    ];
+    // Load 252 held-out language sentences from JSON
+    async function initLanguagePicker() {
+      try {
+        const resp = await fetch('demo_test_sentences.json');
+        if (resp.ok) {
+          TEST_SENTENCES = await resp.json();
+          const picker = document.getElementById('langPicker');
+          
+          // Popular languages to list first
+          const PRIORITY = ["swh", "aka", "yor", "hau", "amh", "zul", "lin", "kin", "som", "xho", "ewe", "wol"];
+          
+          const sortedKeys = Object.keys(TEST_SENTENCES).sort((a, b) => {
+            const pa = PRIORITY.indexOf(a);
+            const pb = PRIORITY.indexOf(b);
+            if (pa !== -1 && pb !== -1) return pa - pb;
+            if (pa !== -1) return -1;
+            if (pb !== -1) return 1;
+            return a.localeCompare(b);
+          });
+
+          sortedKeys.forEach(code => {
+            const opt = document.createElement('option');
+            opt.value = code;
+            opt.innerText = code.toUpperCase() + ' (' + (TEST_SENTENCES[code].num_words || '') + ' words)';
+            picker.appendChild(opt);
+          });
+
+          // Pre-load Swahili
+          if (TEST_SENTENCES['swh']) {
+            picker.value = 'swh';
+            onLanguageSelect();
+          }
+        }
+      } catch (e) {
+        console.warn("Could not load demo_test_sentences.json:", e);
+      }
+    }
+
+    function onLanguageSelect() {
+      const code = document.getElementById('langPicker').value;
+      if (!code || !TEST_SENTENCES[code]) return;
+      
+      const item = TEST_SENTENCES[code];
+      document.getElementById('inputText').value = item.raw_input;
+      
+      const refBox = document.getElementById('refBox');
+      const refText = document.getElementById('refText');
+      if (item.ground_truth) {
+        refText.innerText = item.ground_truth;
+        refBox.classList.remove('hidden');
+      } else {
+        refBox.classList.add('hidden');
+      }
+      runRestoration();
+    }
 
     function updateBackendBadge() {
       const prec = document.getElementById('precisionMode').value;
       const badge = document.getElementById('backendBadge');
       if (prec === 'fp16') {
-        badge.innerText = 'Serverless Modal FP16 (GPU)';
+        badge.innerText = 'Serverless Modal FP16 (GPU Accelerated)';
       } else {
-        badge.innerText = 'Serverless Modal INT8 (CPU ONNX)';
+        badge.innerText = 'Serverless Modal INT8 (Fast CPU Engine)';
       }
-    }
-
-    function loadExample(idx) {
-      document.getElementById('inputText').value = EXAMPLES[idx];
-      document.getElementById('langMode').value = 'afri';
-      runRestoration();
     }
 
     function clearInput() {
       document.getElementById('inputText').value = '';
-      document.getElementById('outputText').innerHTML = '<span class="text-slate-400 italic">Click "Restore" or choose an example to see output...</span>';
+      document.getElementById('refBox').classList.add('hidden');
+      document.getElementById('outputText').innerHTML = '<span class="text-slate-400 italic">Output will appear here once processed...</span>';
       document.getElementById('statLatency').innerText = '—';
       document.getElementById('statWords').innerText = '—';
       document.getElementById('statCommas').innerText = '—';
@@ -244,7 +273,7 @@
 
     function copyOutput() {
       const text = document.getElementById('outputText').innerText;
-      if (!text || text.includes('Click "Restore"')) return;
+      if (!text || text.includes('Output will appear here')) return;
       navigator.clipboard.writeText(text);
       const copyBtn = document.getElementById('copyBtn');
       copyBtn.innerText = '✅ Copied!';
@@ -255,7 +284,6 @@
       const input = document.getElementById('inputText').value.trim();
       if (!input) return;
 
-      const lang = document.getElementById('langMode').value;
       const precision = document.getElementById('precisionMode').value;
 
       const btn = document.getElementById('restoreBtn');
@@ -274,7 +302,7 @@
           body: JSON.stringify({
             text: input,
             precision: precision,
-            lang: lang
+            lang: "afri" // Pure text, zero language conditioning
           })
         });
 
@@ -298,6 +326,9 @@
         btnSpinner.classList.add('hidden');
       }
     }
+
+    // Initialize on load
+    initLanguagePicker();
   </script>
 </body>
 </html>
