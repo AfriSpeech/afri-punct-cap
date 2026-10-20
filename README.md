@@ -17,8 +17,8 @@ When writing African languages, writers conventionally omit commas at natural cl
 
 For **Text-to-Speech (TTS)** and **Automatic Speech Recognition (ASR)** pipelines:
 * **The TTS Bottleneck:** Without commas, TTS models synthesize audio without breath pauses, producing rushed and unnatural phrasing.
-* **Acoustic Pause Alignment & Multi-Corpus Aggregation:** Combines 3,305,255 multi-sentence passages across **751 African languages** from `AfriSpeech/africa-corpus`, `AfriSpeech/african-corpus-jw`, and `AfriSpeech/african-transcribed-speech-monolingual`.
-* **Multi-Task Restoration:** Fine-tunes `Davlan/afro-xlmr-base` (278M params) with dual heads to simultaneously restore **Capitalization** (3 classes) and **Punctuation** (5 classes: commas, periods, question marks, exclamations) across all 751 languages with **zero language tags**.
+* **Large-Scale Multi-Corpus Aggregation:** Combines 3,305,255 multi-sentence passages across **751 African languages** from `AfriSpeech/africa-corpus`, `AfriSpeech/african-corpus-jw`, and `AfriSpeech/african-transcribed-speech-monolingual` in true narrative discourse order.
+* **Multi-Task Restoration:** Fine-tunes `Davlan/afro-xlmr-base` (278M params) with dual heads to simultaneously restore **Capitalization** (3 classes) and **Punctuation** (5 classes: commas, periods, question marks, exclamations) across all 751 languages with **zero language tags**, learning generalized syntactic and punctuation patterns.
 * **Ultra-Fast CPU Inference:** Quantized into an INT8 ONNX engine running in **~15–25 ms** per sentence on standard CPUs.
 
 ### 🌍 751 Languages & Pan-African Generalizability

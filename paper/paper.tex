@@ -19,7 +19,7 @@
     urlcolor=blue
 }
 
-\title{\textbf{AfriPunctCap: Pan-African Speech-Pause Alignment and Fast CPU Punctuation Restoration Across 314 African Languages}}
+\title{\textbf{AfriPunctCap: Pan-African Multi-Sentence Punctuation and Capitalization Restoration Across 751 African Languages}}
 
 \author{
   \textbf{Mich-Seth Owusu}\\
@@ -33,7 +33,7 @@
 \maketitle
 
 \begin{abstract}
-In African language orthographies, writers conventionally omit commas at natural clause, list, and conjunction boundaries, despite speakers making distinct, audible breath pauses (350--600\,ms) in natural speech. This discrepancy creates a severe bottleneck for Text-to-Speech (TTS) models, which rely on punctuation to produce natural phrasing, and for Automatic Speech Recognition (ASR) outputs, which lack punctuation altogether. In this work, we introduce \textbf{AfriPunctCap}, an end-to-end framework for acoustic pause detection and punctuation/capitalization restoration spanning \textbf{314 African languages}. Using Meta's Massively Multilingual Speech (MMS) forced aligner, we align 292,791 audio clips (950+ hours) from the Afri2Universal corpus to detect true acoustic pauses ($\ge 350$\,ms) and insert 400,000+ ground-truth commas. We structure these transcripts into multi-sentence packed streams to train \texttt{afro-xlmr-base} with multi-task dual heads for simultaneous capitalization and punctuation. Evaluated across 20 core African languages spanning Niger-Congo, Afroasiatic, and Nilo-Saharan families, our model achieves \textbf{0.72--0.92 Comma F1} and \textbf{0.86--0.99 Period F1}. Finally, we show that non-autoregressive token classification vastly outperforms sequence-to-sequence models (e.g., T5) by preventing comma under-generation, and deploy an INT8 quantized ONNX engine running in \textbf{15--25\,ms on CPU} with an open-source serverless demonstration interface.
+In African language orthographies, writers conventionally omit commas at natural clause, list, and conjunction boundaries, despite speakers making distinct, audible breath pauses (350--600\,ms) in natural speech. This discrepancy creates a severe bottleneck for Text-to-Speech (TTS) models, which rely on punctuation to produce natural phrasing, and for Automatic Speech Recognition (ASR) outputs, which lack punctuation altogether. In this work, we introduce \textbf{AfriPunctCap}, an end-to-end framework for punctuation and capitalization restoration spanning \textbf{751 African languages and dialects}. We curate a massive Pan-African multi-sentence corpus of \textbf{3.3 Million passages} from canonical narrative corpora and transcribed speech, structured strictly in consecutive discourse order. We train \texttt{afro-xlmr-base} with multi-task dual heads for simultaneous capitalization and punctuation across all 751 languages with **zero language conditioning**. Evaluated across 20 core African languages spanning Niger-Congo, Afroasiatic, and Nilo-Saharan families, our model achieves \textbf{0.733 Comma Precision}, \textbf{0.883 Comma Recall}, and \textbf{0.934 Period F1}. Finally, we show that non-autoregressive token classification vastly outperforms sequence-to-sequence models (e.g., T5) by preventing comma under-generation, and deploy an INT8 quantized ONNX engine running in \textbf{15--25\,ms on CPU} with an open-source serverless demonstration interface.
 \end{abstract}
 
 \section{Introduction}
@@ -67,39 +67,36 @@ This orthographic convention causes significant degradation in speech synthesis 
     \item \textbf{The ASR Post-Processing Gap:} Downstream tasks such as Machine Translation, Information Extraction, and Named Entity Recognition (NER) perform poorly when fed raw, unpunctuated, single-case transcripts emitted by speech-to-text systems.
 \end{enumerate}
 
-To bridge this divide, we present \textbf{AfriPunctCap}. First, we acoustically align 292,791 speech recordings across \textbf{314 African languages} using forced alignment to hoist unwritten acoustic breath pauses into ground-truth commas. Second, we curate a multi-sentence dataset (packing 1--3 consecutive sentences) to teach the model internal sentence-boundary detection. Third, we fine-tune \texttt{Davlan/afro-xlmr-base} \cite{adelani2022afro} with dual multi-task heads for simultaneous capitalization and punctuation. 
+To bridge this divide, we present \textbf{AfriPunctCap}. First, we curate a massive Pan-African corpus of \textbf{3.3 Million multi-sentence passages} across \textbf{751 African languages and dialects} by aggregating chapter-consecutive scripture narratives, continuous article prose, and transcribed speech. Second, we pack consecutive sentences (1--3 sentences per stream) to teach the model internal sentence-boundary detection. Third, we fine-tune \texttt{Davlan/afro-xlmr-base} \cite{adelani2022afro} with dual multi-task heads for simultaneous capitalization and punctuation across all 751 languages with **zero language conditioning**. 
 
-Our empirical results demonstrate that our model achieves \textbf{0.72--0.92 Comma F1} and \textbf{0.86--0.99 Period F1} across core African languages, supporting both Latin and non-Latin scripts (Ethiopic and Arabic) with zero out-of-vocabulary tokens.
+Our empirical results demonstrate that our model achieves \textbf{0.733 Comma Precision}, \textbf{0.883 Comma Recall}, and \textbf{0.934 Period F1} across core African languages, supporting both Latin and non-Latin scripts (Ethiopic and Arabic) with zero out-of-vocabulary tokens.
 
 \section{Related Work}
 
 \paragraph{Punctuation \& Capitalization Restoration.}
 Early approaches to punctuation restoration used recurrent neural networks with attention mechanisms \cite{tilk2016bidirectional}. Modern pipelines typically formulate punctuation and truecasing as token classification using bidirectional transformer encoders \cite{courtland2020efficient}. While high-resource languages such as English and Mandarin have benefited from large curated corpora, African languages have suffered from severe punctuation sparsity in existing parallel text datasets.
 
-\paragraph{Multilingual Speech and African Representations.}
-Recent advances in massively multilingual pre-training have produced models capable of processing hundreds of languages. Meta's MMS project \cite{pratap2024scaling} expanded speech alignment and recognition to over 1,000 languages using CTC and universal Romanization (\texttt{uroman}). Simultaneously, Afro-XLMR \cite{adelani2022afro} established a dedicated multilingual language model covering African languages across Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan families.
+\paragraph{Multilingual African Language Models.}
+Recent advances in massively multilingual pre-training have produced models capable of processing African languages. Afro-XLMR \cite{adelani2022afro} established a dedicated multilingual language model covering African languages across Niger-Congo, Afroasiatic, Nilo-Saharan, and Khoisan families.
 
 \section{Methodology}
 
-\subsection{Large-Scale Acoustic Pause Alignment}
-We leverage speech recordings from the Afri2Universal speech corpus \cite{afrispeech2024afri2universal}, covering 314 languages and over 950 hours of audio. For each audio-transcript pair $(y, T)$, where $T = [w_1, w_2, \dots, w_N]$, we perform forced alignment to determine the exact millisecond word boundaries $[t_i^{\text{start}}, t_i^{\text{end}}]$ using the MMS CTC Aligner \cite{pratap2024scaling}.
+\subsection{Large-Scale Multi-Corpus Aggregation}
+To build a representative Pan-African punctuation corpus, we aggregate three major sources:
+\begin{enumerate}
+    \item \textbf{Africa-Corpus (693 languages, 2,228,521 passages):} Derived from Bible translations \cite{black2019cmu}, keyed by canonical scripture location (\texttt{BOOK.CHAPTER.VERSE}). Verses are grouped strictly within the same chapter into 2--3 sentence paragraphs.
+    \item \textbf{African-Corpus-JW (140 languages, 540,566 passages):} Modern magazine and article prose keyed by paragraph number, containing fluent multi-sentence discourse.
+    \item \textbf{African-Transcribed-Speech-Monolingual (15 languages, 479,177 sentences):} Authentic speech transcripts filtered of non-African English noise.
+\end{enumerate}
 
-Because African orthographies contain unique non-Latin characters (e.g., Ethiopic \textit{ፊደል}, Arabic script, and Latin extensions like $\varepsilon, \textopeno, \textipa{\!d}, \textipa{\!b}, \eta$), words are normalized via universal Romanization ($w_i \to r_i \in \{a\dots z\}$). The CTC emission matrix $E \in \mathbb{R}^{F \times V}$ is calculated via the acoustic encoder, and the optimal alignment path is decoded using Viterbi dynamic programming.
-
-For each pair of adjacent aligned words $(w_i, w_{i+1})$, the acoustic silent gap is measured as:
-\begin{equation}
-    \Delta t_i = t_{i+1}^{\text{start}} - t_i^{\text{end}}
-\end{equation}
-When $\Delta t_i \ge \theta_{\text{pause}}$ (with $\theta_{\text{pause}} = 350$\,ms), an acoustic pause is identified. If $w_i$ does not already terminate with punctuation, a comma is inserted after $w_i$. Across 314 languages, this pipeline detected and inserted **457,704 speech-pause commas**.
-
-\subsection{Multi-Sentence Sequence Packing}
+\subsection{Discourse-Preserving Multi-Sentence Packing}
 A common failure mode in punctuation models is \textit{boundary bias}: models trained on single isolated sentences only learn to predict period tokens on the final token of the input. 
 
-To overcome this, we construct **multi-sentence sequences** by packing $K \in \{1, 2, 3\}$ consecutive sentences from the same language:
+To overcome this, we construct **multi-sentence sequences** by packing $K \in \{1, 2, 3\}$ consecutive sentences strictly within the same narrative context:
 \begin{equation}
     X_{\text{raw}} = [w_{1,1}, \dots, w_{1,N_1}, w_{2,1}, \dots, w_{2,N_2}, w_{3,1}, \dots, w_{3,N_3}]
 \end{equation}
-In the input $X_{\text{raw}}$, all punctuation is stripped and characters are lowercased. In the target sequence $Y$, internal periods and question marks separate sentences, commas delimit clauses, and sentence-initial words are capitalized. From 292,533 single sentences, we construct **145,812 multi-sentence training sequences**.
+In the input $X_{\text{raw}}$, all punctuation is stripped and characters are lowercased with zero language prompt tags. In the target sequence $Y$, internal periods and question marks separate sentences, commas delimit clauses, and sentence-initial words are capitalized. In total, we construct **3,263,160 training passages** and **42,095 balanced validation passages**.
 
 \subsection{Multi-Task Model Architecture}
 We adopt \texttt{Davlan/afro-xlmr-base} (278M parameters, 12 layers, 768 hidden dimension) as the foundational backbone. For each subword token embedding $h_t \in \mathbb{R}^{768}$, we attach two independent linear classification heads:

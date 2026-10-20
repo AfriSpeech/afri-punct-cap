@@ -13,8 +13,12 @@ def download_models():
     print(f"Pre-caching {model_id} into Modal image layer...")
     AutoTokenizer.from_pretrained(model_id)
     AutoConfig.from_pretrained(model_id)
+    hf_hub_download(repo_id=model_id, filename="config.json")
     hf_hub_download(repo_id=model_id, filename="model_fp16.safetensors")
-    hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
+    try:
+        hf_hub_download(repo_id=model_id, filename="onnx/model_quantized.onnx")
+    except Exception:
+        hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
     print("Models pre-cached successfully!")
 
 image = (
@@ -93,7 +97,10 @@ class RestorerService:
         self.fp16_model.eval()
 
         # 2. INT8 ONNX Engine (Optional lightweight)
-        onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
+        try:
+            onnx_path = hf_hub_download(repo_id=model_id, filename="onnx/model_quantized.onnx")
+        except Exception:
+            onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
         sess_opts = ort.SessionOptions()
         sess_opts.intra_op_num_threads = 2
         self.onnx_session = ort.InferenceSession(onnx_path, sess_options=sess_opts, providers=["CPUExecutionProvider"])

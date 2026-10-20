@@ -129,7 +129,7 @@ table_cell_bold = ParagraphStyle(
 story = []
 
 # Title
-story.append(Paragraph("AfriPunctCap: Pan-African Speech-Pause Alignment and Fast CPU Punctuation Restoration Across 314 African Languages", title_style))
+story.append(Paragraph("AfriPunctCap: Pan-African Multi-Sentence Punctuation and Capitalization Restoration Across 751 African Languages", title_style))
 story.append(Paragraph("Mich-Seth Owusu", author_style))
 story.append(Paragraph("AfriSpeech &amp; Ghana NLP &nbsp;|&nbsp; michseth@afrispeech.org &nbsp;|&nbsp; arXiv Preprint", affil_style))
 story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#cbd5e1"), spaceAfter=10))
@@ -140,14 +140,15 @@ abs_text = (
     "and conjunction boundaries, despite speakers making distinct, audible breath pauses (350–600 ms) in natural speech. "
     "This discrepancy creates a severe bottleneck for Text-to-Speech (TTS) models, which rely on punctuation to produce natural "
     "phrasing, and for Automatic Speech Recognition (ASR) outputs, which lack punctuation altogether. In this work, we introduce "
-    "<b>AfriPunctCap</b>, an end-to-end framework for acoustic pause detection and punctuation/capitalization restoration spanning "
-    "<b>314 African languages</b>. Using Meta's Massively Multilingual Speech (MMS) forced aligner, we align 292,791 audio clips (950+ hours) "
-    "from the Afri2Universal corpus to detect true acoustic pauses (≥ 350 ms) and insert 400,000+ ground-truth commas. "
-    "We structure these transcripts into multi-sentence packed streams to train <code>afro-xlmr-base</code> with multi-task dual heads for "
-    "simultaneous capitalization and punctuation. Evaluated across 20 core African languages spanning Niger-Congo, Afroasiatic, and Nilo-Saharan "
-    "families, our model achieves <b>0.72–0.92 Comma F1</b> and <b>0.86–0.99 Period F1</b>. Finally, we show that non-autoregressive token "
-    "classification vastly outperforms sequence-to-sequence models (e.g., T5) by preventing comma under-generation, and deploy an INT8 "
-    "quantized ONNX engine running in <b>15–25 ms on CPU</b> with an open-source serverless demonstration interface."
+    "<b>AfriPunctCap</b>, an end-to-end framework for punctuation and capitalization restoration spanning "
+    "<b>751 African languages and dialects</b>. We curate a massive Pan-African multi-sentence corpus of <b>3.3 Million passages</b> "
+    "from canonical narrative corpora and transcribed speech, structured strictly in consecutive discourse order. "
+    "We train <code>afro-xlmr-base</code> with multi-task dual heads for simultaneous capitalization and punctuation across all 751 languages "
+    "with <b>zero language conditioning</b>. Evaluated across 20 core African languages spanning Niger-Congo, Afroasiatic, and Nilo-Saharan "
+    "families, our model achieves <b>0.733 Comma Precision</b>, <b>0.883 Comma Recall</b>, and <b>0.934 Period F1</b>. "
+    "Finally, we show that non-autoregressive token classification vastly outperforms sequence-to-sequence models (e.g., T5) "
+    "by preventing comma under-generation, and deploy an INT8 quantized ONNX engine running in <b>15–25 ms on CPU</b> with an open-source "
+    "serverless demonstration interface."
 )
 abs_table = Table([[Paragraph(abs_text, abstract_style)]], colWidths=[520])
 abs_table.setStyle(TableStyle([
@@ -178,30 +179,30 @@ story.append(Paragraph(
     body_style
 ))
 story.append(Paragraph(
-    "To solve this problem, we present <b>AfriPunctCap</b>: (1) we acoustically align 292,791 speech recordings across 314 African languages "
-    "to detect speech pauses (≥ 350 ms) and insert 400,000+ ground-truth commas; (2) we curate multi-sentence sequences (1–3 sentences packed) "
-    "to teach models internal sentence-boundary detection; (3) we fine-tune <code>Davlan/afro-xlmr-base</code> with dual multi-task heads; "
-    "and (4) we deploy an INT8 quantized ONNX engine running in 15–25 ms on CPU.",
+    "To solve this problem, we present <b>AfriPunctCap</b>: (1) we curate a massive Pan-African corpus of 3.3 Million multi-sentence "
+    "passages across 751 African languages from canonical narrative corpora and transcribed speech; (2) we pack consecutive sentences "
+    "(1–3 sentences) to teach models internal sentence-boundary detection; (3) we fine-tune <code>Davlan/afro-xlmr-base</code> with dual multi-task "
+    "heads with zero language conditioning; and (4) we deploy an INT8 quantized ONNX engine running in 15–25 ms on CPU.",
     body_style
 ))
 
 # 2. Methodology
 story.append(Paragraph("2. Methodology", h1_style))
-story.append(Paragraph("2.1 Large-Scale Acoustic Pause Alignment", h2_style))
+story.append(Paragraph("2.1 Large-Scale Multi-Corpus Aggregation", h2_style))
 story.append(Paragraph(
-    "We leverage speech recordings from the Afri2Universal corpus, covering 314 languages and 950+ hours of audio. "
-    "For each audio-transcript pair, forced alignment is performed via Meta's MMS CTC Aligner with universal Romanization (<code>uroman</code>). "
-    "For each adjacent word pair (w_i, w_{i+1}), the silent gap is measured as Δt_i = t_{i+1}^{start} - t_i^{end}. "
-    "When Δt_i ≥ 350 ms, a speech pause is identified and resolved into a comma. Across 314 languages, 457,704 speech-pause commas were detected.",
+    "To build a representative Pan-African punctuation corpus, we aggregate three major sources: "
+    "(1) <i>Africa-Corpus</i> (693 languages, 2,228,521 passages) grouped strictly by chapter into 2–3 sentence paragraphs; "
+    "(2) <i>African-Corpus-JW</i> (140 languages, 540,566 passages) containing natural continuous article prose; "
+    "(3) <i>African-Transcribed-Speech-Monolingual</i> (15 languages, 479,177 sentences) of authentic speech transcripts.",
     body_style
 ))
 
-story.append(Paragraph("2.2 Multi-Sentence Sequence Packing", h2_style))
+story.append(Paragraph("2.2 Discourse-Preserving Multi-Sentence Packing", h2_style))
 story.append(Paragraph(
     "To prevent <i>boundary bias</i> (where models only learn to predict period tokens on the final token of isolated sentences), "
-    "we construct multi-sentence sequences by concatenating 1, 2, or 3 consecutive sentences from the same language. "
-    "All punctuation is stripped and casing is lowercased in the input, while targets retain internal sentence-ending periods, "
-    "commas, and capitalization. From 292,533 sentences, we construct 145,812 multi-sentence training sequences.",
+    "we construct multi-sentence sequences by concatenating 1, 2, or 3 consecutive sentences strictly within the same narrative context. "
+    "All punctuation is stripped and casing is lowercased in the input with zero language tags, while targets retain internal sentence-ending periods, "
+    "commas, and capitalization. From 3.3 Million sentences, we construct 3,263,160 training passages and 42,095 balanced validation passages.",
     body_style
 ))
 

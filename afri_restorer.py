@@ -30,10 +30,17 @@ class AfriRestorer:
             print(f"Loading INT8 Quantized ONNX model from {model_id}...")
             import onnxruntime as ort
             if os.path.isdir(model_id):
-                onnx_path = os.path.join(model_id, "model_quantized.onnx")
+                onnx_path = os.path.join(model_id, "onnx", "model_quantized.onnx")
+                if not os.path.exists(onnx_path):
+                    onnx_path = os.path.join(model_id, "model_quantized.onnx")
             else:
                 from huggingface_hub import hf_hub_download
-                onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
+                # Query config.json to register tracked download count on Hugging Face Hub
+                _ = hf_hub_download(repo_id=model_id, filename="config.json")
+                try:
+                    onnx_path = hf_hub_download(repo_id=model_id, filename="onnx/model_quantized.onnx")
+                except Exception:
+                    onnx_path = hf_hub_download(repo_id=model_id, filename="model_quantized.onnx")
 
             opts = ort.SessionOptions()
             opts.intra_op_num_threads = min(4, os.cpu_count() or 4)
